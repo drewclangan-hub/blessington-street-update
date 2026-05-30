@@ -332,7 +332,6 @@ function renderCommercial() {
   <div class="head-block">
     <span class="eyebrow">${ic('stack')} Commercial Laundry</span>
     <h1>Commercial Laundry Services Serving Melbourne</h1>
-    <p class="lede">At Blessington Street Laundrette, we provide professional commercial laundry services with complimentary pick-up and delivery across Melbourne's inner bayside.</p>
   </div>
 
   <div class="sec-head"><div><h2>How Our Commercial Laundry Service Works</h2></div></div>
@@ -413,7 +412,6 @@ function renderPricing() {
   return `
   <div class="head-block">
     <h1>Pricing</h1>
-    <p class="lede">Free pick-up and drop off with every laundry order over $60. Biodegradable detergent is available.</p>
   </div>
   ${(() => {
     const pricingServices = SERVICES.filter(s => s.id !== 'pickup-delivery');
@@ -455,7 +453,6 @@ function renderDelivery() {
   return `
   <div class="head-block"><span class="eyebrow">${ic('truck')} Collection &amp; Delivery</span>
     <h1>Collection &amp; Delivery</h1>
-    <p class="lede">Too busy to come in? We'll collect your laundry, clean it, and deliver it back fresh and ready to use. Services starting from $60. Free pick-up and drop off with every laundry order over $60.</p>
   </div>
   <div class="split2">
     <div class="info-card">
