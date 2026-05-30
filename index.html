@@ -65,7 +65,7 @@
       <path d="M13.6 7.9C16 9.5 20 12.5 20 15.5A1.5 1.5 0 0 1 18.5 17H5.5A1.5 1.5 0 0 1 4 15.5C4 12.5 8 9.5 10.4 7.9"/>
       <path d="M10.4 7.9A1.6 1.6 0 0 1 12 6.9A1.6 1.6 0 0 1 13.6 7.9"/>
     </svg>`;
-    document.getElementById('menuBtn').innerHTML = ic('menu');
+    document.getElementById('menuBtn').innerHTML = ic('menu') + '<span class="menu-btn__label">Menu</span>';
     document.querySelectorAll('[data-ni]').forEach(el => { el.innerHTML = ic(el.dataset.ni); });
     document.querySelectorAll('.nav a').forEach(a => {
       const span = a.querySelector('.ni');

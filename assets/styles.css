@@ -174,9 +174,19 @@ body.nav-open .nav-overlay{display:block;}
 .nav a.btn--primary:hover{background:var(--accent-press); color:var(--on-accent);}
 
 /* ---- MENU BUTTON ---- */
-.menu-btn{display:grid; place-items:center; width:44px; height:44px; flex:none;
-  border-radius:12px; border:1px solid var(--line); background:var(--surface); cursor:pointer;}
-.menu-btn svg{width:20px; height:20px;}
+.menu-btn{
+  display:none; /* hidden by default — shown only on mobile via block below */
+  align-items:center; gap:7px;
+  margin-left:auto; flex:none;
+  height:44px; padding:0 14px 0 10px;
+  border-radius:999px; border:1.5px solid var(--accent);
+  background:var(--accent-tint); color:var(--accent-press);
+  cursor:pointer; font-size:13px; font-weight:700;
+  font-family:var(--font-body);
+}
+.menu-btn svg{width:18px; height:18px; flex:none;}
+.menu-btn__label{font-size:13px; font-weight:700; letter-spacing:.01em;}
+@media(max-width:859px){.menu-btn{display:flex;}}
 @media(min-width:860px){.menu-btn{display:none;}}
 
 /* ---- MAIN ---- */
