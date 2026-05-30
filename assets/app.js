@@ -335,28 +335,25 @@ function renderCommercial() {
     <h1>Commercial Laundry Services Serving Melbourne</h1>
   </div>
 
-  <div class="sec-head"><div><h2>How Our Commercial Laundry Service Works</h2></div></div>
-  <div class="steps" style="margin-bottom:40px;">
+  <div class="sec-head"><div><h2>How It Works</h2></div></div>
+  <div class="steps" style="margin-bottom:36px;">
     ${steps.map((st, i) => `<div class="step"><div class="num">${i + 1}</div><h3>${st[0]}</h3><p>${st[1]}</p></div>`).join('')}
   </div>
 
   <div class="sec-head"><div><h2>Who We Service</h2></div></div>
-  <div class="grid-3" style="margin-bottom:40px;">
-    ${whoAndIndustries.map(ind => `<div class="card" style="padding:18px;"><h3 style="font-size:14px; margin-bottom:6px;">${ind.name}</h3><p style="font-size:13px; color:var(--ink-soft); line-height:1.5;">${ind.desc}</p></div>`).join('')}
+  <div class="chips" style="margin-bottom:32px;">
+    ${whoAndIndustries.map(ind => `<span class="chip">${ind.name}</span>`).join('')}
   </div>
 
-  <div class="info-card" style="margin-bottom:40px;">
-    <h3>What We Clean</h3>
-    <div class="grid-2" style="gap:4px 24px;">
-      ${whatWeClean.map(s => `<div class="info-row"><div class="ii">${ic('check')}</div><div><span>${s}</span></div></div>`).join('')}
-    </div>
+  <div class="sec-head"><div><h2>What We Clean</h2></div></div>
+  <div class="chips" style="margin-bottom:32px;">
+    ${whatWeClean.map(s => `<span class="chip">${ic('check')} ${s}</span>`).join('')}
   </div>
 
   <div class="banner">
     <div>
-      <h3>Book a Commercial Laundry Pickup Today</h3>
-      <p>Take the pressure off your team and ensure clean, professional-quality linen ready to use. Contact Blessington Street Launderette to set up service.</p>
-      <p style="margin-top:10px; color:rgba(255,255,255,.85);">We offer self-service laundry, commercial laundry, dry cleaning, pick-up &amp; delivery, and more across these areas. Looking for reliable, high-quality laundry services in your neighborhood? We've got you covered!</p>
+      <h3>Book a Pickup Today</h3>
+      <p>Professional laundry for businesses across Melbourne. Free pick-up and delivery available.</p>
     </div>
     <a class="btn btn--ghost" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
   </div>
@@ -389,19 +386,23 @@ function renderWhyChooseUs() {
     <h1>Why Businesses Choose Blessington Street Launderette</h1>
   </div>
 
-  <div class="grid-4" style="margin-bottom:40px;">
-    ${whyUs.map(w => `<div class="card" style="padding:22px;">
-      <h3 style="font-size:15px; margin-bottom:8px;">${w.head}</h3>
-      <p style="font-size:13.5px; color:var(--ink-soft); line-height:1.55;">${w.body}</p>
+  <div class="why-grid" style="margin-bottom:36px;">
+    ${whyUs.map(w => `<div class="why-card card">
+      <div class="why-card__head">
+        <span class="why-card__icon">${ic('check')}</span>
+        <h3 class="why-card__title">${w.head}</h3>
+        <span class="why-card__toggle">${ic('arrow').replace('viewBox="0 0 24 24"','viewBox="0 0 24 24" style="transform:rotate(90deg)"')}</span>
+      </div>
+      <p class="why-card__body">${w.body}</p>
     </div>`).join('')}
   </div>
 
   <div class="sec-head"><div><h2>What Our Customers Say</h2></div></div>
-  <div class="grid-2" style="margin-bottom:40px;">
-    ${testimonials.map(t => `<div class="card" style="padding:22px;">
-      <p style="font-size:14.5px; color:var(--ink-soft); line-height:1.6; font-style:italic; margin-bottom:16px;">"${t.quote}"</p>
-      <div style="font-size:13px; font-weight:700; color:var(--ink);">${t.name}</div>
-      <div style="font-size:12px; color:var(--muted);">${t.role}</div>
+  <div class="testimonial-scroll">
+    ${testimonials.map(t => `<div class="testimonial-card card">
+      <p>"${t.quote}"</p>
+      <div class="testimonial-card__name">${t.name}</div>
+      <div class="testimonial-card__role">${t.role}</div>
     </div>`).join('')}
   </div>
 
@@ -603,6 +604,8 @@ document.addEventListener('click', (e) => {
   }
   const priceCard = e.target.closest('.price-card');
   if (priceCard && window.innerWidth < 860) { priceCard.classList.toggle('price-card--open'); return; }
+  const whyCard = e.target.closest('.why-card');
+  if (whyCard && window.innerWidth < 860) { whyCard.classList.toggle('why-card--open'); return; }
   if (e.target.closest('#sendBtn')) {
     const ok = document.getElementById('formOk');
     if (ok) { ok.classList.add('show'); document.getElementById('sendBtn').style.display = 'none'; }
