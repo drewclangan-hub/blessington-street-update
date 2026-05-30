@@ -100,7 +100,7 @@ const SERVICES = [
 
   { id:'doona-cleaning', name:'Doona Cleaning', icon:'bed', img:'images/img-doona.jpg', from:'from $40',
     blurb:'Doonas, quilts & blankets. 30 high-capacity machines for everything from everyday loads to doonas.',
-    desc:'30 high-capacity Dexter washing machines for everything from everyday loads to doonas and blankets. Bulky items that won\'t fit in a home machine cleaned properly and returned fresh.',
+    desc:'30 high-capacity Dexter washing machines for everything from everyday loads to doonas and blankets.',
     extra:'Free pick-up and drop off with every laundry order over $60. Biodegradable detergent is available.',
     chips:['Single doona $40','Two doonas $75','Three doonas $105','Free pickup over $60','Biodegradable detergent available'],
     rows:[['1 Doona','$40'],['2 Doonas','$75'],['3 Doonas','$105'],['Pickup & delivery','free over $60']] },
@@ -263,7 +263,7 @@ function renderService(id) {
     </div>
     <aside class="pricebox">
       <h4>Pricing guide</h4>
-      <div class="from">from <b>${s.from}</b></div>
+      <div class="from"><b>${s.from}</b></div>
       ${s.rows.map(r => `<div class="prow"><span>${r[0]}</span><b>${r[1]}</b></div>`).join('')}
       <a class="btn btn--primary btn--block" data-go="contact">Contact Us</a>
       <a class="btn btn--ghost btn--block" style="margin-top:9px;" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
@@ -385,7 +385,7 @@ function renderDelivery() {
       <h3>Pricing</h3>
       <div class="info-row"><div class="ii">${ic('check')}</div><div><b>Free pick-up and drop off</b><span>With every laundry order over $60.</span></div></div>
       <div class="info-row"><div class="ii">${ic('truck')}</div><div><b>Services starting from</b><span>$60</span></div></div>
-      <div class="info-row"><div class="ii">${ic('tag')}</div><div><b>Payment</b><span>We accept Mastercard and Visa. Account facility available on request for commercial service.</span></div></div>
+      <div class="info-row"><div class="ii">${ic('tag')}</div><div><b>Payment</b><span>We accept Mastercard and Visa. Account facility is available upon request for commercial (pick-up &amp; delivery) service.</span></div></div>
       <a class="btn btn--primary btn--block" style="margin-top:16px;" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
     </div>
     <div class="info-card">
@@ -423,7 +423,7 @@ function renderHours() {
       <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Phone</b><span><a href="${BIZ.phoneHref}" style="color:var(--accent);">${BIZ.phone}</a></span></div></div>
       <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Phone</b><span><a href="${BIZ.phone2Href}" style="color:var(--accent);">${BIZ.phone2}</a></span></div></div>
       <div class="info-row"><div class="ii">${ic('pin')}</div><div><b>Address</b><span>${BIZ.addr}</span></div></div>
-      <div class="info-row"><div class="ii">${ic('tag')}</div><div><b>Payment</b><span>Credit card, Apple Pay, Google Pay, cash. Mastercard &amp; Visa accepted.</span></div></div>
+      <div class="info-row"><div class="ii">${ic('tag')}</div><div><b>Payment</b><span>Pay with credit or debit card, Apple Pay, Google Pay, or cash. We accept Mastercard and Visa.</span></div></div>
       <div class="info-row"><div class="ii">${ic('check')}</div><div><b>Biodegradable detergent</b><span>Available on request.</span></div></div>
       <a class="btn btn--primary btn--block" style="margin-top:16px;" href="https://www.google.com/maps/place/Blessington+Street+Laundrette/@-37.870384,144.9776551,17z" target="_blank" rel="noopener">${ic('pin')} Get directions</a>
     </div>
