@@ -43,8 +43,8 @@ const BRAND_MARK_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColo
 /* ---------------- services data — text from blessingtonstreetlaunderette.com.au only ---------------- */
 const SERVICES = [
   { id:'self-service', name:'Self-Service Laundry', icon:'drum', img:'images/img-machines.jpg', from:'$6',
-    blurb:'Melbourne\'s biggest self-service laundrette. Open 24/7 for your convenience.',
-    desc:'Enjoy 24-hour laundrette access in St Kilda with secure keypad entry, 223182# so you can do your laundry whenever it suits you — early mornings, late nights, or anytime in between.',
+    blurb:'Melbourne\'s biggest self-service launderette. Open 24/7 for your convenience.',
+    desc:'Enjoy 24-hour launderette access in St Kilda with secure keypad entry, 223182# so you can do your laundry whenever it suits you — early mornings, late nights, or anytime in between.',
     extra:'Pay with credit or debit card, Apple Pay, Google Pay, or cash — whatever works best for you. Our Service Hours: 7:30am – 7:00pm, 7 days a week.',
     chips:['Open 24/7','30 high-capacity Dexter washers','28 double-stack EXPRESS dryers','Credit card · Apple Pay · Google Pay · cash','Secure keypad entry 223182#','Clean, spacious & easy-to-use'],
     rows:[['5 kg Front Loader','$6'],['7 kg Front Loader','$7'],['16 kg Front Loader','$14 / Super wash $16'],['24 kg Front Loader','$16'],['28 kg Front Loader','$20']] },
@@ -58,7 +58,7 @@ const SERVICES = [
 
   { id:'dry-cleaning', name:'Dry Cleaning', icon:'hanger', img:'images/img-dry-cleaning.jpg', from:'from $6.50',
     blurb:'Expert care for delicate fabrics, business wear, and special garments — cleaned with attention to detail.',
-    desc:'Dry cleaning at Blessington Street Laundrette is a cost-effective and highly recommended service for garments that require specialized care. Our expert dry cleaners treat each garment as if it were their own, ensuring that your clothing receives the best possible care. Same-day service available when dropped off by 9am.',
+    desc:'Dry cleaning at Blessington Street Launderette is a cost-effective and highly recommended service for garments that require specialized care. Our expert dry cleaners treat each garment as if it were their own, ensuring that your clothing receives the best possible care. Same-day service available when dropped off by 9am.',
     extra:'Whether you choose to drop off your items in person or take advantage of our convenient pick-up service, we ensure a seamless experience from start to finish. We use the most sophisticated cleaning machinery and environmentally friendly solvents.',
     chipsGrid:true,
     chips:['<b>Business Attire</b><br><span style="font-size:11.5px;opacity:.7;font-weight:400;">suits, shirts, blouses</span>','<b>Evening Wear</b><br><span style="font-size:11.5px;opacity:.7;font-weight:400;">gowns, dresses, tuxedos</span>','<b>Outerwear</b><br><span style="font-size:11.5px;opacity:.7;font-weight:400;">coats, jackets, wool blends</span>','<b>Delicate Fabrics</b><br><span style="font-size:11.5px;opacity:.7;font-weight:400;">silk, cashmere & more</span>','<b>Specialty Items</b><br><span style="font-size:11.5px;opacity:.7;font-weight:400;">leather, suede & more</span>','<b>Same-day available</b><br><span style="font-size:11.5px;opacity:.7;font-weight:400;">drop off by 9am</span>'],
@@ -73,7 +73,7 @@ const SERVICES = [
 
   { id:'business-shirts', name:'Business Shirts', icon:'hanger', img:'images/img-business-shirts.jpg', from:'$6 each / $25 for 5',
     blurb:'Sharp, Crisp & Always Fresh. 5 shirts professionally ironed for just $25.',
-    desc:'Look Your Best with Blessington Street Laundrette. Sharp, Crisp & Always Fresh. Our skilled team uses professional equipment and proven techniques to give shirts, blouses, trousers, and more a flawless finish every time. Need fresh, sharp shirts each week? Leave it to us — we\'ll have them looking crisp and ready to go.',
+    desc:'Look Your Best with Blessington Street Launderette. Sharp, Crisp & Always Fresh. Our skilled team uses professional equipment and proven techniques to give shirts, blouses, trousers, and more a flawless finish every time. Need fresh, sharp shirts each week? Leave it to us — we\'ll have them looking crisp and ready to go.',
     extra:'Not Just Shirts — from curtains to bedding to those tricky fabrics that never sit flat — we handle it all. Our heavy-duty steam table makes light work of large or bulky items. Curtains & Upholstery: prices vary by size and fabric — just give us a call for a quote.',
     chips:['5 shirts for $25 ($5 each)','Shirts, blouses & trousers','Professional equipment & techniques','Crisp flawless finish','Curtains & bedding','Heavy-duty steam table'],
     rows:[['5 shirts wash & iron','$25 ($5.00 each)'],['Single shirt','$6'],['Got Something Special Coming Up?','Wedding, party or event — ask us']] },
@@ -87,14 +87,14 @@ const SERVICES = [
 
   { id:'stain-removal', name:'Stain Removal', icon:'drop', img:'images/img-stain.jpg', from:'from $12',
     blurb:'Say Goodbye to Stubborn Marks. We\'ve seen it all, and we know just what to do.',
-    desc:'Spilled wine on your favourite dress? Ink on your work shirt? Oil on your best jacket? Don\'t panic — we\'ve seen it all, and we know just what to do. At Blessington Street Laundrette, we understand that no two stains are alike. From coffee and curry to lipstick, paint, or grease, each mark needs its own special approach.',
+    desc:'Spilled wine on your favourite dress? Ink on your work shirt? Oil on your best jacket? Don\'t panic — we\'ve seen it all, and we know just what to do. At Blessington Street Launderette, we understand that no two stains are alike. From coffee and curry to lipstick, paint, or grease, each mark needs its own special approach.',
     extra:'We\'ll always do our best to give your clothes the greatest chance of a full recovery — and we\'ll be honest about what\'s possible before we begin.',
     chips:['Tailored Treatments — every stain & fabric gets the right method','Professional Care — proven techniques & quality cleaning solutions','Gentle on Fabrics — tough on stains, kind to your clothes','Save Your Favourites — don\'t write off that much-loved garment'],
     rows:[['Stain removal','from $12'],['Assessment','honest upfront'],['Add to wash order','yes']] },
 
   { id:'repairs-alterations', name:'Repairs & Alterations', icon:'needle', img:'images/img-alterations.jpg', from:'quoted in store',
     blurb:'Love Your Clothes for Longer. From simple hems to complete re-sizing.',
-    desc:'Why say goodbye to your favourite clothes or shoes when they can be brought back to life? At Blessington Street Laundrette, we believe in making the most of what you already love — saving you money and reducing waste while keeping you looking your best. From simple hems to complete re-sizing, our skilled alteration service can adjust your garments so they fit and feel just right.',
+    desc:'Why say goodbye to your favourite clothes or shoes when they can be brought back to life? At Blessington Street Launderette, we believe in making the most of what you already love — saving you money and reducing waste while keeping you looking your best. From simple hems to complete re-sizing, our skilled alteration service can adjust your garments so they fit and feel just right.',
     extra:'Whether it\'s a formal dress, a business suit, or everyday wear, we\'ll make sure it flatters you perfectly. Whether it\'s fixing a tear, shortening sleeves, or giving your favourite garment a refresh, we treat every item with care and precision.',
     chips:['Save Money — restoring costs far less than buying new','Better for the Planet — reduce waste & keep quality materials in use','Keep the Comfort — already broken-in items are often more comfortable','Hold on to Memories — some items are simply irreplaceable'],
     rows:[['Clothing alterations','quoted in store'],['Simple hems to complete re-sizing','available'],['Repairs & alterations','quoted on inspection']] },
@@ -116,7 +116,7 @@ const SERVICES = [
   { id:'pickup-delivery', name:'Pickup & Delivery', icon:'truck', img:'images/img-truck.jpg', from:'from $60',
     blurb:'Too busy to come in? We\'ll collect your laundry, clean it, and deliver it back fresh and ready to use.',
     desc:'Too busy to come in? We\'ll collect your laundry, clean it, and deliver it back fresh and ready to use. Services starting from $60. Free pick-up and drop off with every laundry order over $60.',
-    extra:'Blessington Street Laundrette proudly serves customers across Melbourne, including St Kilda, Middle Park, Albert Park, Port Melbourne, Southbank, Elwood, South Yarra, Richmond, Fitzroy, Collingwood, Abbotsford, Brighton, Caulfield and Melbourne CBD.',
+    extra:'Blessington Street Launderette proudly serves customers across Melbourne, including St Kilda, Middle Park, Albert Park, Port Melbourne, Southbank, Elwood, South Yarra, Richmond, Fitzroy, Collingwood, Abbotsford, Brighton, Caulfield and Melbourne CBD.',
     chips:['Free pickup & drop off over $60','St Kilda · Middle Park · Albert Park','Port Melbourne · Southbank · Elwood','South Yarra · Richmond · Fitzroy','Brighton · Caulfield · Melbourne CBD','Services starting from $60'],
     rows:[['Services starting from','$60'],['Mastercard & Visa','accepted'],['Account facility','available on request']] },
 ];
@@ -181,9 +181,9 @@ function heroStandard(T) {
         <a class="btn btn--primary" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
         <a class="btn btn--ghost" data-go="pricing">See pricing</a>
       </div>
-      <div class="trust"><span class="stars">★★★★★</span> Melbourne's Biggest Self-Service Laundrette</div>
+      <div class="trust"><span class="stars">★★★★★</span> Melbourne's Biggest Self-Service Launderette</div>
     </div>
-    ${photo('images/img-home.jpg', 'Blessington Street Laundrette', 'hero__photo')}
+    ${photo('images/img-home.jpg', 'Blessington Street Launderette', 'hero__photo')}
   </div>`;
 }
 function heroCompact(T) {
@@ -354,7 +354,7 @@ function renderCommercial() {
   <div class="banner">
     <div>
       <h3>Book a Commercial Laundry Pickup Today</h3>
-      <p>Take the pressure off your team and ensure clean, professional-quality linen ready to use. Contact Blessington Street Laundrette to set up service.</p>
+      <p>Take the pressure off your team and ensure clean, professional-quality linen ready to use. Contact Blessington Street Launderette to set up service.</p>
       <p style="margin-top:10px; color:rgba(255,255,255,.85);">We offer self-service laundry, commercial laundry, dry cleaning, pick-up &amp; delivery, and more across these areas. Looking for reliable, high-quality laundry services in your neighborhood? We've got you covered!</p>
     </div>
     <a class="btn btn--ghost" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
@@ -385,7 +385,7 @@ function renderWhyChooseUs() {
   return `
   <div class="head-block">
     <span class="eyebrow">${ic('star')} Why Choose Us</span>
-    <h1>Why Businesses Choose Blessington Street Laundrette</h1>
+    <h1>Why Businesses Choose Blessington Street Launderette</h1>
   </div>
 
   <div class="grid-4" style="margin-bottom:40px;">
@@ -462,7 +462,7 @@ function renderDelivery() {
     </div>
     <div class="info-card">
       <h3>Service Areas</h3>
-      <p style="font-size:13px; color:var(--muted); margin-bottom:14px;">Blessington Street Laundrette proudly serves customers across Melbourne, including:</p>
+      <p style="font-size:13px; color:var(--muted); margin-bottom:14px;">Blessington Street Launderette proudly serves customers across Melbourne, including:</p>
       <div class="chips" style="flex-wrap:wrap;">
         ${areas.map(a => `<span class="chip">${a}</span>`).join('')}
       </div>
@@ -517,11 +517,11 @@ function renderFind() {
       src="https://maps.google.com/maps?q=-37.870384,144.98023&z=17&output=embed"
       width="100%" height="460" style="border:0; display:block;"
       allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-      title="Blessington Street Laundrette on Google Maps">
+      title="Blessington Street Launderette on Google Maps">
     </iframe>
   </div>
   <div style="margin-top:16px;">
-    <a class="btn btn--primary" href="https://www.google.com/maps/dir/?api=1&destination=Blessington+Street+Laundrette,22+Blessington+St,St+Kilda+VIC+3182" target="_blank" rel="noopener">${ic('pin')} Get directions</a>
+    <a class="btn btn--primary" href="https://www.google.com/maps/dir/?api=1&destination=Blessington+Street+Launderette,22+Blessington+St,St+Kilda+VIC+3182" target="_blank" rel="noopener">${ic('pin')} Get directions</a>
   </div>
   ${footer()}`;
 }
