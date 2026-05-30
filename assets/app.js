@@ -317,14 +317,9 @@ function renderCommercial() {
     </div>
   </div>
 
-  <div class="sec-head"><div>
-    <h2>Commercial Medical &amp; Linen Laundry Service in St Kilda &amp; Melbourne</h2>
-    <p style="margin-top:8px; color:var(--ink-soft);">For Clinics, Gyms, Rehab Centres &amp; Healthcare Facilities</p>
-  </div></div>
-
-  <div class="card" style="padding:28px; margin-bottom:40px;">
-    <h3 style="font-size:20px; margin-bottom:12px;">Save Staff Time, Reduce Costs &amp; Maintain Professional Hygiene Standards</h3>
-    <p style="font-size:16px; color:var(--ink-soft); line-height:1.6;">Running a medical clinic is demanding — your team shouldn't be tied up washing towels and linen. Professional cleaning includes sanitisation, drying, folding, and next-day return of fresh, hygienic items.</p>
+  <div class="sec-head"><div><h2>How Our Commercial Laundry Service Works</h2></div></div>
+  <div class="steps" style="margin-bottom:40px;">
+    ${steps.map((st, i) => `<div class="step"><div class="num">${i + 1}</div><h3>${st[0]}</h3><p>${st[1]}</p></div>`).join('')}
   </div>
 
   <div class="sec-head"><div><h2>Who We Service</h2></div></div>
@@ -333,11 +328,6 @@ function renderCommercial() {
       <h3 style="font-size:14px; margin-bottom:6px;">${ind.name}</h3>
       <p style="font-size:13px; color:var(--ink-soft); line-height:1.5;">${ind.desc}</p>
     </div>`).join('')}
-  </div>
-
-  <div class="sec-head"><div><h2>How Our Commercial Laundry Service Works</h2></div></div>
-  <div class="steps" style="margin-bottom:40px;">
-    ${steps.map((st, i) => `<div class="step"><div class="num">${i + 1}</div><h3>${st[0]}</h3><p>${st[1]}</p></div>`).join('')}
   </div>
 
   <div class="info-card" style="margin-bottom:40px;">
