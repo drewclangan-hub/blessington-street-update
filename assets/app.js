@@ -492,7 +492,6 @@ function renderHours() {
       <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Phone</b><span><a href="${BIZ.phone2Href}" style="color:var(--accent);">${BIZ.phone2}</a></span></div></div>
       <div class="info-row"><div class="ii">${ic('pin')}</div><div><b>Address</b><span>${BIZ.addr}</span></div></div>
       <div class="info-row"><div class="ii">${ic('tag')}</div><div><b>Payment</b><span>Pay with credit or debit card, Apple Pay, Google Pay, or cash. We accept Mastercard and Visa.</span></div></div>
-      <div class="info-row"><div class="ii">${ic('check')}</div><div><b>Biodegradable detergent</b><span>Available on request.</span></div></div>
       <a class="btn btn--primary btn--block" style="margin-top:16px;" href="https://www.google.com/maps/place/Blessington+Street+Laundrette/@-37.870384,144.9776551,17z" target="_blank" rel="noopener">${ic('pin')} Get directions</a>
     </div>
   </div>
