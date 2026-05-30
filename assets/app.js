@@ -231,14 +231,27 @@ function svcCard(s) {
 }
 function renderHome() {
   const T = TWEAKS;
+  const cols = T.columns || 3;
   const hero = T.hero === 'hidden' ? '' : (T.hero === 'standard' ? heroStandard(T) : heroCompact(T));
+
+  const rem = SERVICES.length % cols;
+  const mainServices = rem ? SERVICES.slice(0, -rem) : SERVICES;
+  const lastServices = rem ? SERVICES.slice(-rem) : [];
+
+  const itemWidth = `calc((100% - ${cols - 1} * 18px) / ${cols})`;
+  const lastRow = lastServices.length ? `
+    <div style="display:flex; justify-content:center; gap:18px; grid-column:1/-1;">
+      ${lastServices.map(s => `<div style="flex:0 0 ${itemWidth}; min-width:0;">${svcCard(s)}</div>`).join('')}
+    </div>` : '';
+
   return `
   ${hero}
   <div class="sec-head">
     <div><h2>Services</h2></div>
   </div>
   <div class="svc-grid">
-    ${SERVICES.map(svcCard).join('')}
+    ${mainServices.map(svcCard).join('')}
+    ${lastRow}
   </div>
   ${T.showBanner ? bannerBlock() : ''}
   ${footer()}`;
