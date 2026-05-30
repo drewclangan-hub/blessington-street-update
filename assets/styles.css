@@ -198,10 +198,10 @@ body.nav-open .sidebar{z-index:75;}
 
 /* ---- MENU BUTTON ---- */
 .menu-btn{
-  display:none; /* hidden by default — shown only on mobile via block below */
-  align-items:center; gap:7px;
+  display:none;
+  align-items:center; gap:8px;
   margin-left:auto; flex:none;
-  height:44px; padding:0 14px 0 10px;
+  height:48px; padding:0 18px 0 14px; min-width:100px;
   border-radius:999px; border:1.5px solid var(--accent);
   background:var(--accent-tint); color:var(--accent-press);
   cursor:pointer; font-size:13px; font-weight:700;
@@ -211,6 +211,8 @@ body.nav-open .sidebar{z-index:75;}
 .menu-btn__label{font-size:13px; font-weight:700; letter-spacing:.01em;}
 @media(max-width:859px){.menu-btn{display:flex;}}
 @media(min-width:860px){.menu-btn{display:none;}}
+/* Prevent brand tap-to-home on mobile — nav drawer is the way to navigate */
+@media(max-width:859px){.brand{pointer-events:none;} .brand__mark,.brand__name{pointer-events:none;} .menu-btn{pointer-events:auto;}}
 
 /* ---- MAIN ---- */
 .main{min-width:0; flex:1;}
