@@ -613,9 +613,10 @@ document.addEventListener('click', (e) => {
     const ok = document.getElementById('formOk');
     if (ok) { ok.classList.add('show'); document.getElementById('sendBtn').style.display = 'none'; }
   }
-  if (e.target.closest('.menu-btn')) document.body.classList.toggle('nav-open');
-  if (e.target.closest('.nav-overlay')) document.body.classList.remove('nav-open');
-  if (e.target.closest('.brand')) location.hash = '#/home';
+  if (e.target.closest('.menu-btn')) { document.body.classList.toggle('nav-open'); return; }
+  if (e.target.closest('.nav__close')) { document.body.classList.remove('nav-open'); return; }
+  if (e.target.closest('.nav-overlay')) { document.body.classList.remove('nav-open'); return; }
+  if (e.target.closest('.brand') && !document.body.classList.contains('nav-open')) location.hash = '#/home';
 });
 window.addEventListener('hashchange', route);
 
