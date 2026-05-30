@@ -413,8 +413,13 @@ function renderPricing() {
     <h1>Pricing</h1>
     <p class="lede">Free pick-up and drop off with every laundry order over $60. Biodegradable detergent is available.</p>
   </div>
-  <div class="price-grid">
-    ${SERVICES.map(s => `
+  ${(() => {
+    const pricingServices = SERVICES.filter(s => s.id !== 'pickup-delivery');
+    const cols = 3;
+    const rem = pricingServices.length % cols;
+    const main = rem ? pricingServices.slice(0, -rem) : pricingServices;
+    const last = rem ? pricingServices.slice(-rem) : [];
+    const cardHtml = s => `
     <div class="price-card">
       <div class="price-card__head">
         <div class="price-card__ico">${ic(s.icon)}</div>
@@ -426,8 +431,14 @@ function renderPricing() {
       <div class="price-card__rows">
         ${s.rows.map(r => `<div class="price-card__row"><span>${r[0]}</span><b>${r[1]}</b></div>`).join('')}
       </div>
-    </div>`).join('')}
-  </div>
+    </div>`;
+    const itemWidth = `calc((100% - ${cols - 1} * 18px) / ${cols})`;
+    const lastRow = last.length ? `
+    <div style="display:flex; justify-content:center; gap:18px; grid-column:1/-1;">
+      ${last.map(s => `<div style="flex:0 0 ${itemWidth}; min-width:0;">${cardHtml(s)}</div>`).join('')}
+    </div>` : '';
+    return `<div class="price-grid">${main.map(cardHtml).join('')}${lastRow}</div>`;
+  })()}
   <div class="banner" style="margin-top:10px;">
     <div><p>We offer self-service laundry, commercial laundry, dry cleaning, pick-up &amp; delivery, and more. We accept Mastercard and Visa. Account facility is available upon request for commercial (pick-up &amp; delivery) service.</p></div>
     <a class="btn btn--ghost" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
