@@ -174,10 +174,8 @@ body.nav-open .sidebar{z-index:75;}
 .side-cta{display:none;}
 .side-foot{display:none;}
 
-/* Show CTA and footer info inside mobile drawer */
-.nav__cta{display:block; margin:16px 4px 6px; padding:16px; border-radius:var(--r); background:linear-gradient(160deg, var(--accent-tint), var(--accent-tint-2)); border:1px solid var(--line-soft);}
-.nav__cta p{font-size:13px; color:var(--ink-soft); margin-bottom:10px; line-height:1.35;}
-.nav__cta strong{color:var(--ink);}
+/* Show footer info inside mobile drawer, hide blue CTA box */
+.nav__cta{display:none;}
 .nav__foot{display:block; margin-top:auto; padding:16px 10px 4px; border-top:1px solid var(--line-soft); font-size:12.5px; color:var(--ink-soft); line-height:1.55;}
 
 @media(min-width:860px){
