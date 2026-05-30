@@ -284,37 +284,21 @@ function renderService(id) {
 
 /* ---------------- COMMERCIAL ---------------- */
 function renderCommercial() {
-  const whoWeService = ['Medical Clinics & Doctor Surgeries','Rehab Centres & Physiotherapy Clinics','Gyms & Fitness Studios','Dental Clinics','Wellness Clinics & Day Spas','Aged Care & Specialist Facilities'];
   const whatWeClean = ['Towels and gym linen','Medical and patient gowns','Bed sheets and pillowcases','Staff uniforms','Treatment room linen','Massage and therapy towels','Cleaning cloths','Robes and spa linen'];
-  const whyUs = [
-    { head:'Save Staff Time & Improve Productivity', body:'Your team should focus on patients and clients — not managing laundry.' },
-    { head:'Professional Sanitisation & Hygiene', body:'Commercial-grade systems designed for deep cleaning and proper linen care.' },
-    { head:'Fast, Next-Day Turnaround', body:'Never run out of clean linen again with efficient processing.' },
-    { head:'Reliable Pickup & Delivery', body:'Collection and return on schedules fitting your business operations.' },
-    { head:'More Cost-Effective Than In-House Laundry', body:'Outsourcing laundry is often financially smarter than managing onsite.' },
-  ];
-  const industries = [
+  const whoAndIndustries = [
+    { name:'Medical Clinics & Doctor Surgeries', desc:'Scrubs, towels, uniforms cleaned to strict hygiene standards.' },
+    { name:'Rehab Centres & Physiotherapy Clinics', desc:'Scrubs, towels, uniforms cleaned to strict hygiene standards.' },
     { name:'Dental Clinics & Medical Specialists', desc:'Scrubs, towels, uniforms cleaned to strict hygiene standards.' },
+    { name:'Aged Care & Specialist Facilities', desc:'Scrubs, towels, uniforms cleaned to strict hygiene standards.' },
+    { name:'Wellness Clinics & Day Spas', desc:'We clean towels, robes, sheets, and pillow covers to premium standards.' },
+    { name:'Massage Therapists & Day Spas', desc:'We clean towels, robes, sheets, and pillow covers to premium standards.' },
+    { name:'Fitness Centres & Gyms', desc:'Towel and uniform laundry with fast turnaround.' },
     { name:'Restaurants & Cafés', desc:'Tablecloths, napkins, aprons, chef jackets cleaned to high standard.' },
     { name:'Hair & Beauty Salons', desc:'Salon towels, gowns, capes professionally laundered and pressed.' },
-    { name:'Massage Therapists & Day Spas', desc:'We clean towels, robes, sheets, and pillow covers to premium standards.' },
     { name:'Hotels, Motels & Short-Stay Accommodation', desc:'High-volume laundry for sheets, pillowcases, towels, staff uniforms.' },
     { name:'Cleaning Companies', desc:'Uniforms, rags, mop heads, towels cleaned efficiently.' },
     { name:'Childcare Centres & Schools', desc:'Bedding, uniforms, activity mats sanitised for child safety.' },
-    { name:'Fitness Centres & Gyms', desc:'Towel and uniform laundry with fast turnaround.' },
     { name:'Event & Function Coordinators', desc:'Tablecloths, chair covers, event linens cleaned and returned flawlessly.' },
-  ];
-  const whyChoose = [
-    { head:'Tailored Laundry Solutions', body:'Custom plans for business size, industry, schedule.' },
-    { head:'Reliable Pick-Up & Delivery', body:'Same-day or scheduled delivery, always on time.' },
-    { head:'Quality-First Approach', body:'Latest commercial laundry tech and premium detergents.' },
-    { head:'Eco-Friendly Practices', body:'Biodegradable detergent options and sustainable methods.' },
-  ];
-  const testimonials = [
-    { name:'Rachel Berger', role:'Comedian', quote:'I\'ve been a regular for over 20 years...the service is impeccable.' },
-    { name:'Kerry Mccormack', role:'Regular Customer', quote:'Rita, Milad and the girls are always pleasant...end result always immaculately cleaned.' },
-    { name:'Will Cochrane', role:'Regular Customer', quote:'I have been using the Blessington Street Laundry for over 10 years...always assured the job will be done properly.' },
-    { name:'The Hon Neil Brown QC', role:'Regular Customer', quote:'I have used it for several years...very happy with the quality of work.' },
   ];
   const steps = [
     ['Schedule a Pickup', 'Organise regular collection times.'],
@@ -343,22 +327,11 @@ function renderCommercial() {
     <p style="font-size:16px; color:var(--ink-soft); line-height:1.6;">Running a medical clinic is demanding — your team shouldn't be tied up washing towels and linen. Professional cleaning includes sanitisation, drying, folding, and next-day return of fresh, hygienic items.</p>
   </div>
 
-  <div class="split2" style="margin-bottom:40px; align-items:start;">
-    <div class="info-card">
-      <h3>Who We Service</h3>
-      ${whoWeService.map(s => `<div class="info-row" style="padding:8px 0;"><div class="ii">${ic('check')}</div><div><span>${s}</span></div></div>`).join('')}
-    </div>
-    <div class="info-card">
-      <h3>What We Clean</h3>
-      ${whatWeClean.map(s => `<div class="info-row" style="padding:8px 0;"><div class="ii">${ic('check')}</div><div><span>${s}</span></div></div>`).join('')}
-    </div>
-  </div>
-
-  <div class="sec-head"><div><h2>Why Businesses Choose Blessington Street Laundrette</h2></div></div>
-  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:40px;">
-    ${whyUs.map(w => `<div class="card" style="padding:22px;">
-      <h3 style="font-size:15px; margin-bottom:8px;">${w.head}</h3>
-      <p style="font-size:13.5px; color:var(--ink-soft); line-height:1.55;">${w.body}</p>
+  <div class="sec-head"><div><h2>Who We Service</h2></div></div>
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:40px;">
+    ${whoAndIndustries.map(ind => `<div class="card" style="padding:18px;">
+      <h3 style="font-size:14px; margin-bottom:6px;">${ind.name}</h3>
+      <p style="font-size:13px; color:var(--ink-soft); line-height:1.5;">${ind.desc}</p>
     </div>`).join('')}
   </div>
 
@@ -367,11 +340,57 @@ function renderCommercial() {
     ${steps.map((st, i) => `<div class="step"><div class="num">${i + 1}</div><h3>${st[0]}</h3><p>${st[1]}</p></div>`).join('')}
   </div>
 
-  <div class="sec-head"><div><h2>Industries We Serve</h2></div></div>
-  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:40px;">
-    ${industries.map(ind => `<div class="card" style="padding:18px;">
-      <h3 style="font-size:14px; margin-bottom:6px;">${ind.name}</h3>
-      <p style="font-size:13px; color:var(--ink-soft); line-height:1.5;">${ind.desc}</p>
+  <div class="info-card" style="margin-bottom:40px;">
+    <h3>What We Clean</h3>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:4px 24px;">
+      ${whatWeClean.map(s => `<div class="info-row" style="padding:8px 0;"><div class="ii">${ic('check')}</div><div><span>${s}</span></div></div>`).join('')}
+    </div>
+  </div>
+
+  <div class="banner">
+    <div>
+      <h3>Book a Commercial Laundry Pickup Today</h3>
+      <p>Take the pressure off your team and ensure clean, professional-quality linen ready to use. Contact Blessington Street Laundrette to set up service.</p>
+      <p style="margin-top:10px; color:rgba(255,255,255,.85);">We offer self-service laundry, commercial laundry, dry cleaning, pick-up &amp; delivery, and more across these areas. Looking for reliable, high-quality laundry services in your neighborhood? We've got you covered!</p>
+    </div>
+    <a class="btn btn--ghost" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
+  </div>
+
+  ${footer()}`;
+}
+
+/* ---------------- WHY CHOOSE US ---------------- */
+function renderWhyChooseUs() {
+  const whyUs = [
+    { head:'Save Staff Time & Improve Productivity', body:'Your team should focus on patients and clients — not managing laundry.' },
+    { head:'Professional Sanitisation & Hygiene', body:'Commercial-grade systems designed for deep cleaning and proper linen care.' },
+    { head:'Fast, Next-Day Turnaround', body:'Never run out of clean linen again with efficient processing.' },
+    { head:'Reliable Pickup & Delivery', body:'Collection and return on schedules fitting your business operations.' },
+    { head:'More Cost-Effective Than In-House Laundry', body:'Outsourcing laundry is often financially smarter than managing onsite.' },
+  ];
+  const whyChoose = [
+    { head:'Tailored Laundry Solutions', body:'Custom plans for business size, industry, schedule.' },
+    { head:'Reliable Pick-Up & Delivery', body:'Same-day or scheduled delivery, always on time.' },
+    { head:'Quality-First Approach', body:'Latest commercial laundry tech and premium detergents.' },
+    { head:'Eco-Friendly Practices', body:'Biodegradable detergent options and sustainable methods.' },
+  ];
+  const testimonials = [
+    { name:'Rachel Berger', role:'Comedian', quote:'I\'ve been a regular for over 20 years...the service is impeccable.' },
+    { name:'Kerry Mccormack', role:'Regular Customer', quote:'Rita, Milad and the girls are always pleasant...end result always immaculately cleaned.' },
+    { name:'Will Cochrane', role:'Regular Customer', quote:'I have been using the Blessington Street Laundry for over 10 years...always assured the job will be done properly.' },
+    { name:'The Hon Neil Brown QC', role:'Regular Customer', quote:'I have used it for several years...very happy with the quality of work.' },
+  ];
+
+  return `
+  <div class="head-block">
+    <span class="eyebrow">${ic('star')} Why Choose Us</span>
+    <h1>Why Businesses Choose Blessington Street Laundrette</h1>
+  </div>
+
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:40px;">
+    ${whyUs.map(w => `<div class="card" style="padding:22px;">
+      <h3 style="font-size:15px; margin-bottom:8px;">${w.head}</h3>
+      <p style="font-size:13.5px; color:var(--ink-soft); line-height:1.55;">${w.body}</p>
     </div>`).join('')}
   </div>
 
@@ -390,15 +409,6 @@ function renderCommercial() {
       <div style="font-size:13px; font-weight:700; color:var(--ink);">${t.name}</div>
       <div style="font-size:12px; color:var(--muted);">${t.role}</div>
     </div>`).join('')}
-  </div>
-
-  <div class="banner">
-    <div>
-      <h3>Book a Commercial Laundry Pickup Today</h3>
-      <p>Take the pressure off your team and ensure clean, professional-quality linen ready to use. Contact Blessington Street Laundrette to set up service.</p>
-      <p style="margin-top:10px; color:rgba(255,255,255,.85);">We offer self-service laundry, commercial laundry, dry cleaning, pick-up &amp; delivery, and more across these areas. Looking for reliable, high-quality laundry services in your neighborhood? We've got you covered!</p>
-    </div>
-    <a class="btn btn--ghost" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
   </div>
 
   ${footer()}`;
@@ -573,7 +583,8 @@ function footer() {
 /* ---------------- ROUTER ---------------- */
 const ROUTES = {
   home: renderHome, pricing: renderPricing, delivery: renderDelivery,
-  commercial: renderCommercial, hours: renderHours, find: renderFind, contact: renderContact,
+  commercial: renderCommercial, whychooseus: renderWhyChooseUs,
+  hours: renderHours, find: renderFind, contact: renderContact,
 };
 
 function route() {
