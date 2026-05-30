@@ -29,6 +29,13 @@ const ICON = (() => {
     grid:`<svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.6" ${w}/><rect x="13" y="4" width="7" height="7" rx="1.6" ${w}/><rect x="4" y="13" width="7" height="7" rx="1.6" ${w}/><rect x="13" y="13" width="7" height="7" rx="1.6" ${w}/></svg>`,
     tag:`<svg viewBox="0 0 24 24"><path d="M4 12.5V5.5A1.5 1.5 0 0 1 5.5 4h7l7.5 7.5a1.6 1.6 0 0 1 0 2.2l-5.3 5.3a1.6 1.6 0 0 1-2.2 0Z" ${w}/><circle cx="8.5" cy="8.5" r="1.2" ${w}/></svg>`,
     star:`<svg viewBox="0 0 24 24"><path d="M12 4l2.3 4.8 5.2.7-3.8 3.7.9 5.2L12 16.6 7.4 18.4l.9-5.2L4.5 9.5l5.2-.7Z" ${w}/></svg>`,
+    scissors:`<svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5" ${w}/><circle cx="6" cy="18" r="2.5" ${w}/><path d="M8.3 7.7L20 20M8.3 16.3L20 4" ${w}/></svg>`,
+    fork:`<svg viewBox="0 0 24 24"><path d="M8 3v5a3 3 0 0 0 6 0V3M11 8v13M17 3v18M14.5 7a2.5 2.5 0 0 0 2.5-2.5" ${w}/></svg>`,
+    building:`<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1.5" ${w}/><path d="M9 21V10h6v11" ${w}/><path d="M9 13h6M9 16h6" ${w}/><rect x="10.5" y="3" width="3" height="4" rx=".5" ${w}/></svg>`,
+    heart:`<svg viewBox="0 0 24 24"><path d="M12 21C12 21 4 14.5 4 8.5a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 8.5C20 14.5 12 21 12 21Z" ${w}/></svg>`,
+    shirt:`<svg viewBox="0 0 24 24"><path d="M3 6l3-3 3 3v3l-2 1v8h10v-8l-2-1V6l3-3 3 3-3 3v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9Z" ${w}/></svg>`,
+    towel:`<svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2" ${w}/><path d="M5 8h14" ${w}/><path d="M5 13h14" ${w}/></svg>`,
+    child:`<svg viewBox="0 0 24 24"><circle cx="12" cy="5.5" r="2.5" ${w}/><path d="M8 21v-7a4 4 0 0 1 8 0v7" ${w}/><path d="M5 12l3-2M19 12l-3-2" ${w}/></svg>`,
   };
 })();
 const ic = (n) => ICON[n] || ICON.hanger;
@@ -308,28 +315,28 @@ function renderService(id) {
 /* ---------------- COMMERCIAL ---------------- */
 function renderCommercial() {
   const whatWeClean = [
-    { name:'Towels & gym linen', icon:'drop' },
-    { name:'Medical & patient gowns', icon:'spark' },
+    { name:'Towels & gym linen', icon:'towel' },
+    { name:'Medical & patient gowns', icon:'heart' },
     { name:'Bed sheets & pillowcases', icon:'bed' },
-    { name:'Staff uniforms', icon:'hanger' },
+    { name:'Staff uniforms', icon:'shirt' },
     { name:'Treatment room linen', icon:'spark' },
     { name:'Massage & therapy towels', icon:'drop' },
     { name:'Cleaning cloths', icon:'check' },
     { name:'Robes & spa linen', icon:'hanger' },
   ];
   const whoAndIndustries = [
-    { name:'Medical Clinics', icon:'spark' },
-    { name:'Rehab & Physio Clinics', icon:'spark' },
+    { name:'Medical Clinics', icon:'heart' },
+    { name:'Rehab & Physio', icon:'heart' },
     { name:'Dental Specialists', icon:'spark' },
-    { name:'Aged Care Facilities', icon:'star' },
+    { name:'Aged Care', icon:'star' },
     { name:'Wellness & Day Spas', icon:'drop' },
     { name:'Massage Therapists', icon:'drop' },
-    { name:'Fitness Centres & Gyms', icon:'coin' },
-    { name:'Restaurants & Cafés', icon:'stack' },
-    { name:'Hair & Beauty Salons', icon:'drop' },
-    { name:'Hotels & Accommodation', icon:'bed' },
+    { name:'Gyms & Fitness', icon:'coin' },
+    { name:'Restaurants & Cafés', icon:'fork' },
+    { name:'Hair & Beauty', icon:'scissors' },
+    { name:'Hotels & Accommodation', icon:'building' },
     { name:'Cleaning Companies', icon:'spark' },
-    { name:'Childcare & Schools', icon:'star' },
+    { name:'Childcare & Schools', icon:'child' },
     { name:'Events & Functions', icon:'camera' },
   ];
   const steps = [
@@ -349,19 +356,27 @@ function renderCommercial() {
   </div>
 
   <div class="sec-head"><div><h2>Who We Service</h2></div></div>
-  <div class="tile-grid" style="margin-bottom:32px;">
-    ${whoAndIndustries.map(ind => `<div class="tile">
-      <div class="tile__icon">${ic(ind.icon)}</div>
-      <span class="tile__name">${ind.name}</span>
-    </div>`).join('')}
+  <div class="carousel-wrap" style="margin-bottom:32px;">
+    <button class="carousel-btn carousel-btn--prev" onclick="blCarousel('who-carousel',-1)">${ic('back')}</button>
+    <div class="carousel" id="who-carousel">
+      ${whoAndIndustries.map(ind => `<div class="tile">
+        <div class="tile__icon">${ic(ind.icon)}</div>
+        <span class="tile__name">${ind.name}</span>
+      </div>`).join('')}
+    </div>
+    <button class="carousel-btn carousel-btn--next" onclick="blCarousel('who-carousel',1)">${ic('arrow')}</button>
   </div>
 
   <div class="sec-head"><div><h2>What We Clean</h2></div></div>
-  <div class="tile-grid" style="margin-bottom:32px;">
-    ${whatWeClean.map(s => `<div class="tile">
-      <div class="tile__icon">${ic(s.icon)}</div>
-      <span class="tile__name">${s.name}</span>
-    </div>`).join('')}
+  <div class="carousel-wrap" style="margin-bottom:32px;">
+    <button class="carousel-btn carousel-btn--prev" onclick="blCarousel('clean-carousel',-1)">${ic('back')}</button>
+    <div class="carousel" id="clean-carousel">
+      ${whatWeClean.map(s => `<div class="tile">
+        <div class="tile__icon">${ic(s.icon)}</div>
+        <span class="tile__name">${s.name}</span>
+      </div>`).join('')}
+    </div>
+    <button class="carousel-btn carousel-btn--next" onclick="blCarousel('clean-carousel',1)">${ic('arrow')}</button>
   </div>
 
   <div class="banner" style="margin-top:28px;">
