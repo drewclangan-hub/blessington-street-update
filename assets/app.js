@@ -286,8 +286,8 @@ function renderService(id) {
   <div class="more">
     <div class="sec-head" style="margin:0 0 14px;"><h2 style="font-size:22px;">Services</h2></div>
     <div class="carousel-wrap">
-      <button class="carousel-btn carousel-btn--prev" onclick="this.nextElementSibling.scrollBy({left:-240,behavior:'smooth'})">${ic('back')}</button>
-      <div class="carousel">
+      <button class="carousel-btn carousel-btn--prev" onclick="blCarousel('svc-carousel-${id}',-1)">${ic('back')}</button>
+      <div class="carousel" id="svc-carousel-${id}">
         ${SERVICES.filter(s => s.id !== id).map(s => `
         <div class="carousel-item" data-link="${s.id}">
           <img src="${s.img}" alt="${s.name}">
@@ -297,7 +297,7 @@ function renderService(id) {
           </div>
         </div>`).join('')}
       </div>
-      <button class="carousel-btn carousel-btn--next" onclick="this.previousElementSibling.scrollBy({left:240,behavior:'smooth'})">${ic('arrow')}</button>
+      <button class="carousel-btn carousel-btn--next" onclick="blCarousel('svc-carousel-${id}',1)">${ic('arrow')}</button>
     </div>
   </div>
   ${footer()}`;
@@ -634,6 +634,26 @@ document.addEventListener('click', (e) => {
   const b = e.target.closest('.looks button');
   if (b) setLook(b.dataset.look);
 });
+
+/* ---------------- carousel helper (infinite wrap) ---------------- */
+window.blCarousel = function(id, dir) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const step = 240;
+  if (dir > 0) {
+    if (el.scrollLeft + el.clientWidth >= el.scrollWidth - 2) {
+      el.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      el.scrollBy({ left: step, behavior: 'smooth' });
+    }
+  } else {
+    if (el.scrollLeft <= 2) {
+      el.scrollTo({ left: el.scrollWidth, behavior: 'smooth' });
+    } else {
+      el.scrollBy({ left: -step, behavior: 'smooth' });
+    }
+  }
+};
 
 /* ---------------- boot ---------------- */
 document.documentElement.style.setProperty('--cols', TWEAKS.columns);
