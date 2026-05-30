@@ -168,6 +168,7 @@ button{font-family:inherit;}
 .hero--compact{display:block; text-align:center; margin:4px 0 10px;}
 .hero--compact h1{font-size:clamp(23px,2.7vw,30px); margin:9px auto 9px; max-width:20ch;}
 .hero--compact .lede{font-size:15.5px; max-width:46ch; margin:0 auto;}
+.hero-tagline{font-size:11px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--accent-press); margin:10px auto 14px; max-width:none;}
 .hero--compact .cta-row{margin-top:16px; justify-content:center;}
 
 .sec-head{display:flex; align-items:flex-end; justify-content:space-between; gap:16px; margin:46px 0 20px;}

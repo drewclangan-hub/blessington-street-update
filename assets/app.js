@@ -188,6 +188,7 @@ function heroCompact(T) {
   <div class="hero hero--compact">
     <span class="eyebrow">Your local laundry · St Kilda</span>
     <h1>${T.headline}</h1>
+    <p class="hero-tagline">Save time &amp; money with Melbourne's biggest self-service coinless laundry</p>
     <p class="lede">30 machines · 28 dryers · open 24/7 · drop in or let us collect.</p>
   </div>`;
 }
