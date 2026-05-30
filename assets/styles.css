@@ -222,6 +222,8 @@ button{font-family:inherit;}
 .chips{display:flex; flex-wrap:wrap; gap:9px; margin-top:20px;}
 .chip{display:inline-flex; align-items:center; gap:7px; font-size:13.5px; font-weight:600; color:var(--ink); background:var(--surface-2); border:1px solid var(--line); border-radius:999px; padding:7px 14px;}
 .chip svg{width:14px; height:14px; color:var(--accent);}
+.chips--grid{display:grid; grid-template-columns:repeat(3,1fr); gap:9px;}
+.chip--grid{border-radius:var(--r-sm); align-items:flex-start; padding:10px 14px;}
 
 .pricebox{position:sticky; top:24px; padding:22px; border-radius:var(--r); background:var(--surface); border:1px solid var(--line); box-shadow:var(--shadow);}
 .pricebox h4{font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); font-family:var(--font-body); font-weight:700; margin-bottom:6px;}

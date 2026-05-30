@@ -60,7 +60,8 @@ const SERVICES = [
     blurb:'Expert care for delicate fabrics, business wear, and special garments — cleaned with attention to detail.',
     desc:'Dry cleaning at Blessington Street Laundrette is a cost-effective and highly recommended service for garments that require specialized care. Our expert dry cleaners treat each garment as if it were their own, ensuring that your clothing receives the best possible care. Same-day service available when dropped off by 9am.',
     extra:'Whether you choose to drop off your items in person or take advantage of our convenient pick-up service, we ensure a seamless experience from start to finish. We use the most sophisticated cleaning machinery and environmentally friendly solvents.',
-    chips:['Business Attire — suits, shirts, blouses','Evening Wear — gowns, dresses, tuxedos','Outerwear — coats, jackets, wool blends','Delicate Fabrics — silk, cashmere & more','Specialty Items — leather, suede & more','Same-day available — drop off by 9am'],
+    chipsGrid:true,
+    chips:['<b>Business Attire</b><br><span style="font-size:11.5px;opacity:.7;font-weight:400;">suits, shirts, blouses</span>','<b>Evening Wear</b><br><span style="font-size:11.5px;opacity:.7;font-weight:400;">gowns, dresses, tuxedos</span>','<b>Outerwear</b><br><span style="font-size:11.5px;opacity:.7;font-weight:400;">coats, jackets, wool blends</span>','<b>Delicate Fabrics</b><br><span style="font-size:11.5px;opacity:.7;font-weight:400;">silk, cashmere & more</span>','<b>Specialty Items</b><br><span style="font-size:11.5px;opacity:.7;font-weight:400;">leather, suede & more</span>','<b>Same-day available</b><br><span style="font-size:11.5px;opacity:.7;font-weight:400;">drop off by 9am</span>'],
     rows:[['Shirt','$6.50'],['Trousers / skirt','$9.90'],['Two-piece suit','$19.90'],['Dress','from $16'],['Same-day (drop off by 9am)','available'],['Pick-up & delivery','available']] },
 
   { id:'rug-cleaning', name:'Rug Cleaning', icon:'rug', img:'images/img-rug.jpg', from:'by size',
@@ -271,7 +272,7 @@ function renderService(id) {
     <div class="detail-desc">
       ${photo(s.img, s.name, 'detail-hero')}
       <p>${s.desc}</p>
-      <div class="chips">${s.chips.map(c => `<span class="chip">${ic('check')} ${c}</span>`).join('')}</div>
+      <div class="${s.chipsGrid ? 'chips chips--grid' : 'chips'}">${s.chips.map(c => `<span class="chip${s.chipsGrid ? ' chip--grid' : ''}">${ic('check')} ${c}</span>`).join('')}</div>
       <p style="margin-top:22px; font-size:15px; color:var(--muted); line-height:1.55;">${s.extra}</p>
     </div>
     <aside class="pricebox">
