@@ -436,8 +436,8 @@ function renderPricing() {
     </div>`;
     const itemWidth = `calc((100% - ${cols - 1} * 18px) / ${cols})`;
     const lastRow = last.length ? `
-    <div style="display:flex; justify-content:center; gap:18px; grid-column:1/-1;">
-      ${last.map(s => `<div style="flex:0 0 ${itemWidth}; min-width:0;">${cardHtml(s)}</div>`).join('')}
+    <div class="price-last-row" style="--item-w:${itemWidth}">
+      ${last.map(cardHtml).join('')}
     </div>` : '';
     return `<div class="price-grid">${main.map(cardHtml).join('')}${lastRow}</div>`;
   })()}
