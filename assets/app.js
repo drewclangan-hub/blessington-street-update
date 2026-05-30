@@ -418,12 +418,12 @@ function renderPricing() {
 function renderDelivery() {
   const areas = ['St Kilda','Middle Park','Albert Park','Port Melbourne','Southbank','Kew & Kew East','Abbotsford','Collingwood','Fitzroy','Richmond','Brighton','Caulfield & Caulfield South/East','South Yarra','Elwood','East Melbourne','Melbourne CBD (3004)'];
   return `
-  <div class="head-block"><span class="eyebrow">${ic('truck')} Pickup &amp; Delivery</span>
-    <h1>Pickup &amp; Delivery Laundry Service</h1>
+  <div class="head-block"><span class="eyebrow">${ic('truck')} Collection &amp; Delivery</span>
+    <h1>Collection &amp; Delivery</h1>
     <p class="lede">Too busy to come in? We'll collect your laundry, clean it, and deliver it back fresh and ready to use. Services starting from $60. Free pick-up and drop off with every laundry order over $60.</p>
     <div class="cta-row" style="margin-top:22px; display:flex; gap:12px;">
-      <a class="btn btn--primary" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
-      <a class="btn btn--ghost" href="${BIZ.phone2Href}">${ic('phone')} ${BIZ.phone2}</a>
+      <a class="btn btn--primary" href="${BIZ.phoneHref}">${ic('phone')} Mobile: ${BIZ.phone}</a>
+      <a class="btn btn--ghost" href="${BIZ.phone2Href}">${ic('phone')} Landline: ${BIZ.phone2}</a>
     </div>
   </div>
   <div class="split2">
