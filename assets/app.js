@@ -508,7 +508,7 @@ function renderFind() {
       title="Blessington Street Laundrette on Google Maps">
     </iframe>
   </div>
-  <div class="split2" style="margin-top:24px;">
+  <div style="margin-top:24px; max-width:520px; margin-left:auto; margin-right:auto;">
     <div class="info-card">
       <h3>GET IN TOUCH!</h3>
       <div class="info-row"><div class="ii">${ic('pin')}</div><div><b>Address</b><span>${BIZ.addr}</span></div></div>
