@@ -182,7 +182,7 @@ body.nav-open .sidebar{z-index:75;}
   .side-cta{display:block; margin:16px 4px 6px; padding:16px; border-radius:var(--r); background:linear-gradient(160deg, var(--accent-tint), var(--accent-tint-2)); border:1px solid var(--line-soft);}
   .side-cta p{font-size:13px; color:var(--ink-soft); margin-bottom:10px; line-height:1.35;}
   .side-cta strong{color:var(--ink);}
-  .side-foot{display:block; margin-top:auto; padding:16px 10px 4px; border-top:1px solid var(--line-soft); font-size:12.5px; color:var(--ink-soft); line-height:1.55;}
+  .side-foot{display:block; margin-top:16px; padding:16px 10px 4px; border-top:1px solid var(--line-soft); font-size:12.5px; color:var(--ink-soft); line-height:1.55;}
   /* Hide the mobile-only duplicates on desktop */
   .nav__cta{display:none;}
   .nav__foot{display:none;}
