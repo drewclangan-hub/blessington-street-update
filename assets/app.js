@@ -352,7 +352,10 @@ function renderCommercial() {
 
   <div class="sec-head"><div><h2>How It Works</h2></div></div>
   <div class="steps" style="margin-bottom:36px;">
-    ${steps.map((st, i) => `<div class="step"><div class="num">${i + 1}</div><h3>${st[0]}</h3><p>${st[1]}</p></div>`).join('')}
+    ${steps.map((st, i) => `
+      <div class="step"><div class="num">${i + 1}</div><h3>${st[0]}</h3><p>${st[1]}</p></div>
+      ${i < steps.length - 1 ? `<div class="step-arrow">${ic('arrow')}</div>` : ''}
+    `).join('')}
   </div>
 
   <div class="sec-head"><div><h2>Who We Service</h2></div></div>

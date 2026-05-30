@@ -495,8 +495,12 @@ body.nav-open .sidebar{z-index:75;}
 @media(min-width:640px){.head-block h1{margin:14px 0 14px;}}
 .head-block .lede{max-width:none;}
 
-.steps{display:grid; grid-template-columns:1fr; gap:12px; margin-top:8px; margin-bottom:28px;}
-@media(min-width:640px){.steps{grid-template-columns:repeat(3,1fr); gap:18px; margin-bottom:40px;}}
+.steps{display:flex; flex-direction:column; gap:0; margin-top:8px; margin-bottom:28px;}
+@media(min-width:640px){.steps{flex-direction:row; align-items:center; gap:0; margin-bottom:40px;}}
+.step-arrow{display:flex; justify-content:center; align-items:center; padding:6px 0; color:var(--accent); transform:rotate(90deg);}
+.step-arrow svg{width:22px; height:22px;}
+@media(min-width:640px){.step-arrow{padding:0 4px; transform:rotate(0deg); flex:none;}}
+@media(min-width:640px){.step{flex:1;}}
 .step{padding:18px; border-radius:var(--r); background:var(--surface); border:1px solid var(--line); box-shadow:var(--shadow-sm);}
 @media(min-width:640px){.step{padding:22px;}}
 .step .num{width:34px; height:34px; border-radius:11px; background:var(--accent); color:var(--on-accent); display:grid; place-items:center; font-family:var(--font-head); font-weight:var(--head-weight); margin-bottom:14px;}
