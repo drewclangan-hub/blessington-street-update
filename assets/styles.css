@@ -244,16 +244,25 @@ button{font-family:inherit;}
 .more-card b{display:block; font-size:14.5px;}
 .more-card span{font-size:12.5px; color:var(--muted);}
 
-/* ============================================================ PRICING / TABLES */
-.price-section{margin-top:26px;}
-.price-section .ps-head{display:flex; align-items:center; gap:12px; margin-bottom:8px;}
-.price-section .ps-head .di{width:38px; height:38px; border-radius:11px; background:var(--accent-tint); color:var(--accent-press); display:grid; place-items:center; flex:none;}
-.price-section .ps-head .di svg{width:20px; height:20px;}
-.price-table{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); overflow:hidden;}
-.price-table .tr{display:flex; justify-content:space-between; gap:16px; padding:14px 20px; font-size:15px; color:var(--ink-soft); border-bottom:1px solid var(--line-soft);}
-.price-table .tr:last-child{border-bottom:0;}
-.price-table .tr:hover{background:var(--surface-2);}
-.price-table .tr b{font-family:var(--font-head); font-weight:var(--head-weight); color:var(--ink); white-space:nowrap;}
+/* ============================================================ PRICING CARDS */
+.price-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-bottom:30px;}
+@media(max-width:860px){.price-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:520px){.price-grid{grid-template-columns:1fr;}}
+
+.price-card{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:22px; box-shadow:var(--shadow-sm); cursor:default; transition:.18s; display:flex; flex-direction:column; gap:12px;}
+.price-card:hover{transform:translateY(-4px); box-shadow:var(--shadow); border-color:var(--accent-tint-2);}
+.price-card__head{display:flex; align-items:center; gap:12px;}
+.price-card__ico{width:38px; height:38px; border-radius:11px; background:var(--accent-tint); color:var(--accent-press); display:grid; place-items:center; flex:none;}
+.price-card__ico svg{width:20px; height:20px;}
+.price-card__name{font-family:var(--font-head); font-weight:var(--head-weight); font-size:15px; color:var(--ink); line-height:1.2;}
+.price-card__from{font-size:13px; color:var(--accent-press); font-weight:700; margin-top:2px;}
+.price-card__rows{overflow:hidden; max-height:0; transition:max-height .28s ease, opacity .2s ease; opacity:0; border-top:0 solid var(--line-soft);}
+.price-card:hover .price-card__rows{max-height:320px; opacity:1; border-top-width:1px; padding-top:12px;}
+.price-card__row{display:flex; justify-content:space-between; gap:12px; padding:7px 0; font-size:13px; color:var(--ink-soft); border-bottom:1px solid var(--line-soft);}
+.price-card__row:last-child{border-bottom:0;}
+.price-card__row b{font-family:var(--font-head); font-weight:var(--head-weight); font-size:13.5px; color:var(--ink); white-space:nowrap;}
+.price-card__hint{font-size:11.5px; color:var(--muted); margin-top:auto; display:flex; align-items:center; gap:5px;}
+.price-card:hover .price-card__hint{display:none;}
 
 /* ============================================================ INFO PAGES */
 .head-block{margin-bottom:30px;}

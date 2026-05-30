@@ -410,17 +410,26 @@ function renderWhyChooseUs() {
 function renderPricing() {
   return `
   <div class="head-block">
-    <h1>Specials</h1>
-    <p class="lede">Free pick-up and drop off with every laundry order over $60. Biodegradable detergent is available.</p>
+    <h1>Pricing</h1>
+    <p class="lede">Free pick-up and drop off with every laundry order over $60. Biodegradable detergent is available. Hover over each service to see full pricing.</p>
   </div>
-  ${SERVICES.map(s => `
-    <div class="price-section">
-      <div class="ps-head"><div class="di">${ic(s.icon)}</div><h3 style="font-size:19px;">${s.name}</h3></div>
-      <div class="price-table">
-        ${s.rows.map(r => `<div class="tr"><span>${r[0]}</span><b>${r[1]}</b></div>`).join('')}
+  <div class="price-grid">
+    ${SERVICES.map(s => `
+    <div class="price-card">
+      <div class="price-card__head">
+        <div class="price-card__ico">${ic(s.icon)}</div>
+        <div>
+          <div class="price-card__name">${s.name}</div>
+          <div class="price-card__from">${s.from}</div>
+        </div>
       </div>
+      <div class="price-card__rows">
+        ${s.rows.map(r => `<div class="price-card__row"><span>${r[0]}</span><b>${r[1]}</b></div>`).join('')}
+      </div>
+      <div class="price-card__hint">${ic('arrow')} Hover to see pricing</div>
     </div>`).join('')}
-  <div class="banner" style="margin-top:34px;">
+  </div>
+  <div class="banner" style="margin-top:10px;">
     <div><p>We offer self-service laundry, commercial laundry, dry cleaning, pick-up &amp; delivery, and more. We accept Mastercard and Visa. Account facility is available upon request for commercial (pick-up &amp; delivery) service.</p></div>
     <a class="btn btn--ghost" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
   </div>
