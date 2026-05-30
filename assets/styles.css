@@ -176,7 +176,7 @@ body.nav-open .sidebar{z-index:75;}
 
 /* Show footer info inside mobile drawer, hide blue CTA box */
 .nav__cta{display:none;}
-.nav__foot{display:block; margin-top:auto; padding:16px 10px 4px; border-top:1px solid var(--line-soft); font-size:12.5px; color:var(--ink-soft); line-height:1.55;}
+.nav__foot{display:block; margin-top:8px; padding:10px 10px 4px; border-top:1px solid var(--line-soft); font-size:12.5px; color:var(--ink-soft); line-height:1.55;}
 
 @media(min-width:860px){
   .side-cta{display:block; margin:16px 4px 6px; padding:16px; border-radius:var(--r); background:linear-gradient(160deg, var(--accent-tint), var(--accent-tint-2)); border:1px solid var(--line-soft);}
@@ -187,7 +187,7 @@ body.nav-open .sidebar{z-index:75;}
   .nav__cta{display:none;}
   .nav__foot{display:none;}
 }
-.side-foot .row{display:flex; align-items:center; gap:8px; margin-top:7px;}
+.side-foot .row{display:flex; align-items:center; gap:8px; margin-top:3px;}
 .side-foot svg{width:14px; height:14px; flex:none; color:var(--accent);}
 .open-dot{display:inline-block; width:7px; height:7px; border-radius:50%; background:oklch(0.72 0.16 150); margin-right:6px; box-shadow:0 0 0 3px oklch(0.72 0.16 150 / .18);}
 
