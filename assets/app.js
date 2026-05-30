@@ -361,7 +361,7 @@ function renderHours() {
       <div class="info-row"><div class="ii">${ic('spark')}</div><div><b>Public holidays</b><span>Staff hours may vary — call ahead on ${BIZ.phone}.</span></div></div>
       <div class="info-row"><div class="ii">${ic('truck')}</div><div><b>Collection windows</b><span>Pickups run 7:30am – 6pm, seven days.</span></div></div>
       <div class="info-row"><div class="ii">${ic('pin')}</div><div><b>Address</b><span>${BIZ.addr}</span></div></div>
-      <a class="btn btn--primary btn--block" style="margin-top:16px;" data-go="find">${ic('pin')} Get directions</a>
+      <a class="btn btn--primary btn--block" style="margin-top:16px;" href="https://www.google.com/maps/place/Blessington+Street+Laundrette/@-37.870384,144.9776551,17z" target="_blank" rel="noopener">${ic('pin')} Get directions</a>
     </div>
   </div>
   ${footer()}`;
@@ -374,7 +374,14 @@ function renderFind() {
     <h1>22 Blessington Street,<br>St Kilda</h1>
     <p class="lede">On Blessington Street with easy street parking, a short walk from Acland Street and the tram.</p>
   </div>
-  ${photo('images/img-home.jpg', 'Blessington Street Launderette exterior', 'map-ph')}
+  <div class="map-ph" style="padding:0; overflow:hidden; border-radius:var(--r); border:1px solid var(--line);">
+    <iframe
+      src="https://maps.google.com/maps?q=-37.870384,144.98023&z=17&output=embed"
+      width="100%" height="100%" style="border:0; display:block; min-height:380px;"
+      allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      title="Blessington Street Laundrette on Google Maps">
+    </iframe>
+  </div>
   <div class="split2" style="margin-top:24px;">
     <div class="info-card">
       <h3>Getting here</h3>
@@ -387,7 +394,7 @@ function renderFind() {
       <div class="info-row"><div class="ii">${ic('clock')}</div><div><b>Self-service</b><span>Open 24/7 · Keypad: ${BIZ.keypad}</span></div></div>
       <div class="info-row"><div class="ii">${ic('clock')}</div><div><b>Staff hours</b><span>7:30am – 7pm, 7 days</span></div></div>
       <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Call us</b><span><a href="${BIZ.phoneHref}" style="color:var(--accent);">${BIZ.phone}</a></span></div></div>
-      <a class="btn btn--primary btn--block" style="margin-top:16px;" data-go="hours">View opening hours</a>
+      <a class="btn btn--primary btn--block" style="margin-top:16px;" href="https://www.google.com/maps/place/Blessington+Street+Laundrette/@-37.870384,144.9776551,17z" target="_blank" rel="noopener">${ic('pin')} Get directions</a>
       <a class="btn btn--ghost btn--block" style="margin-top:9px;" data-go="contact">Contact us</a>
     </div>
   </div>
