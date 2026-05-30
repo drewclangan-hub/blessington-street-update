@@ -241,8 +241,8 @@ function renderHome() {
 
   const itemWidth = `calc((100% - ${cols - 1} * 18px) / ${cols})`;
   const lastRow = lastServices.length ? `
-    <div style="display:flex; justify-content:center; gap:18px; grid-column:1/-1;">
-      ${lastServices.map(s => `<div style="flex:0 0 ${itemWidth}; min-width:0;">${svcCard(s)}</div>`).join('')}
+    <div class="svc-last-row" style="--item-w:${itemWidth}">
+      ${lastServices.map(svcCard).join('')}
     </div>` : '';
 
   return `
@@ -341,21 +341,14 @@ function renderCommercial() {
   </div>
 
   <div class="sec-head"><div><h2>Who We Service</h2></div></div>
-  ${(() => {
-    const cols = 3;
-    const rem = whoAndIndustries.length % cols;
-    const main = rem ? whoAndIndustries.slice(0, -rem) : whoAndIndustries;
-    const last = rem ? whoAndIndustries.slice(-rem) : [];
-    const cardHtml = ind => `<div class="card" style="padding:18px;"><h3 style="font-size:14px; margin-bottom:6px;">${ind.name}</h3><p style="font-size:13px; color:var(--ink-soft); line-height:1.5;">${ind.desc}</p></div>`;
-    const itemW = `calc((100% - ${cols - 1} * 14px) / ${cols})`;
-    const lastRow = last.length ? `<div style="display:flex; justify-content:center; gap:14px; grid-column:1/-1;">${last.map(ind => `<div style="flex:0 0 ${itemW}; min-width:0;">${cardHtml(ind)}</div>`).join('')}</div>` : '';
-    return `<div style="display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:40px;">${main.map(cardHtml).join('')}${lastRow}</div>`;
-  })()}
+  <div class="grid-3" style="margin-bottom:40px;">
+    ${whoAndIndustries.map(ind => `<div class="card" style="padding:18px;"><h3 style="font-size:14px; margin-bottom:6px;">${ind.name}</h3><p style="font-size:13px; color:var(--ink-soft); line-height:1.5;">${ind.desc}</p></div>`).join('')}
+  </div>
 
   <div class="info-card" style="margin-bottom:40px;">
     <h3>What We Clean</h3>
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:4px 24px;">
-      ${whatWeClean.map(s => `<div class="info-row" style="padding:8px 0;"><div class="ii">${ic('check')}</div><div><span>${s}</span></div></div>`).join('')}
+    <div class="grid-2" style="gap:4px 24px;">
+      ${whatWeClean.map(s => `<div class="info-row"><div class="ii">${ic('check')}</div><div><span>${s}</span></div></div>`).join('')}
     </div>
   </div>
 
@@ -396,7 +389,7 @@ function renderWhyChooseUs() {
     <h1>Why Businesses Choose Blessington Street Laundrette</h1>
   </div>
 
-  <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:40px;">
+  <div class="grid-4" style="margin-bottom:40px;">
     ${whyUs.map(w => `<div class="card" style="padding:22px;">
       <h3 style="font-size:15px; margin-bottom:8px;">${w.head}</h3>
       <p style="font-size:13.5px; color:var(--ink-soft); line-height:1.55;">${w.body}</p>
@@ -404,7 +397,7 @@ function renderWhyChooseUs() {
   </div>
 
   <div class="sec-head"><div><h2>What Our Customers Say</h2></div></div>
-  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-bottom:40px;">
+  <div class="grid-2" style="margin-bottom:40px;">
     ${testimonials.map(t => `<div class="card" style="padding:22px;">
       <p style="font-size:14.5px; color:var(--ink-soft); line-height:1.6; font-style:italic; margin-bottom:16px;">"${t.quote}"</p>
       <div style="font-size:13px; font-weight:700; color:var(--ink);">${t.name}</div>
@@ -573,7 +566,7 @@ function renderContact() {
 function footer() {
   return `<div class="foot">
     <span>© 2026 Blessington Street Launderette · ${BIZ.addr} · ${BIZ.phone}</span>
-    <span style="display:flex; gap:16px;">
+    <span class="foot-links">
       <a data-go="pricing">Pricing</a>
       <a data-go="delivery">Collection</a>
       <a data-go="hours">Hours</a>
@@ -621,6 +614,7 @@ document.addEventListener('click', (e) => {
     if (ok) { ok.classList.add('show'); document.getElementById('sendBtn').style.display = 'none'; }
   }
   if (e.target.closest('.menu-btn')) document.body.classList.toggle('nav-open');
+  if (e.target.closest('.nav-overlay')) document.body.classList.remove('nav-open');
   if (e.target.closest('.brand')) location.hash = '#/home';
 });
 window.addEventListener('hashchange', route);
