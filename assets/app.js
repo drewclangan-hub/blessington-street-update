@@ -284,62 +284,113 @@ function renderService(id) {
 
 /* ---------------- COMMERCIAL ---------------- */
 function renderCommercial() {
-  const benefits = [
-    { icon:'clock', head:'Time and Cost Efficiency', body:'Save valuable time by leaving the laundry to us, allowing your team to focus on core business operations. Avoid the overhead of in-house laundry facilities and their associated costs — like equipment maintenance, utilities, and labour.' },
-    { icon:'check', head:'Consistency and Quality', body:'Our professional services ensure your linens, uniforms, and other laundry items are cleaned and pressed to the highest standards, every time. We handle high-volume laundry with attention to detail.' },
-    { icon:'arrow', head:'Increased Productivity', body:'With laundry tasks outsourced, your staff can focus on customer service and daily operations, improving overall efficiency.' },
-    { icon:'truck', head:'Flexibility and Convenience', body:'We offer customized delivery and pick-up schedules to suit your business, whether you need daily, weekly, or urgent services.' },
-    { icon:'spark', head:'Sustainability and Eco-Friendly Practices', body:'We use eco-friendly detergents and cleaning methods, ensuring that your business stays environmentally conscious while keeping your linens fresh and clean.' },
-    { icon:'stack', head:'No Job Too Big or Small', body:'Whether it\'s chef uniforms, towels, table linens, or medical attire, we have the capacity and expertise to handle all your laundry needs.' },
+  const whoWeService = ['Medical Clinics & Doctor Surgeries','Rehab Centres & Physiotherapy Clinics','Gyms & Fitness Studios','Dental Clinics','Wellness Clinics & Day Spas','Aged Care & Specialist Facilities'];
+  const whatWeClean = ['Towels and gym linen','Medical and patient gowns','Bed sheets and pillowcases','Staff uniforms','Treatment room linen','Massage and therapy towels','Cleaning cloths','Robes and spa linen'];
+  const whyUs = [
+    { head:'Save Staff Time & Improve Productivity', body:'Your team should focus on patients and clients — not managing laundry.' },
+    { head:'Professional Sanitisation & Hygiene', body:'Commercial-grade systems designed for deep cleaning and proper linen care.' },
+    { head:'Fast, Next-Day Turnaround', body:'Never run out of clean linen again with efficient processing.' },
+    { head:'Reliable Pickup & Delivery', body:'Collection and return on schedules fitting your business operations.' },
+    { head:'More Cost-Effective Than In-House Laundry', body:'Outsourcing laundry is often financially smarter than managing onsite.' },
+  ];
+  const industries = [
+    { name:'Dental Clinics & Medical Specialists', desc:'Scrubs, towels, uniforms cleaned to strict hygiene standards.' },
+    { name:'Restaurants & Cafés', desc:'Tablecloths, napkins, aprons, chef jackets cleaned to high standard.' },
+    { name:'Hair & Beauty Salons', desc:'Salon towels, gowns, capes professionally laundered and pressed.' },
+    { name:'Massage Therapists & Day Spas', desc:'We clean towels, robes, sheets, and pillow covers to premium standards.' },
+    { name:'Hotels, Motels & Short-Stay Accommodation', desc:'High-volume laundry for sheets, pillowcases, towels, staff uniforms.' },
+    { name:'Cleaning Companies', desc:'Uniforms, rags, mop heads, towels cleaned efficiently.' },
+    { name:'Childcare Centres & Schools', desc:'Bedding, uniforms, activity mats sanitised for child safety.' },
+    { name:'Fitness Centres & Gyms', desc:'Towel and uniform laundry with fast turnaround.' },
+    { name:'Event & Function Coordinators', desc:'Tablecloths, chair covers, event linens cleaned and returned flawlessly.' },
+  ];
+  const whyChoose = [
+    { head:'Tailored Laundry Solutions', body:'Custom plans for business size, industry, schedule.' },
+    { head:'Reliable Pick-Up & Delivery', body:'Same-day or scheduled delivery, always on time.' },
+    { head:'Quality-First Approach', body:'Latest commercial laundry tech and premium detergents.' },
+    { head:'Eco-Friendly Practices', body:'Biodegradable detergent options and sustainable methods.' },
+  ];
+  const steps = [
+    ['Schedule a Pickup', 'Organise regular collection times.'],
+    ['Professional Cleaning & Sanitisation', 'Expertly washed, sanitised, dried, folded.'],
+    ['Next-Day Delivery', 'Clean, fresh linen returned promptly.'],
   ];
 
   return `
   <div class="head-block">
     <span class="eyebrow">${ic('stack')} Commercial Laundry</span>
-    <h1>Commercial Laundry Services</h1>
-    <p class="lede">Our Commercial Laundry service, conveniently located at Blessington Street, is perfectly situated to cater to restaurants, hotels, and businesses throughout St Kilda and the surrounding areas. We offer flexible delivery and collection times tailored to your needs.</p>
+    <h1>Commercial Laundry Services Serving Melbourne, Albert Park, Middle Park, St Kilda &amp; Surrounding Suburbs</h1>
+    <p class="lede">At Blessington Street Laundrette, we provide professional commercial laundry services with complimentary pick-up and delivery across Melbourne's inner bayside.</p>
     <div class="cta-row" style="margin-top:22px; display:flex; gap:12px;">
       <a class="btn btn--primary" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
       <a class="btn btn--ghost" href="${BIZ.phone2Href}">${ic('phone')} ${BIZ.phone2}</a>
     </div>
   </div>
 
-  <div class="sec-head">
-    <div><span class="eyebrow">Benefits of outsourcing your laundry to us</span><h2 style="margin-top:10px;">Why Choose Us</h2></div>
+  <div class="sec-head"><div>
+    <h2>Commercial Medical &amp; Linen Laundry Service in St Kilda &amp; Melbourne</h2>
+    <p style="margin-top:8px; color:var(--ink-soft);">For Clinics, Gyms, Rehab Centres &amp; Healthcare Facilities</p>
+  </div></div>
+
+  <div class="card" style="padding:28px; margin-bottom:40px;">
+    <h3 style="font-size:20px; margin-bottom:12px;">Save Staff Time, Reduce Costs &amp; Maintain Professional Hygiene Standards</h3>
+    <p style="font-size:16px; color:var(--ink-soft); line-height:1.6;">Running a medical clinic is demanding — your team shouldn't be tied up washing towels and linen. Professional cleaning includes sanitisation, drying, folding, and next-day return of fresh, hygienic items.</p>
   </div>
-  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:50px;">
-    ${benefits.map(b => `
-    <div class="card" style="padding:22px;">
-      <div style="width:36px;height:36px;border-radius:10px;background:var(--accent-tint);color:var(--accent-press);display:grid;place-items:center;margin-bottom:14px;">${ic(b.icon)}</div>
-      <h3 style="font-size:15px; margin-bottom:8px;">${b.head}</h3>
-      <p style="font-size:13.5px; color:var(--ink-soft); line-height:1.55;">${b.body}</p>
+
+  <div class="split2" style="margin-bottom:40px; align-items:start;">
+    <div class="info-card">
+      <h3>Who We Service</h3>
+      ${whoWeService.map(s => `<div class="info-row" style="padding:8px 0;"><div class="ii">${ic('check')}</div><div><span>${s}</span></div></div>`).join('')}
+    </div>
+    <div class="info-card">
+      <h3>What We Clean</h3>
+      ${whatWeClean.map(s => `<div class="info-row" style="padding:8px 0;"><div class="ii">${ic('check')}</div><div><span>${s}</span></div></div>`).join('')}
+    </div>
+  </div>
+
+  <div class="sec-head"><div><h2>Why Businesses Choose Blessington Street Laundrette</h2></div></div>
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:40px;">
+    ${whyUs.map(w => `<div class="card" style="padding:22px;">
+      <h3 style="font-size:15px; margin-bottom:8px;">${w.head}</h3>
+      <p style="font-size:13.5px; color:var(--ink-soft); line-height:1.55;">${w.body}</p>
     </div>`).join('')}
   </div>
 
-  <div class="split2" style="margin-bottom:50px; align-items:start;">
-    <div class="info-card">
-      <h3>Specials</h3>
-      <div class="prow"><span>1 Doona</span><b>$40</b></div>
-      <div class="prow"><span>2 Doonas</span><b>$75</b></div>
-      <div class="prow"><span>3 Doonas</span><b>$105</b></div>
-      <div class="prow"><span>5 shirts wash &amp; iron</span><b>$25.00 ($5.00 each)</b></div>
-      <div class="prow"><span>Free pickup &amp; drop off</span><b>orders over $60</b></div>
-      <div class="note" style="margin-top:14px;">${ic('check')} Biodegradable detergent is available. We accept Mastercard and Visa. Account facility available on request.</div>
-    </div>
-    <div class="info-card">
-      <h3>Specials</h3>
-      <div class="info-row"><div class="ii">${ic('check')}</div><div><b>We offer flexible, personalized service</b><span>To service your every need, we have washers of different sizes.</span></div></div>
-      <div class="info-row"><div class="ii">${ic('drop')}</div><div><b>Expertly removing different types of stains</b><span>You can feel confident when you are choosing our laundry services.</span></div></div>
-      <div class="info-row"><div class="ii">${ic('truck')}</div><div><b>Reliable, fast, and quality laundry services</b><span>To keep your operations running smoothly.</span></div></div>
-      <a class="btn btn--primary btn--block" style="margin-top:16px;" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
-      <a class="btn btn--ghost btn--block" style="margin-top:9px;" data-go="contact">Send an enquiry</a>
-    </div>
+  <div class="sec-head"><div><h2>How Our Commercial Laundry Service Works</h2></div></div>
+  <div class="steps" style="margin-bottom:40px;">
+    ${steps.map((st, i) => `<div class="step"><div class="num">${i + 1}</div><h3>${st[0]}</h3><p>${st[1]}</p></div>`).join('')}
+  </div>
+
+  <div class="sec-head"><div><h2>Industries We Serve</h2></div></div>
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:40px;">
+    ${industries.map(ind => `<div class="card" style="padding:18px;">
+      <h3 style="font-size:14px; margin-bottom:6px;">${ind.name}</h3>
+      <p style="font-size:13px; color:var(--ink-soft); line-height:1.5;">${ind.desc}</p>
+    </div>`).join('')}
+  </div>
+
+  <div class="sec-head"><div><h2>Why Choose Us</h2></div></div>
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-bottom:40px;">
+    ${whyChoose.map(w => `<div class="card" style="padding:22px;">
+      <h3 style="font-size:15px; margin-bottom:8px;">${w.head}</h3>
+      <p style="font-size:13.5px; color:var(--ink-soft); line-height:1.55;">${w.body}</p>
+    </div>`).join('')}
+  </div>
+
+  <div class="info-card" style="margin-bottom:40px;">
+    <h3>Specials</h3>
+    <div class="prow"><span>1 Doona</span><b>$40</b></div>
+    <div class="prow"><span>2 Doonas</span><b>$75</b></div>
+    <div class="prow"><span>3 Doonas</span><b>$105</b></div>
+    <div class="prow"><span>5 shirts wash &amp; iron</span><b>$25.00 ($5.00 each)</b></div>
+    <div class="prow"><span>Free pick-up &amp; drop off</span><b>orders over $60</b></div>
+    <div class="note" style="margin-top:14px;">${ic('check')} Biodegradable detergent is available.</div>
   </div>
 
   <div class="banner">
     <div>
-      <h3>Commercial Laundry Services Serving Melbourne</h3>
-      <p>Albert Park, Middle Park, St Kilda &amp; Surrounding Suburbs. By outsourcing your laundry needs to Blessington Street Laundrette, you're investing in the reliability, quality, and efficiency that your business deserves.</p>
+      <h3>Book a Commercial Laundry Pickup Today</h3>
+      <p>Take the pressure off your team and ensure clean, professional-quality linen ready to use. Contact Blessington Street Laundrette to set up service.</p>
     </div>
     <a class="btn btn--ghost" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
   </div>
