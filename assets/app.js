@@ -235,8 +235,7 @@ function renderHome() {
   return `
   ${hero}
   <div class="sec-head">
-    <div><span class="eyebrow">What we do</span><h2 style="margin-top:10px;">Everything laundry, one address</h2></div>
-    <p>Tap any card for details &amp; pricing →</p>
+    <div><h2>Services</h2></div>
   </div>
   <div class="svc-grid">
     ${SERVICES.map(svcCard).join('')}
@@ -253,7 +252,7 @@ function renderService(id) {
   <div class="crumb"><a data-go="home">Home</a> ${ic('arrow')} <a data-go="pricing">Services</a> ${ic('arrow')} <span>${s.name}</span></div>
   <div class="detail-head">
     <div class="di">${ic(s.icon)}</div>
-    <div><span class="eyebrow">Service</span><h1 style="margin-top:8px;">${s.name}</h1></div>
+    <div><h1 style="margin-top:8px;">${s.name}</h1></div>
   </div>
   <div class="detail-grid">
     <div class="detail-desc">
@@ -266,13 +265,13 @@ function renderService(id) {
       <h4>Pricing guide</h4>
       <div class="from">from <b>${s.from}</b></div>
       ${s.rows.map(r => `<div class="prow"><span>${r[0]}</span><b>${r[1]}</b></div>`).join('')}
-      <a class="btn btn--primary btn--block" data-go="contact">Book / enquire</a>
+      <a class="btn btn--primary btn--block" data-go="contact">Contact Us</a>
       <a class="btn btn--ghost btn--block" style="margin-top:9px;" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
-      <div class="note">${ic('truck')} Free collection &amp; delivery on orders over $60 across St Kilda.</div>
+      <div class="note">${ic('truck')} Free pick-up and drop off with every laundry order over $60.</div>
     </aside>
   </div>
   <div class="more">
-    <div class="sec-head" style="margin:0 0 4px;"><h2 style="font-size:22px;">More services</h2></div>
+    <div class="sec-head" style="margin:0 0 4px;"><h2 style="font-size:22px;">Services</h2></div>
     <div class="more-grid">
       ${others.map(o => `<div class="more-card" data-link="${o.id}">
         <div class="mi">${ic(o.icon)}</div>
@@ -328,7 +327,7 @@ function renderCommercial() {
       <div class="note" style="margin-top:14px;">${ic('check')} Biodegradable detergent is available. We accept Mastercard and Visa. Account facility available on request.</div>
     </div>
     <div class="info-card">
-      <h3>Our Flexible Service</h3>
+      <h3>Specials</h3>
       <div class="info-row"><div class="ii">${ic('check')}</div><div><b>We offer flexible, personalized service</b><span>To service your every need, we have washers of different sizes.</span></div></div>
       <div class="info-row"><div class="ii">${ic('drop')}</div><div><b>Expertly removing different types of stains</b><span>You can feel confident when you are choosing our laundry services.</span></div></div>
       <div class="info-row"><div class="ii">${ic('truck')}</div><div><b>Reliable, fast, and quality laundry services</b><span>To keep your operations running smoothly.</span></div></div>
@@ -351,9 +350,9 @@ function renderCommercial() {
 /* ---------------- PRICING ---------------- */
 function renderPricing() {
   return `
-  <div class="head-block"><span class="eyebrow">${ic('tag')} Pricing</span>
-    <h1>Simple, honest pricing</h1>
-    <p class="lede">No hidden fees. Free collection &amp; delivery on orders over $60. Self-service open 24/7 — no coins needed.</p>
+  <div class="head-block">
+    <h1>Specials</h1>
+    <p class="lede">Free pick-up and drop off with every laundry order over $60. Biodegradable detergent is available.</p>
   </div>
   ${SERVICES.map(s => `
     <div class="price-section">
@@ -363,8 +362,8 @@ function renderPricing() {
       </div>
     </div>`).join('')}
   <div class="banner" style="margin-top:34px;">
-    <div><h3>Not sure what you need?</h3><p>Call us on ${BIZ.phone} and we'll give you a straight answer — and an exact price.</p></div>
-    <a class="btn btn--ghost" href="${BIZ.phoneHref}">Call now ${ic('arrow')}</a>
+    <div><p>We offer self-service laundry, commercial laundry, dry cleaning, pick-up &amp; delivery, and more. We accept Mastercard and Visa. Account facility is available upon request for commercial (pick-up &amp; delivery) service.</p></div>
+    <a class="btn btn--ghost" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
   </div>
   ${footer()}`;
 }
@@ -420,7 +419,7 @@ function renderHours() {
       }).join('')}
     </div>
     <div class="info-card">
-      <h3>Contact &amp; Payment</h3>
+      <h3>Contact Information</h3>
       <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Phone</b><span><a href="${BIZ.phoneHref}" style="color:var(--accent);">${BIZ.phone}</a></span></div></div>
       <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Phone</b><span><a href="${BIZ.phone2Href}" style="color:var(--accent);">${BIZ.phone2}</a></span></div></div>
       <div class="info-row"><div class="ii">${ic('pin')}</div><div><b>Address</b><span>${BIZ.addr}</span></div></div>
@@ -435,9 +434,8 @@ function renderHours() {
 /* ---------------- FIND US ---------------- */
 function renderFind() {
   return `
-  <div class="head-block"><span class="eyebrow">${ic('pin')} Find us</span>
-    <h1>22 Blessington Street,<br>St Kilda</h1>
-    <p class="lede">On Blessington Street with easy street parking, a short walk from Acland Street and the tram.</p>
+  <div class="head-block">
+    <h1>22 Blessington Street, St Kilda</h1>
   </div>
   <div class="map-ph" style="padding:0; overflow:hidden; border-radius:var(--r); border:1px solid var(--line);">
     <iframe
@@ -449,18 +447,22 @@ function renderFind() {
   </div>
   <div class="split2" style="margin-top:24px;">
     <div class="info-card">
-      <h3>Getting here</h3>
+      <h3>GET IN TOUCH!</h3>
       <div class="info-row"><div class="ii">${ic('pin')}</div><div><b>Address</b><span>${BIZ.addr}</span></div></div>
-      <div class="info-row"><div class="ii">${ic('truck')}</div><div><b>Parking</b><span>Free 2-hour street parking on Blessington Street and nearby.</span></div></div>
-      <div class="info-row"><div class="ii">${ic('arrow')}</div><div><b>Public transport</b><span>Short walk from St Kilda tram stop and Fitzroy Street buses.</span></div></div>
+      <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Telephone</b><span><a href="${BIZ.phoneHref}" style="color:var(--accent);">${BIZ.phone}</a></span></div></div>
+      <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Telephone</b><span><a href="${BIZ.phone2Href}" style="color:var(--accent);">${BIZ.phone2}</a></span></div></div>
+      <div class="info-row"><div class="ii">${ic('clock')}</div><div><b>Self-Service Hours</b><span>24 hours, 7 days a week · entry code ${BIZ.keypad}</span></div></div>
+      <div class="info-row"><div class="ii">${ic('clock')}</div><div><b>Service Hours (Pickup/Drop Off)</b><span>7:30am – 7:00pm, 7 days a week</span></div></div>
+      <a class="btn btn--primary btn--block" style="margin-top:16px;" href="https://www.google.com/maps/place/Blessington+Street+Laundrette/@-37.870384,144.9776551,17z" target="_blank" rel="noopener">${ic('pin')} Get directions</a>
     </div>
     <div class="info-card">
-      <h3>Visit us</h3>
-      <div class="info-row"><div class="ii">${ic('clock')}</div><div><b>Self-service</b><span>Open 24/7 · Keypad: ${BIZ.keypad}</span></div></div>
-      <div class="info-row"><div class="ii">${ic('clock')}</div><div><b>Staff hours</b><span>7:30am – 7pm, 7 days</span></div></div>
-      <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Call us</b><span><a href="${BIZ.phoneHref}" style="color:var(--accent);">${BIZ.phone}</a></span></div></div>
-      <a class="btn btn--primary btn--block" style="margin-top:16px;" href="https://www.google.com/maps/place/Blessington+Street+Laundrette/@-37.870384,144.9776551,17z" target="_blank" rel="noopener">${ic('pin')} Get directions</a>
-      <a class="btn btn--ghost btn--block" style="margin-top:9px;" data-go="contact">Contact us</a>
+      <h3>Specials</h3>
+      <div class="prow"><span>1 Doona</span><b>$40</b></div>
+      <div class="prow"><span>2 Doonas</span><b>$75</b></div>
+      <div class="prow"><span>3 Doonas</span><b>$105</b></div>
+      <div class="prow"><span>Shirt Special — 5 shirts wash &amp; iron</span><b>$25.00 ($5.00 each)</b></div>
+      <div class="prow"><span>Free pick-up &amp; drop off</span><b>orders over $60</b></div>
+      <div class="note" style="margin-top:14px;">${ic('check')} Biodegradable detergent is available.</div>
     </div>
   </div>
   ${footer()}`;
