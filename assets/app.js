@@ -51,8 +51,8 @@ const BRAND_MARK_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColo
 const SERVICES = [
   { id:'self-service', name:'Self-Service Laundry', icon:'drum', img:'images/img-machines.jpg', from:'$6',
     blurb:'Melbourne\'s biggest self-service launderette. Open 24/7 for your convenience.',
-    desc:'Enjoy 24-hour launderette access in St Kilda with secure keypad entry, 223182# so you can do your laundry whenever it suits you — early mornings, late nights, or anytime in between.',
-    extra:'Pay with credit or debit card, Apple Pay, Google Pay, or cash — whatever works best for you. Our Service Hours: 7:30am – 7:00pm, 7 days a week.',
+    desc:'',
+    extra:'',
     chips:['Open 24/7','30 high-capacity Dexter washers','28 double-stack EXPRESS dryers','Credit card · Apple Pay · Google Pay · cash','Secure keypad entry 223182#','Clean, spacious & easy-to-use'],
     rows:[['5 kg Front Loader','$6'],['7 kg Front Loader','$7'],['16 kg Front Loader','$14 / Super wash $16'],['24 kg Front Loader','$16'],['28 kg Front Loader','$20']] },
 
@@ -279,9 +279,9 @@ function renderService(id) {
   <div class="detail-grid">
     <div class="detail-desc">
       ${photo(s.img, s.name, 'detail-hero')}
-      <p>${s.desc}</p>
+      ${s.desc ? `<p>${s.desc}</p>` : ''}
       <div class="${s.chipsGrid ? 'chips chips--grid' : 'chips'}">${s.chips.map(c => `<span class="chip${s.chipsGrid ? ' chip--grid' : ''}">${ic('check')} ${c}</span>`).join('')}</div>
-      <p style="margin-top:22px; font-size:15px; color:var(--muted); line-height:1.55;">${s.extra}</p>
+      ${s.extra ? `<p style="margin-top:22px; font-size:15px; color:var(--muted); line-height:1.55;">${s.extra}</p>` : ''}
     </div>
     <aside class="pricebox">
       <h4>Pricing guide</h4>
