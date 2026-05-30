@@ -413,7 +413,7 @@ function renderPricing() {
   return `
   <div class="head-block">
     <h1>Pricing</h1>
-    <p style="font-size:14px; color:var(--ink-soft); margin-top:10px;">We accept Visa, Mastercard, Apple Pay, Google Pay, and cash — whatever works best for you.</p>
+    <p style="font-size:14px; color:var(--ink-soft); margin-top:10px;">We accept Visa, Mastercard, Apple Pay, Google Pay, and cash.</p>
   </div>
   ${(() => {
     const pricingServices = SERVICES.filter(s => s.id !== 'pickup-delivery');
