@@ -635,16 +635,17 @@ document.addEventListener('click', (e) => {
   if (b) setLook(b.dataset.look);
 });
 
-/* ---------------- carousel helper (infinite wrap, index-based) ---------------- */
+/* ---------------- carousel helper (infinite wrap, data-index tracked) ---------------- */
 window.blCarousel = function(id, dir) {
   const el = document.getElementById(id);
   if (!el) return;
   const items = el.querySelectorAll('.carousel-item');
   if (!items.length) return;
-  const itemW = items[0].offsetWidth + 16; // card width + gap
   const total = items.length;
-  const currentIdx = Math.round(el.scrollLeft / itemW);
-  let nextIdx = (currentIdx + dir + total) % total;
+  const currentIdx = parseInt(el.dataset.idx || '0');
+  const nextIdx = (currentIdx + dir + total) % total;
+  el.dataset.idx = nextIdx;
+  const itemW = items[0].offsetWidth + 16;
   el.scrollTo({ left: nextIdx * itemW, behavior: 'smooth' });
 };
 
