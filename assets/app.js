@@ -307,21 +307,30 @@ function renderService(id) {
 
 /* ---------------- COMMERCIAL ---------------- */
 function renderCommercial() {
-  const whatWeClean = ['Towels and gym linen','Medical and patient gowns','Bed sheets and pillowcases','Staff uniforms','Treatment room linen','Massage and therapy towels','Cleaning cloths','Robes and spa linen'];
+  const whatWeClean = [
+    { name:'Towels & gym linen', icon:'drop' },
+    { name:'Medical & patient gowns', icon:'spark' },
+    { name:'Bed sheets & pillowcases', icon:'bed' },
+    { name:'Staff uniforms', icon:'hanger' },
+    { name:'Treatment room linen', icon:'spark' },
+    { name:'Massage & therapy towels', icon:'drop' },
+    { name:'Cleaning cloths', icon:'check' },
+    { name:'Robes & spa linen', icon:'hanger' },
+  ];
   const whoAndIndustries = [
-    { name:'Medical Clinics & Doctor Surgeries', desc:'Scrubs, towels, uniforms cleaned to strict hygiene standards.' },
-    { name:'Rehab Centres & Physiotherapy Clinics', desc:'Scrubs, towels, uniforms cleaned to strict hygiene standards.' },
-    { name:'Dental Clinics & Medical Specialists', desc:'Scrubs, towels, uniforms cleaned to strict hygiene standards.' },
-    { name:'Aged Care & Specialist Facilities', desc:'Scrubs, towels, uniforms cleaned to strict hygiene standards.' },
-    { name:'Wellness Clinics & Day Spas', desc:'We clean towels, robes, sheets, and pillow covers to premium standards.' },
-    { name:'Massage Therapists & Day Spas', desc:'We clean towels, robes, sheets, and pillow covers to premium standards.' },
-    { name:'Fitness Centres & Gyms', desc:'Towel and uniform laundry with fast turnaround.' },
-    { name:'Restaurants & Cafés', desc:'Tablecloths, napkins, aprons, chef jackets cleaned to high standard.' },
-    { name:'Hair & Beauty Salons', desc:'Salon towels, gowns, capes professionally laundered and pressed.' },
-    { name:'Hotels, Motels & Short-Stay Accommodation', desc:'High-volume laundry for sheets, pillowcases, towels, staff uniforms.' },
-    { name:'Cleaning Companies', desc:'Uniforms, rags, mop heads, towels cleaned efficiently.' },
-    { name:'Childcare Centres & Schools', desc:'Bedding, uniforms, activity mats sanitised for child safety.' },
-    { name:'Event & Function Coordinators', desc:'Tablecloths, chair covers, event linens cleaned and returned flawlessly.' },
+    { name:'Medical Clinics', icon:'spark' },
+    { name:'Rehab & Physio Clinics', icon:'spark' },
+    { name:'Dental Specialists', icon:'spark' },
+    { name:'Aged Care Facilities', icon:'star' },
+    { name:'Wellness & Day Spas', icon:'drop' },
+    { name:'Massage Therapists', icon:'drop' },
+    { name:'Fitness Centres & Gyms', icon:'coin' },
+    { name:'Restaurants & Cafés', icon:'stack' },
+    { name:'Hair & Beauty Salons', icon:'drop' },
+    { name:'Hotels & Accommodation', icon:'bed' },
+    { name:'Cleaning Companies', icon:'spark' },
+    { name:'Childcare & Schools', icon:'star' },
+    { name:'Events & Functions', icon:'camera' },
   ];
   const steps = [
     ['Schedule a Pickup', 'Organise regular collection times.'],
@@ -339,19 +348,20 @@ function renderCommercial() {
     ${steps.map((st, i) => `<div class="step"><div class="num">${i + 1}</div><h3>${st[0]}</h3><p>${st[1]}</p></div>`).join('')}
   </div>
 
-  <div class="commercial-split">
-    <div class="info-card">
-      <h3 style="margin-bottom:14px;">Who We Service</h3>
-      <div class="commercial-list">
-        ${whoAndIndustries.map(ind => `<div class="commercial-item">${ic('check')}<span>${ind.name}</span></div>`).join('')}
-      </div>
-    </div>
-    <div class="info-card">
-      <h3 style="margin-bottom:14px;">What We Clean</h3>
-      <div class="commercial-list">
-        ${whatWeClean.map(s => `<div class="commercial-item">${ic('check')}<span>${s}</span></div>`).join('')}
-      </div>
-    </div>
+  <div class="sec-head"><div><h2>Who We Service</h2></div></div>
+  <div class="tile-grid" style="margin-bottom:32px;">
+    ${whoAndIndustries.map(ind => `<div class="tile">
+      <div class="tile__icon">${ic(ind.icon)}</div>
+      <span class="tile__name">${ind.name}</span>
+    </div>`).join('')}
+  </div>
+
+  <div class="sec-head"><div><h2>What We Clean</h2></div></div>
+  <div class="tile-grid" style="margin-bottom:32px;">
+    ${whatWeClean.map(s => `<div class="tile">
+      <div class="tile__icon">${ic(s.icon)}</div>
+      <span class="tile__name">${s.name}</span>
+    </div>`).join('')}
   </div>
 
   <div class="banner" style="margin-top:28px;">
