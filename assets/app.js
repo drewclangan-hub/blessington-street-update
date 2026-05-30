@@ -47,7 +47,7 @@ const SERVICES = [
     desc:'Enjoy 24-hour laundrette access in St Kilda with secure keypad entry, 223182# so you can do your laundry whenever it suits you — early mornings, late nights, or anytime in between. 30 high-capacity Dexter washing machines for everything from everyday loads to doonas and blankets. 28 double-stack EXPRESS dryers for faster drying times.',
     extra:'Pay with credit or debit card, Apple Pay, Google Pay, or cash — whatever works best for you. Our Service Hours: 7:30am – 7:00pm, 7 days a week.',
     chips:['Open 24/7','30 high-capacity Dexter washers','28 double-stack EXPRESS dryers','Credit card · Apple Pay · Google Pay · cash','Secure keypad entry 223182#','Clean, spacious & easy-to-use'],
-    rows:[['5 kg Front Loader','$6'],['7 kg Front Loader','$7'],['16 kg Front Loader','$14 / Super wash $16'],['24 kg Front Loader','$16'],['28 kg Front Loader','$20'],['After-hours keypad','223182#']] },
+    rows:[['5 kg Front Loader','$6'],['7 kg Front Loader','$7'],['16 kg Front Loader','$14 / Super wash $16'],['24 kg Front Loader','$16'],['28 kg Front Loader','$20']] },
 
   { id:'wash-dry-fold', name:'Wash, Dry & Fold', icon:'drum', img:'images/img-wash-dry-fold.jpg', from:'from $38',
     blurb:'Let us handle your everyday laundry — washed, dried and neatly folded, ready to go straight into your wardrobe.',
@@ -117,7 +117,7 @@ const SERVICES = [
     desc:'Too busy to come in? We\'ll collect your laundry, clean it, and deliver it back fresh and ready to use. Services starting from $60. Free pick-up and drop off with every laundry order over $60.',
     extra:'Blessington Street Laundrette proudly serves customers across Melbourne, including St Kilda, Middle Park, Albert Park, Port Melbourne, Southbank, Elwood, South Yarra, Richmond, Fitzroy, Collingwood, Abbotsford, Brighton, Caulfield and Melbourne CBD.',
     chips:['Free pickup & drop off over $60','St Kilda · Middle Park · Albert Park','Port Melbourne · Southbank · Elwood','South Yarra · Richmond · Fitzroy','Brighton · Caulfield · Melbourne CBD','Services starting from $60'],
-    rows:[['Free pickup & drop off','orders over $60'],['Services starting from','$60'],['Mastercard & Visa','accepted'],['Account facility','available on request']] },
+    rows:[['Services starting from','$60'],['Mastercard & Visa','accepted'],['Account facility','available on request']] },
 ];
 const svcById = (id) => SERVICES.find(s => s.id === id) || SERVICES[0];
 
