@@ -533,7 +533,7 @@ function renderFind() {
 /* ---------------- CONTACT ---------------- */
 function renderContact() {
   return `
-  <div class="head-block"><span class="eyebrow">${ic('mail')} Contact Us</span>
+  <div class="head-block">
     <h1>Get In Touch</h1>
   </div>
   <div style="max-width:560px; margin:0 auto;">
