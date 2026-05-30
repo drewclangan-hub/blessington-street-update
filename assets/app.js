@@ -529,7 +529,7 @@ function renderContact() {
     <h1>Get In Touch</h1>
     <p class="lede">Blessington Street Laundrette proudly serves customers across Melbourne. Fill in the form below and we will be in touch soon.</p>
   </div>
-  <div class="split2">
+  <div style="max-width:560px; margin:0 auto;">
     <form class="form" id="contactForm" onsubmit="return false;">
       <div class="field--row">
         <div class="field"><label>Name</label><input type="text" placeholder="Your name" required></div>
@@ -543,21 +543,10 @@ function renderContact() {
           <option>Something else</option>
         </select>
       </div>
-      <div class="field"><label>Message</label><textarea placeholder="Tell us a bit more…"></textarea></div>
+      <div class="field"><label>Message</label><textarea></textarea></div>
       <button class="btn btn--primary" id="sendBtn" type="submit">Send message ${ic('arrow')}</button>
       <div class="form-ok" id="formOk">${ic('check')} Thanks — we'll be in touch soon.</div>
     </form>
-    <div>
-      <div class="info-card">
-        <h3>GET IN TOUCH!</h3>
-        <div class="info-row"><div class="ii">${ic('pin')}</div><div><b>Address</b><span>${BIZ.addr}</span></div></div>
-        <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Telephone</b><span><a href="${BIZ.phoneHref}" style="color:var(--accent);">${BIZ.phone}</a></span></div></div>
-        <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Telephone</b><span><a href="${BIZ.phone2Href}" style="color:var(--accent);">${BIZ.phone2}</a></span></div></div>
-        <div class="info-row"><div class="ii">${ic('clock')}</div><div><b>Service Hours (Pickup/Drop Off)</b><span>7:30am – 7:00pm, 7 days a week</span></div></div>
-        <div class="info-row"><div class="ii">${ic('coin')}</div><div><b>Self-Service Hours</b><span>24 hours, 7 days a week · entry code ${BIZ.keypad}</span></div></div>
-        <div class="info-row"><div class="ii">${ic('tag')}</div><div><b>Payment</b><span>${BIZ.payment}</span></div></div>
-      </div>
-    </div>
   </div>
   ${footer()}`;
 }
