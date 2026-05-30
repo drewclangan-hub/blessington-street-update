@@ -429,7 +429,7 @@ function renderPricing() {
           <div class="price-card__name">${s.name}</div>
           <div class="price-card__from">${s.from}</div>
         </div>
-        <span class="price-card__toggle">${ic('arrow').replace('viewBox="0 0 24 24"','viewBox="0 0 24 24" style="transform:rotate(90deg)"')}</span>
+        <span class="price-card__toggle"><span class="price-card__toggle-label">See prices</span>${ic('arrow').replace('viewBox="0 0 24 24"','viewBox="0 0 24 24" style="transform:rotate(90deg)"')}</span>
       </div>
       <div class="price-card__rows">
         ${s.rows.map(r => `<div class="price-card__row"><span>${r[0]}</span><b>${r[1]}</b></div>`).join('')}
