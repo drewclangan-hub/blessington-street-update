@@ -442,10 +442,6 @@ function renderDelivery() {
   <div class="head-block"><span class="eyebrow">${ic('truck')} Collection &amp; Delivery</span>
     <h1>Collection &amp; Delivery</h1>
     <p class="lede">Too busy to come in? We'll collect your laundry, clean it, and deliver it back fresh and ready to use. Services starting from $60. Free pick-up and drop off with every laundry order over $60.</p>
-    <div class="cta-row" style="margin-top:22px; display:flex; gap:12px;">
-      <a class="btn btn--primary" href="${BIZ.phoneHref}">${ic('phone')} Mobile: ${BIZ.phone}</a>
-      <a class="btn btn--ghost" href="${BIZ.phone2Href}">${ic('phone')} Landline: ${BIZ.phone2}</a>
-    </div>
   </div>
   <div class="split2">
     <div class="info-card">
@@ -453,7 +449,8 @@ function renderDelivery() {
       <div class="info-row"><div class="ii">${ic('check')}</div><div><b>Free pick-up and drop off</b><span>With every laundry order over $60.</span></div></div>
       <div class="info-row"><div class="ii">${ic('truck')}</div><div><b>Services starting from</b><span>$60</span></div></div>
       <div class="info-row"><div class="ii">${ic('tag')}</div><div><b>Payment</b><span>We accept Mastercard and Visa. Account facility is available upon request for commercial (pick-up &amp; delivery) service.</span></div></div>
-      <a class="btn btn--primary btn--block" style="margin-top:16px;" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
+      <div class="info-row"><div class="ii">${ic('phone')}</div><div><a href="${BIZ.phoneHref}" style="color:var(--accent);">${BIZ.phone}</a></div></div>
+      <div class="info-row"><div class="ii">${ic('phone')}</div><div><a href="${BIZ.phone2Href}" style="color:var(--accent);">${BIZ.phone2}</a></div></div>
     </div>
     <div class="info-card">
       <h3>Service Areas</h3>
