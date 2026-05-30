@@ -108,9 +108,9 @@ const SERVICES = [
   { id:'commercial-laundry', name:'Commercial & Bulk', icon:'stack', img:'images/img-machines.jpg', from:'contact us',
     blurb:'Reliable, professional laundry solutions for restaurants, cafés, salons, gyms, Airbnbs, and more.',
     desc:'Our Commercial Laundry service, conveniently located at Blessington Street, is perfectly situated to cater to restaurants, hotels, and businesses throughout St Kilda and the surrounding areas. We understand that businesses need reliable, fast, and quality laundry services to keep operations running smoothly. We offer flexible delivery and collection times tailored to your needs.',
-    extra:'We accept Mastercard and Visa. Account facility is available upon request for commercial (pick-up & delivery) service.',
+    extra:'Account facility is available upon request for commercial (pick-up & delivery) service.',
     chips:['Time and Cost Efficiency','Consistency and Quality','Increased Productivity','Flexibility and Convenience','Eco-Friendly Practices','No Job Too Big or Small'],
-    rows:[['Towels / linen','from $3.50 / kg'],['Account billing','available on request'],['Mastercard & Visa','accepted'],['Delivery & collection','flexible, tailored to your needs']] },
+    rows:[['Towels / linen','from $3.50 / kg'],['Account billing','available on request'],['Delivery & collection','flexible, tailored to your needs']] },
 
   { id:'pickup-delivery', name:'Pickup & Delivery', icon:'truck', img:'images/img-truck.jpg', from:'from $60',
     blurb:'Too busy to come in? We\'ll collect your laundry, clean it, and deliver it back fresh and ready to use.',
@@ -411,7 +411,7 @@ function renderPricing() {
   return `
   <div class="head-block">
     <h1>Pricing</h1>
-    <p class="lede">Free pick-up and drop off with every laundry order over $60. Biodegradable detergent is available. Hover over each service to see full pricing.</p>
+    <p class="lede">Free pick-up and drop off with every laundry order over $60. Biodegradable detergent is available.</p>
   </div>
   <div class="price-grid">
     ${SERVICES.map(s => `
@@ -426,7 +426,6 @@ function renderPricing() {
       <div class="price-card__rows">
         ${s.rows.map(r => `<div class="price-card__row"><span>${r[0]}</span><b>${r[1]}</b></div>`).join('')}
       </div>
-      <div class="price-card__hint">${ic('arrow')} Hover to see pricing</div>
     </div>`).join('')}
   </div>
   <div class="banner" style="margin-top:10px;">
