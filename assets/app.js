@@ -60,63 +60,63 @@ const SERVICES = [
     blurb:'Let us handle your everyday laundry — washed, dried and neatly folded, ready to go straight into your wardrobe.',
     desc:'', extra:'',
     chips:['Plain/colour separation','Neatly folded & ready to put away','Pick-up and delivery available','Ideal for families, busy professionals & Airbnb hosts','Quality detergents','Free pickup over $60'],
-    rows:[['Wash, dry & fold','from $38'],['Doona cleaning (1)','$40'],['Doona cleaning (2)','$75'],['Doona cleaning (3)','$105'],['Free pickup & drop off','orders over $60']] },
+    rows:[['Wash, Dry & Fold','from $38'],['Doona Cleaning (1)','$40'],['Doona Cleaning (2)','$75'],['Doona Cleaning (3)','$105'],['Free Pickup & Drop Off','orders over $60']] },
 
   { id:'dry-cleaning', name:'Dry Cleaning', icon:'hanger', img:'images/img-dry-cleaning.jpg', from:'from $6.50',
     blurb:'Expert care for delicate fabrics, business wear, and special garments — cleaned with attention to detail.',
     desc:'', extra:'',
     chipsGrid:true,
     chips:['<b>Business Attire</b><br><span style="font-size:11.5px;opacity:.7;font-weight:400;">suits, shirts, blouses</span>','<b>Evening Wear</b><br><span style="font-size:11.5px;opacity:.7;font-weight:400;">gowns, dresses, tuxedos</span>','<b>Outerwear</b><br><span style="font-size:11.5px;opacity:.7;font-weight:400;">coats, jackets, wool blends</span>','<b>Delicate Fabrics</b><br><span style="font-size:11.5px;opacity:.7;font-weight:400;">silk, cashmere & more</span>','<b>Specialty Items</b><br><span style="font-size:11.5px;opacity:.7;font-weight:400;">leather, suede & more</span>','<b>Same-day available</b><br><span style="font-size:11.5px;opacity:.7;font-weight:400;">drop off by 9am</span>'],
-    rows:[['Shirt','$6.50'],['Trousers / skirt','$9.90'],['Two-piece suit','$19.90'],['Dress','from $16'],['Same-day (drop off by 9am)','available'],['Pick-up & delivery','available']] },
+    rows:[['Shirt','$6.50'],['Trousers / Skirt','$9.90'],['Two-Piece Suit','$19.90'],['Dress','from $16'],['Same-Day (drop off by 9am)','Available'],['Pick-Up & Delivery','Available']] },
 
   { id:'rug-cleaning', name:'Rug Cleaning', icon:'rug', img:'images/img-rug.jpg', from:'by size',
     blurb:'Professional cleaning for wool, synthetic, and area rugs. Average 7-day turnaround.',
     desc:'', extra:'',
     chips:['Wool, synthetic & area rugs','Clear pricing by size or sq metre','Pick-up and delivery','Average 7-day turnaround','Free pickup over $60'],
-    rows:[['Small rug (up to 1.5m²)','from $60'],['Medium rug (1.5–3m²)','from $90'],['Large rug (3m²+)','from $130'],['Pickup & delivery','free over $60'],['Average turnaround','7 days']] },
+    rows:[['Small Rug (up to 1.5m²)','from $60'],['Medium Rug (1.5–3m²)','from $90'],['Large Rug (3m²+)','from $130'],['Pickup & Delivery','free over $60'],['Average Turnaround','7 days']] },
 
   { id:'business-shirts', name:'Business Shirts', icon:'hanger', img:'images/img-business-shirts.jpg', from:'$6 each / $25 for 5',
     blurb:'Sharp, Crisp & Always Fresh. 5 shirts professionally ironed for just $25.',
     desc:'',
     extra:'',
     chips:['5 shirts for $25 ($5 each)','Shirts, blouses & trousers','Professional equipment & techniques','Crisp flawless finish','Curtains & bedding','Heavy-duty steam table'],
-    rows:[['5 shirts wash & iron','$25 ($5.00 each)'],['Single shirt','$6'],['Got Something Special Coming Up?','Wedding, party or event — ask us']] },
+    rows:[['5 Shirts Wash & Iron','$25 ($5.00 each)'],['Single Shirt','$6'],['Got Something Special Coming Up?','Wedding, party or event — ask us']] },
 
   { id:'ironing', name:'Ironing & Pressing', icon:'iron', img:'images/img-ironing.jpg', from:'from $5',
     blurb:'Crisp, professional finish every time. Gentle care for delicate fabrics.',
     desc:'', extra:'',
     chips:['Crisp, professional finish every time','Gentle care for delicate fabrics','Perfect for busy workers, parents & special occasions','Curtains & bedding','Heavy-duty steam table'],
-    rows:[['5 shirts wash & iron','$25 ($5.00 each)'],['Single shirt','$6'],['Curtains & upholstery','call for a quote']] },
+    rows:[['5 Shirts Wash & Iron','$25 ($5.00 each)'],['Single Shirt','$6'],['Curtains & Upholstery','call for a quote']] },
 
   { id:'stain-removal', name:'Stain Removal', icon:'drop', img:'images/img-stain.jpg', from:'from $12',
     blurb:'Say Goodbye to Stubborn Marks. We\'ve seen it all, and we know just what to do.',
     desc:'', extra:'',
     chips:['Tailored Treatments — every stain & fabric gets the right method','Professional Care — proven techniques & quality cleaning solutions','Gentle on Fabrics — tough on stains, kind to your clothes','Save Your Favourites — don\'t write off that much-loved garment'],
-    rows:[['Stain removal','from $12'],['Assessment','honest upfront'],['Add to wash order','yes']] },
+    rows:[['Stain Removal','from $12'],['Assessment','Honest Upfront'],['Add to Wash Order','Yes']] },
 
   { id:'repairs-alterations', name:'Repairs & Alterations', icon:'needle', img:'images/img-alterations.jpg', from:'quoted in store',
     blurb:'Love Your Clothes for Longer. From simple hems to complete re-sizing.',
     desc:'', extra:'',
     chips:['Save Money — restoring costs far less than buying new','Better for the Planet — reduce waste & keep quality materials in use','Keep the Comfort — already broken-in items are often more comfortable','Hold on to Memories — some items are simply irreplaceable'],
-    rows:[['Clothing alterations','quoted in store'],['Simple hems to complete re-sizing','available'],['Repairs & alterations','quoted on inspection']] },
+    rows:[['Clothing Alterations','Quoted In Store'],['Simple Hems to Complete Re-Sizing','Available'],['Repairs & Alterations','Quoted on Inspection']] },
 
   { id:'doona-cleaning', name:'Doona Cleaning', icon:'bed', img:'images/img-doona.jpg', from:'from $40',
     blurb:'Doonas, quilts & blankets. 30 high-capacity machines for everything from everyday loads to doonas.',
     desc:'', extra:'',
     chips:['Single doona $40','Two doonas $75','Three doonas $105','Free pickup over $60','Biodegradable detergent available'],
-    rows:[['1 Doona','$40'],['2 Doonas','$75'],['3 Doonas','$105'],['Pickup & delivery','free over $60']] },
+    rows:[['1 Doona','$40'],['2 Doonas','$75'],['3 Doonas','$105'],['Pickup & Delivery','Free over $60']] },
 
   { id:'commercial-laundry', name:'Commercial & Bulk', icon:'stack', img:'images/img-machines.jpg', from:'contact us',
     blurb:'Reliable, professional laundry solutions for restaurants, cafés, salons, gyms, Airbnbs, and more.',
     desc:'', extra:'',
     chips:['Time and Cost Efficiency','Consistency and Quality','Increased Productivity','Flexibility and Convenience','Eco-Friendly Practices','No Job Too Big or Small'],
-    rows:[['Towels / linen','from $3.50 / kg'],['Account billing','available on request'],['Delivery & collection','flexible, tailored to your needs']] },
+    rows:[['Towels / Linen','from $3.50 / kg'],['Account Billing','Available on Request'],['Delivery & Collection','Flexible, tailored to your needs']] },
 
   { id:'pickup-delivery', name:'Pickup & Delivery', icon:'truck', img:'images/img-truck.jpg', from:'from $60',
     blurb:'Too busy to come in? We\'ll collect your laundry, clean it, and deliver it back fresh and ready to use.',
     desc:'', extra:'',
     chips:['Free pickup & drop off over $60','St Kilda · Middle Park · Albert Park','Port Melbourne · Southbank · Elwood','South Yarra · Richmond · Fitzroy','Brighton · Caulfield · Melbourne CBD','Services starting from $60'],
-    rows:[['Services starting from','$60'],['Mastercard & Visa','accepted'],['Account facility','available on request']] },
+    rows:[['Services Starting From','$60'],['Mastercard & Visa','Accepted'],['Account Facility','Available on Request']] },
 ];
 const svcById = (id) => SERVICES.find(s => s.id === id) || SERVICES[0];
 
@@ -178,7 +178,7 @@ function heroStandard(T) {
       <p class="lede">Open 24/7 for Your Convenience. Our Service Hours: 7:30am – 7:00pm, 7 days a week.</p>
       <div class="cta-row">
         <a class="btn btn--primary" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
-        <a class="btn btn--ghost" data-go="pricing">See pricing</a>
+        <a class="btn btn--ghost" data-go="pricing">See Pricing</a>
       </div>
       <div class="trust"><span class="stars">★★★★★</span> Melbourne's Biggest Self-Service Launderette</div>
     </div>
@@ -202,7 +202,7 @@ function bannerBlock() {
       <h3 style="margin-top:12px;">Free pick-up and drop off with every laundry order over $60.</h3>
       <p>Too busy to come in? We'll collect your laundry, clean it, and deliver it back fresh and ready to use. Services starting from $60.</p>
     </div>
-    <a class="btn btn--ghost" data-link="pickup-delivery">Book a pickup ${ic('arrow')}</a>
+    <a class="btn btn--ghost" data-link="pickup-delivery">Book a Pickup ${ic('arrow')}</a>
   </div>`;
 }
 function svcCard(s) {
@@ -275,7 +275,7 @@ function renderService(id) {
       ${s.extra ? `<p style="margin-top:22px; font-size:15px; color:var(--muted); line-height:1.55;">${s.extra}</p>` : ''}
     </div>
     <aside class="pricebox">
-      <h4>Pricing guide</h4>
+      <h4>Pricing Guide</h4>
       <div class="from"><b>${s.from}</b></div>
       ${s.rows.map(r => `<div class="prow"><span>${r[0]}</span><b>${r[1]}</b></div>`).join('')}
       <a class="btn btn--primary btn--block" data-go="contact">Contact Us</a>
@@ -479,8 +479,8 @@ function renderDelivery() {
   <div class="split2">
     <div class="info-card">
       <h3>Pricing</h3>
-      <div class="info-row"><div class="ii">${ic('truck')}</div><div><b>Services starting from</b><span>$60</span></div></div>
-      <div class="info-row"><div class="ii">${ic('check')}</div><div><b>Free pick-up and drop off</b><span>With every laundry order over $60.</span></div></div>
+      <div class="info-row"><div class="ii">${ic('truck')}</div><div><b>Services Starting From</b><span>$60</span></div></div>
+      <div class="info-row"><div class="ii">${ic('check')}</div><div><b>Free Pick-Up and Drop Off</b><span>With every laundry order over $60.</span></div></div>
     </div>
     <div class="info-card">
       <h3>Service Areas</h3>
@@ -505,7 +505,7 @@ function renderHours() {
   const today = new Date().getDay();
   const order = [1,2,3,4,5,6,0];
   return `
-  <div class="head-block"><span class="eyebrow">${ic('clock')} Opening hours</span>
+  <div class="head-block"><span class="eyebrow">${ic('clock')} Opening Hours</span>
     <h1>Opening Hours</h1>
   </div>
   <div class="info-card hours-table">
@@ -549,7 +549,7 @@ function renderFind() {
     </iframe>
   </div>
   <div style="margin-top:16px;">
-    <a class="btn btn--primary" href="https://www.google.com/maps/dir/?api=1&destination=Blessington+Street+Launderette,22+Blessington+St,St+Kilda+VIC+3182" target="_blank" rel="noopener">${ic('pin')} Get directions</a>
+    <a class="btn btn--primary" href="https://www.google.com/maps/dir/?api=1&destination=Blessington+Street+Launderette,22+Blessington+St,St+Kilda+VIC+3182" target="_blank" rel="noopener">${ic('pin')} Get Directions</a>
   </div>
   ${footer()}`;
 }
@@ -575,7 +575,7 @@ function renderContact() {
         </select>
       </div>
       <div class="field"><label>Message</label><textarea></textarea></div>
-      <button class="btn btn--primary" id="sendBtn" type="submit">Send message ${ic('arrow')}</button>
+      <button class="btn btn--primary" id="sendBtn" type="submit">Send Message ${ic('arrow')}</button>
       <div class="form-ok" id="formOk">${ic('check')} Thanks — we'll be in touch soon.</div>
     </form>
   </div>
