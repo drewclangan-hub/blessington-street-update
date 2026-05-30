@@ -322,7 +322,7 @@ function renderCommercial() {
   return `
   <div class="head-block">
     <span class="eyebrow">${ic('stack')} Commercial Laundry</span>
-    <h1>Commercial Laundry Services Serving Melbourne, Albert Park, Middle Park, St Kilda &amp; Surrounding Suburbs</h1>
+    <h1>Commercial Laundry Services Serving Melbourne</h1>
     <p class="lede">At Blessington Street Laundrette, we provide professional commercial laundry services with complimentary pick-up and delivery across Melbourne's inner bayside.</p>
   </div>
 
