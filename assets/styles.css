@@ -255,8 +255,9 @@ button{font-family:inherit;}
 .price-table .tr b{font-family:var(--font-head); font-weight:var(--head-weight); color:var(--ink); white-space:nowrap;}
 
 /* ============================================================ INFO PAGES */
-.head-block{margin-bottom:30px; max-width:64ch;}
+.head-block{margin-bottom:30px;}
 .head-block h1{font-size:clamp(30px,4vw,46px); margin:14px 0 14px;}
+.head-block .lede{max-width:none;}
 .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:8px;}
 @media(max-width:820px){.steps{grid-template-columns:1fr;}}
 .step{padding:22px; border-radius:var(--r); background:var(--surface); border:1px solid var(--line); box-shadow:var(--shadow-sm);}
