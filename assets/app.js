@@ -81,7 +81,7 @@ const SERVICES = [
   { id:'business-shirts', name:'Business Shirts', icon:'hanger', img:'images/img-business-shirts.jpg', from:'$6 each / $25 for 5',
     blurb:'Sharp, Crisp & Always Fresh. 5 shirts professionally ironed for just $25.',
     desc:'Look Your Best with Blessington Street Launderette. Sharp, Crisp & Always Fresh. Our skilled team uses professional equipment and proven techniques to give shirts, blouses, trousers, and more a flawless finish every time. Need fresh, sharp shirts each week? Leave it to us — we\'ll have them looking crisp and ready to go.',
-    extra:'Not Just Shirts — from curtains to bedding to those tricky fabrics that never sit flat — we handle it all. Our heavy-duty steam table makes light work of large or bulky items. Curtains & Upholstery: prices vary by size and fabric — just give us a call for a quote.',
+    extra:'',
     chips:['5 shirts for $25 ($5 each)','Shirts, blouses & trousers','Professional equipment & techniques','Crisp flawless finish','Curtains & bedding','Heavy-duty steam table'],
     rows:[['5 shirts wash & iron','$25 ($5.00 each)'],['Single shirt','$6'],['Got Something Special Coming Up?','Wedding, party or event — ask us']] },
 
