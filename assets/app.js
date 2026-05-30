@@ -129,6 +129,7 @@ const BIZ = {
   phone2:'(03) 9534 2976',
   phone2Href:'tel:0395342976',
   addr:'22 Blessington Street, St Kilda',
+  addrFull:'22 Blessington Street, St Kilda, VIC 3182, Melbourne, Australia',
   keypad:'223182#',
   payment:'We accept Mastercard and Visa. Account facility is available upon request for commercial (pick-up & delivery) service.',
 };
@@ -500,7 +501,7 @@ function renderContactInfo() {
   <div class="info-card" style="max-width:480px;">
     <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Phone</b><span><a href="${BIZ.phoneHref}" style="color:var(--accent);">${BIZ.phone}</a></span></div></div>
     <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Phone</b><span><a href="${BIZ.phone2Href}" style="color:var(--accent);">${BIZ.phone2}</a></span></div></div>
-    <div class="info-row"><div class="ii">${ic('pin')}</div><div><b>Address</b><span>${BIZ.addr}</span></div></div>
+    <div class="info-row"><div class="ii">${ic('pin')}</div><div><b>Address</b><span>${BIZ.addrFull}</span></div></div>
   </div>
   ${footer()}`;
 }
