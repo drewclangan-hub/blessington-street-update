@@ -496,13 +496,12 @@ function renderContactInfo() {
   return `
   <div class="head-block">
     <h1>Contact</h1>
+    <p style="font-size:13.5px; color:var(--ink-soft); margin-top:8px;">${ic('tag')} We accept credit &amp; debit card, Apple Pay, Google Pay and cash.</p>
   </div>
   <div class="info-card" style="max-width:480px;">
     <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Phone</b><span><a href="${BIZ.phoneHref}" style="color:var(--accent);">${BIZ.phone}</a></span></div></div>
     <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Phone</b><span><a href="${BIZ.phone2Href}" style="color:var(--accent);">${BIZ.phone2}</a></span></div></div>
     <div class="info-row"><div class="ii">${ic('pin')}</div><div><b>Address</b><span>${BIZ.addr}</span></div></div>
-    <div class="info-row"><div class="ii">${ic('tag')}</div><div><b>Payment</b><span>Pay with credit or debit card, Apple Pay, Google Pay, or cash. We accept Mastercard and Visa.</span></div></div>
-    <a class="btn btn--primary btn--block" style="margin-top:16px;" href="https://www.google.com/maps/dir/?api=1&destination=Blessington+Street+Laundrette,22+Blessington+St,St+Kilda+VIC+3182" target="_blank" rel="noopener">${ic('pin')} Get directions</a>
   </div>
   ${footer()}`;
 }
