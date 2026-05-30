@@ -211,24 +211,23 @@ body.nav-open .sidebar{z-index:75;}
 .menu-btn__label{font-size:13px; font-weight:700; letter-spacing:.01em;}
 @media(max-width:859px){.menu-btn{display:flex;}}
 @media(min-width:860px){.menu-btn{display:none;}}
-/* Mobile brand — tappable pill, left side of header */
+/* Mobile: brand pill left, menu btn right — siblings in sidebar flex container */
 @media(max-width:859px){
-  .sidebar{justify-content:space-between; gap:10px; padding:10px 14px;}
+  .sidebar{justify-content:space-between; align-items:center; gap:12px; padding:10px 14px;}
   .brand{
     pointer-events:auto; cursor:pointer;
     min-height:48px; border-radius:999px;
     border:1.5px solid var(--line);
     background:var(--surface-2);
-    padding:0 14px 0 10px;
-    gap:9px;
-    flex:0 0 auto;
-    max-width:55%;
+    padding:0 16px 0 10px;
+    gap:9px; flex:0 1 auto;
+    overflow:hidden;
     transition:border-color .15s, background .15s;
   }
   .brand:active{border-color:var(--accent); background:var(--accent-tint);}
-  .brand__name{font-size:12.5px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:140px;}
+  .brand__name{font-size:12.5px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
   .brand__name span{display:none;}
-  .menu-btn{flex:0 0 auto;}
+  .menu-btn{flex:0 0 auto; margin-left:0;}
 }
 
 /* ---- MAIN ---- */
