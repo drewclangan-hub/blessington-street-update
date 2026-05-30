@@ -535,7 +535,6 @@ function renderContact() {
   return `
   <div class="head-block"><span class="eyebrow">${ic('mail')} Contact Us</span>
     <h1>Get In Touch</h1>
-    <p class="lede">Blessington Street Laundrette proudly serves customers across Melbourne. Fill in the form below and we will be in touch soon.</p>
   </div>
   <div style="max-width:560px; margin:0 auto;">
     <form class="form" id="contactForm" onsubmit="return false;">
