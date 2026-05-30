@@ -667,18 +667,21 @@ document.addEventListener('click', (e) => {
   if (b) setLook(b.dataset.look);
 });
 
-/* ---------------- carousel helper (infinite wrap, data-index tracked) ---------------- */
+/* ---------------- carousel helper (infinite loop) ---------------- */
 window.blCarousel = function(id, dir) {
   const el = document.getElementById(id);
   if (!el) return;
-  const items = el.querySelectorAll('.carousel-item');
+  const items = el.querySelectorAll('.carousel-item, .tile, .testimonial-card');
   if (!items.length) return;
   const total = items.length;
   const currentIdx = parseInt(el.dataset.idx || '0');
   const nextIdx = (currentIdx + dir + total) % total;
+  const wrapping = (currentIdx === 0 && dir === -1) || (currentIdx === total - 1 && dir === 1);
+  const gap = parseInt(getComputedStyle(el).gap) || 16;
+  const itemW = items[0].offsetWidth + gap;
+  // Jump instantly on wrap-around so it doesn't scroll the wrong way
+  el.scrollTo({ left: nextIdx * itemW, behavior: wrapping ? 'instant' : 'smooth' });
   el.dataset.idx = nextIdx;
-  const itemW = items[0].offsetWidth + 16;
-  el.scrollTo({ left: nextIdx * itemW, behavior: 'smooth' });
 };
 
 /* ---------------- boot ---------------- */
