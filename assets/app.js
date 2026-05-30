@@ -310,6 +310,12 @@ function renderCommercial() {
     { head:'Quality-First Approach', body:'Latest commercial laundry tech and premium detergents.' },
     { head:'Eco-Friendly Practices', body:'Biodegradable detergent options and sustainable methods.' },
   ];
+  const testimonials = [
+    { name:'Rachel Berger', role:'Comedian', quote:'I\'ve been a regular for over 20 years...the service is impeccable.' },
+    { name:'Kerry Mccormack', role:'Regular Customer', quote:'Rita, Milad and the girls are always pleasant...end result always immaculately cleaned.' },
+    { name:'Will Cochrane', role:'Regular Customer', quote:'I have been using the Blessington Street Laundry for over 10 years...always assured the job will be done properly.' },
+    { name:'The Hon Neil Brown QC', role:'Regular Customer', quote:'I have used it for several years...very happy with the quality of work.' },
+  ];
   const steps = [
     ['Schedule a Pickup', 'Organise regular collection times.'],
     ['Professional Cleaning & Sanitisation', 'Expertly washed, sanitised, dried, folded.'],
@@ -377,6 +383,15 @@ function renderCommercial() {
     </div>`).join('')}
   </div>
 
+  <div class="sec-head"><div><h2>What Our Customers Say</h2></div></div>
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-bottom:40px;">
+    ${testimonials.map(t => `<div class="card" style="padding:22px;">
+      <p style="font-size:14.5px; color:var(--ink-soft); line-height:1.6; font-style:italic; margin-bottom:16px;">"${t.quote}"</p>
+      <div style="font-size:13px; font-weight:700; color:var(--ink);">${t.name}</div>
+      <div style="font-size:12px; color:var(--muted);">${t.role}</div>
+    </div>`).join('')}
+  </div>
+
   <div class="info-card" style="margin-bottom:40px;">
     <h3>Specials</h3>
     <div class="prow"><span>1 Doona</span><b>$40</b></div>
@@ -391,6 +406,7 @@ function renderCommercial() {
     <div>
       <h3>Book a Commercial Laundry Pickup Today</h3>
       <p>Take the pressure off your team and ensure clean, professional-quality linen ready to use. Contact Blessington Street Laundrette to set up service.</p>
+      <p style="margin-top:10px; color:rgba(255,255,255,.85);">We offer self-service laundry, commercial laundry, dry cleaning, pick-up &amp; delivery, and more across these areas. Looking for reliable, high-quality laundry services in your neighborhood? We've got you covered!</p>
     </div>
     <a class="btn btn--ghost" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
   </div>
