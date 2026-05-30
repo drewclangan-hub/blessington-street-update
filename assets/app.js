@@ -413,6 +413,7 @@ function renderPricing() {
   return `
   <div class="head-block">
     <h1>Pricing</h1>
+    <p style="font-size:14px; color:var(--ink-soft); margin-top:10px;">We accept Visa, Mastercard, Apple Pay, Google Pay, and cash — whatever works best for you.</p>
   </div>
   ${(() => {
     const pricingServices = SERVICES.filter(s => s.id !== 'pickup-delivery');
@@ -441,10 +442,6 @@ function renderPricing() {
     </div>` : '';
     return `<div class="price-grid">${main.map(cardHtml).join('')}${lastRow}</div>`;
   })()}
-  <div class="banner" style="margin-top:10px;">
-    <div><p>We offer self-service laundry, commercial laundry, dry cleaning, pick-up &amp; delivery, and more. We accept Mastercard and Visa. Account facility is available upon request for commercial (pick-up &amp; delivery) service.</p></div>
-    <a class="btn btn--ghost" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
-  </div>
   ${footer()}`;
 }
 
