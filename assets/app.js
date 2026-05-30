@@ -284,12 +284,20 @@ function renderService(id) {
     </aside>
   </div>
   <div class="more">
-    <div class="sec-head" style="margin:0 0 4px;"><h2 style="font-size:22px;">Services</h2></div>
-    <div class="more-grid">
-      ${others.map(o => `<div class="more-card" data-link="${o.id}">
-        <div class="mi">${ic(o.icon)}</div>
-        <div><b>${o.name}</b><span>from ${o.from}</span></div>
-      </div>`).join('')}
+    <div class="sec-head" style="margin:0 0 14px;"><h2 style="font-size:22px;">Services</h2></div>
+    <div class="carousel-wrap">
+      <button class="carousel-btn carousel-btn--prev" onclick="this.nextElementSibling.scrollBy({left:-240,behavior:'smooth'})">${ic('back')}</button>
+      <div class="carousel">
+        ${SERVICES.filter(s => s.id !== id).map(s => `
+        <div class="carousel-item" data-link="${s.id}">
+          <img src="${s.img}" alt="${s.name}">
+          <div class="carousel-item__body">
+            <div class="carousel-item__name">${s.name}</div>
+            <div class="carousel-item__price">${s.from}</div>
+          </div>
+        </div>`).join('')}
+      </div>
+      <button class="carousel-btn carousel-btn--next" onclick="this.previousElementSibling.scrollBy({left:240,behavior:'smooth'})">${ic('arrow')}</button>
     </div>
   </div>
   ${footer()}`;
