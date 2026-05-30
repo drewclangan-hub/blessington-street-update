@@ -484,7 +484,6 @@ function renderHours() {
   return `
   <div class="head-block"><span class="eyebrow">${ic('clock')} Opening hours</span>
     <h1>Opening Hours</h1>
-    <p class="lede">Self-service hours: 24 hours, 7 days a week with the entry code 223182#. Service hours pickup/drop off: 7:30am – 7:00pm, 7 days a week.</p>
   </div>
   <div class="split2">
     <div class="info-card hours-table">
