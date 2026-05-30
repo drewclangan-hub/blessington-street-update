@@ -482,23 +482,37 @@ function renderHours() {
   <div class="head-block"><span class="eyebrow">${ic('clock')} Opening hours</span>
     <h1>Opening Hours</h1>
   </div>
-  <div class="split2">
-    <div class="info-card hours-table">
-      <div class="hours-row" style="font-weight:700; color:var(--accent-press); border-bottom:1px solid var(--line-soft); margin-bottom:4px; padding-bottom:10px;">
-        <span>Self-service</span><span style="font-family:var(--font-head);">24 hours, 7 days — keypad ${BIZ.keypad}</span>
-      </div>
-      ${order.map(d => {
-        const h = HOURS[d === 0 ? 6 : d - 1];
-        return `<div class="hours-row ${d === today ? 'today' : ''}"><span class="day">${h[0]}</span><span class="time">${h[1]}</span></div>`;
-      }).join('')}
+  <div class="info-card hours-table">
+    <div class="hours-row" style="font-weight:700; color:var(--accent-press); border-bottom:1px solid var(--line-soft); margin-bottom:4px; padding-bottom:10px;">
+      <span>Self-service</span><span style="font-family:var(--font-head);">24 hours, 7 days — keypad ${BIZ.keypad}</span>
     </div>
+    ${order.map(d => {
+      const h = HOURS[d === 0 ? 6 : d - 1];
+      return `<div class="hours-row ${d === today ? 'today' : ''}"><span class="day">${h[0]}</span><span class="time">${h[1]}</span></div>`;
+    }).join('')}
+  </div>
+  ${footer()}`;
+}
+
+/* ---------------- CONTACT INFO ---------------- */
+function renderContactInfo() {
+  return `
+  <div class="head-block">
+    <h1>Contact</h1>
+  </div>
+  <div class="split2">
     <div class="info-card">
-      <h3>Contact Information</h3>
+      <h3>Get In Touch</h3>
       <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Phone</b><span><a href="${BIZ.phoneHref}" style="color:var(--accent);">${BIZ.phone}</a></span></div></div>
       <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Phone</b><span><a href="${BIZ.phone2Href}" style="color:var(--accent);">${BIZ.phone2}</a></span></div></div>
       <div class="info-row"><div class="ii">${ic('pin')}</div><div><b>Address</b><span>${BIZ.addr}</span></div></div>
       <div class="info-row"><div class="ii">${ic('tag')}</div><div><b>Payment</b><span>Pay with credit or debit card, Apple Pay, Google Pay, or cash. We accept Mastercard and Visa.</span></div></div>
       <a class="btn btn--primary btn--block" style="margin-top:16px;" href="https://www.google.com/maps/place/Blessington+Street+Laundrette/@-37.870384,144.9776551,17z" target="_blank" rel="noopener">${ic('pin')} Get directions</a>
+    </div>
+    <div class="info-card">
+      <h3>Send Us a Message</h3>
+      <p style="font-size:14px; color:var(--ink-soft); margin-bottom:16px;">Prefer to write to us? Use the form below and we'll be in touch.</p>
+      <a class="btn btn--primary btn--block" data-go="contact">${ic('mail')} Get in touch</a>
     </div>
   </div>
   ${footer()}`;
@@ -576,6 +590,7 @@ const ROUTES = {
   home: renderHome, pricing: renderPricing, delivery: renderDelivery,
   commercial: renderCommercial, whychooseus: renderWhyChooseUs,
   hours: renderHours, find: renderFind, contact: renderContact,
+  contactinfo: renderContactInfo,
 };
 
 function route() {
