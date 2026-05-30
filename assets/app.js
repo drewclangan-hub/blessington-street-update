@@ -635,24 +635,17 @@ document.addEventListener('click', (e) => {
   if (b) setLook(b.dataset.look);
 });
 
-/* ---------------- carousel helper (infinite wrap) ---------------- */
+/* ---------------- carousel helper (infinite wrap, index-based) ---------------- */
 window.blCarousel = function(id, dir) {
   const el = document.getElementById(id);
   if (!el) return;
-  const step = 240;
-  if (dir > 0) {
-    if (el.scrollLeft + el.clientWidth >= el.scrollWidth - 2) {
-      el.scrollTo({ left: 0, behavior: 'smooth' });
-    } else {
-      el.scrollBy({ left: step, behavior: 'smooth' });
-    }
-  } else {
-    if (el.scrollLeft <= 2) {
-      el.scrollTo({ left: el.scrollWidth, behavior: 'smooth' });
-    } else {
-      el.scrollBy({ left: -step, behavior: 'smooth' });
-    }
-  }
+  const items = el.querySelectorAll('.carousel-item');
+  if (!items.length) return;
+  const itemW = items[0].offsetWidth + 16; // card width + gap
+  const total = items.length;
+  const currentIdx = Math.round(el.scrollLeft / itemW);
+  let nextIdx = (currentIdx + dir + total) % total;
+  el.scrollTo({ left: nextIdx * itemW, behavior: 'smooth' });
 };
 
 /* ---------------- boot ---------------- */
