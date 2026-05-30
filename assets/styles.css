@@ -211,8 +211,21 @@ body.nav-open .sidebar{z-index:75;}
 .menu-btn__label{font-size:13px; font-weight:700; letter-spacing:.01em;}
 @media(max-width:859px){.menu-btn{display:flex;}}
 @media(min-width:860px){.menu-btn{display:none;}}
-/* Prevent brand tap-to-home on mobile — nav drawer is the way to navigate */
-@media(max-width:859px){.brand{pointer-events:none;} .brand__mark,.brand__name{pointer-events:none;} .menu-btn{pointer-events:auto;}}
+/* Mobile brand — tappable, matches menu button height */
+@media(max-width:859px){
+  .brand{
+    pointer-events:auto; cursor:pointer;
+    min-height:48px; border-radius:999px;
+    border:1.5px solid var(--line);
+    background:var(--surface-2);
+    padding:0 14px 0 8px;
+    gap:9px; flex:0 1 auto; max-width:calc(100% - 120px);
+    transition:border-color .15s, background .15s;
+  }
+  .brand:active{border-color:var(--accent); background:var(--accent-tint);}
+  .brand__name{font-size:13px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+  .brand__name span{display:none;}
+}
 
 /* ---- MAIN ---- */
 .main{min-width:0; flex:1;}
