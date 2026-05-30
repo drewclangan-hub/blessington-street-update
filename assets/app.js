@@ -383,7 +383,7 @@ function renderWhyChooseUs() {
   return `
   <div class="head-block">
     <span class="eyebrow">${ic('star')} Why Choose Us</span>
-    <h1>Why Businesses Choose Blessington Street Launderette</h1>
+    <h1>Why Choose Blessington Street Launderette</h1>
   </div>
 
   <div class="why-grid" style="margin-bottom:36px;">
