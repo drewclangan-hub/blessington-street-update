@@ -505,7 +505,7 @@ function renderContactInfo() {
     <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Phone</b><span><a href="${BIZ.phone2Href}" style="color:var(--accent);">${BIZ.phone2}</a></span></div></div>
     <div class="info-row"><div class="ii">${ic('pin')}</div><div><b>Address</b><span>${BIZ.addr}</span></div></div>
     <div class="info-row"><div class="ii">${ic('tag')}</div><div><b>Payment</b><span>Pay with credit or debit card, Apple Pay, Google Pay, or cash. We accept Mastercard and Visa.</span></div></div>
-    <a class="btn btn--primary btn--block" style="margin-top:16px;" href="https://www.google.com/maps/place/Blessington+Street+Laundrette/@-37.870384,144.9776551,17z" target="_blank" rel="noopener">${ic('pin')} Get directions</a>
+    <a class="btn btn--primary btn--block" style="margin-top:16px;" href="https://www.google.com/maps/dir/?api=1&destination=Blessington+Street+Laundrette,22+Blessington+St,St+Kilda+VIC+3182" target="_blank" rel="noopener">${ic('pin')} Get directions</a>
   </div>
   ${footer()}`;
 }
@@ -525,7 +525,7 @@ function renderFind() {
     </iframe>
   </div>
   <div style="margin-top:16px;">
-    <a class="btn btn--primary" href="https://www.google.com/maps/place/Blessington+Street+Laundrette/@-37.870384,144.9776551,17z" target="_blank" rel="noopener">${ic('pin')} Get directions</a>
+    <a class="btn btn--primary" href="https://www.google.com/maps/dir/?api=1&destination=Blessington+Street+Laundrette,22+Blessington+St,St+Kilda+VIC+3182" target="_blank" rel="noopener">${ic('pin')} Get directions</a>
   </div>
   ${footer()}`;
 }
@@ -598,6 +598,8 @@ function route() {
 
 /* delegated navigation */
 document.addEventListener('click', (e) => {
+  const anchor = e.target.closest('a[href]');
+  if (anchor && (anchor.href.startsWith('http') || anchor.href.startsWith('tel') || anchor.href.startsWith('mailto'))) return;
   const link = e.target.closest('[data-link]');
   const go = e.target.closest('[data-go]');
   if (link) { location.hash = '#/service/' + link.dataset.link; return; }
