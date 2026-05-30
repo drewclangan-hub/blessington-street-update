@@ -515,13 +515,22 @@ function renderFind() {
   <div class="head-block">
     <h1>22 Blessington Street, St Kilda</h1>
   </div>
-  <div class="map-ph" style="padding:0; overflow:hidden; border-radius:var(--r); border:1px solid var(--line);">
+  <div style="display:grid; grid-template-columns:1fr 340px; gap:0; border:1px solid var(--line); border-radius:var(--r); overflow:hidden; box-shadow:var(--shadow-sm);">
     <iframe
       src="https://maps.google.com/maps?q=-37.870384,144.98023&z=17&output=embed"
-      width="100%" height="100%" style="border:0; display:block; min-height:380px;"
+      width="100%" height="460" style="border:0; display:block;"
       allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
       title="Blessington Street Laundrette on Google Maps">
     </iframe>
+    <div style="background:var(--surface); padding:28px; display:flex; flex-direction:column; gap:0; border-left:1px solid var(--line);">
+      <h3 style="font-size:17px; margin-bottom:16px; padding-bottom:14px; border-bottom:1px solid var(--line-soft);">GET IN TOUCH!</h3>
+      <div class="info-row"><div class="ii">${ic('pin')}</div><div><b>Address</b><span>${BIZ.addr}</span></div></div>
+      <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Telephone</b><span><a href="${BIZ.phoneHref}" style="color:var(--accent);">${BIZ.phone}</a></span></div></div>
+      <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Telephone</b><span><a href="${BIZ.phone2Href}" style="color:var(--accent);">${BIZ.phone2}</a></span></div></div>
+      <div class="info-row"><div class="ii">${ic('clock')}</div><div><b>Self-Service Hours</b><span>24 hours, 7 days a week · entry code ${BIZ.keypad}</span></div></div>
+      <div class="info-row"><div class="ii">${ic('clock')}</div><div><b>Service Hours (Pickup/Drop Off)</b><span>7:30am – 7:00pm, 7 days a week</span></div></div>
+      <a class="btn btn--primary btn--block" style="margin-top:auto;" href="https://www.google.com/maps/place/Blessington+Street+Laundrette/@-37.870384,144.9776551,17z" target="_blank" rel="noopener">${ic('pin')} Get directions</a>
+    </div>
   </div>
   ${footer()}`;
 }
