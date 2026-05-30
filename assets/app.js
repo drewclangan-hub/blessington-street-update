@@ -365,12 +365,9 @@ function renderWhyChooseUs() {
     { head:'Save Staff Time & Improve Productivity', body:'Your team should focus on patients and clients — not managing laundry.' },
     { head:'Professional Sanitisation & Hygiene', body:'Commercial-grade systems designed for deep cleaning and proper linen care.' },
     { head:'Fast, Next-Day Turnaround', body:'Never run out of clean linen again with efficient processing.' },
-    { head:'Reliable Pickup & Delivery', body:'Collection and return on schedules fitting your business operations.' },
+    { head:'Reliable Pick-Up & Delivery', body:'Same-day or scheduled collection and return on schedules fitting your business operations.' },
     { head:'More Cost-Effective Than In-House Laundry', body:'Outsourcing laundry is often financially smarter than managing onsite.' },
-  ];
-  const whyChoose = [
     { head:'Tailored Laundry Solutions', body:'Custom plans for business size, industry, schedule.' },
-    { head:'Reliable Pick-Up & Delivery', body:'Same-day or scheduled delivery, always on time.' },
     { head:'Quality-First Approach', body:'Latest commercial laundry tech and premium detergents.' },
     { head:'Eco-Friendly Practices', body:'Biodegradable detergent options and sustainable methods.' },
   ];
@@ -387,16 +384,8 @@ function renderWhyChooseUs() {
     <h1>Why Businesses Choose Blessington Street Laundrette</h1>
   </div>
 
-  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:40px;">
+  <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:40px;">
     ${whyUs.map(w => `<div class="card" style="padding:22px;">
-      <h3 style="font-size:15px; margin-bottom:8px;">${w.head}</h3>
-      <p style="font-size:13.5px; color:var(--ink-soft); line-height:1.55;">${w.body}</p>
-    </div>`).join('')}
-  </div>
-
-  <div class="sec-head"><div><h2>Why Choose Us</h2></div></div>
-  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-bottom:40px;">
-    ${whyChoose.map(w => `<div class="card" style="padding:22px;">
       <h3 style="font-size:15px; margin-bottom:8px;">${w.head}</h3>
       <p style="font-size:13.5px; color:var(--ink-soft); line-height:1.55;">${w.body}</p>
     </div>`).join('')}
