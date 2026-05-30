@@ -392,16 +392,6 @@ function renderCommercial() {
     </div>`).join('')}
   </div>
 
-  <div class="info-card" style="margin-bottom:40px;">
-    <h3>Specials</h3>
-    <div class="prow"><span>1 Doona</span><b>$40</b></div>
-    <div class="prow"><span>2 Doonas</span><b>$75</b></div>
-    <div class="prow"><span>3 Doonas</span><b>$105</b></div>
-    <div class="prow"><span>5 shirts wash &amp; iron</span><b>$25.00 ($5.00 each)</b></div>
-    <div class="prow"><span>Free pick-up &amp; drop off</span><b>orders over $60</b></div>
-    <div class="note" style="margin-top:14px;">${ic('check')} Biodegradable detergent is available.</div>
-  </div>
-
   <div class="banner">
     <div>
       <h3>Book a Commercial Laundry Pickup Today</h3>
@@ -521,15 +511,6 @@ function renderFind() {
       <div class="info-row"><div class="ii">${ic('clock')}</div><div><b>Self-Service Hours</b><span>24 hours, 7 days a week · entry code ${BIZ.keypad}</span></div></div>
       <div class="info-row"><div class="ii">${ic('clock')}</div><div><b>Service Hours (Pickup/Drop Off)</b><span>7:30am – 7:00pm, 7 days a week</span></div></div>
       <a class="btn btn--primary btn--block" style="margin-top:16px;" href="https://www.google.com/maps/place/Blessington+Street+Laundrette/@-37.870384,144.9776551,17z" target="_blank" rel="noopener">${ic('pin')} Get directions</a>
-    </div>
-    <div class="info-card">
-      <h3>Specials</h3>
-      <div class="prow"><span>1 Doona</span><b>$40</b></div>
-      <div class="prow"><span>2 Doonas</span><b>$75</b></div>
-      <div class="prow"><span>3 Doonas</span><b>$105</b></div>
-      <div class="prow"><span>Shirt Special — 5 shirts wash &amp; iron</span><b>$25.00 ($5.00 each)</b></div>
-      <div class="prow"><span>Free pick-up &amp; drop off</span><b>orders over $60</b></div>
-      <div class="note" style="margin-top:14px;">${ic('check')} Biodegradable detergent is available.</div>
     </div>
   </div>
   ${footer()}`;
