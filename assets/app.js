@@ -40,99 +40,101 @@ const BRAND_MARK_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColo
   <path d="M10.2 7.4A1.8 1.8 0 0 1 12 6.2A1.8 1.8 0 0 1 13.8 7.4"/>
 </svg>`;
 
-/* ---------------- services data (real info from the business) ---------------- */
+/* ---------------- services data — text from blessingtonstreetlaunderette.com.au only ---------------- */
 const SERVICES = [
   { id:'self-service', name:'Self-Service Laundry', icon:'drum', img:'images/img-machines.jpg', from:'$6',
-    blurb:'30 machines & 28 express dryers. Open 24/7 — keypad entry after hours.',
-    desc:'A clean, bright laundromat with big-capacity machines and fast dryers. Tap, card, Apple Pay, Google Pay or cash. Comfortable seating and free wifi. Do a week\'s washing in under an hour. After-hours keypad access: <strong>223182#</strong>.',
-    extra:'Last self-service wash 45 minutes before machine cutoff. Staff on-site 7:30am – 7pm if you need a hand. Detergent sachets available in store for $2.',
-    chips:['Open 24/7','30 machines · 28 dryers','Card · tap · cash · Apple Pay','Free wifi','14 kg large machines','Staff on-site till 7pm'],
-    rows:[['Standard wash (8 kg)','from $6'],['Large machine (14 kg)','$10'],['Express dryer (per 10 min)','$2'],['Detergent sachets','$2'],['After-hours keypad','223182#']] },
+    blurb:'Melbourne\'s biggest self-service laundrette. Open 24/7 for your convenience.',
+    desc:'Enjoy 24-hour laundrette access in St Kilda with secure keypad entry, 223182# so you can do your laundry whenever it suits you — early mornings, late nights, or anytime in between. 30 high-capacity Dexter washing machines for everything from everyday loads to doonas and blankets. 28 double-stack EXPRESS dryers for faster drying times.',
+    extra:'Pay with credit or debit card, Apple Pay, Google Pay, or cash — whatever works best for you. Our Service Hours: 7:30am – 7:00pm, 7 days a week.',
+    chips:['Open 24/7','30 high-capacity Dexter washers','28 double-stack EXPRESS dryers','Credit card · Apple Pay · Google Pay · cash','Secure keypad entry 223182#','Clean, spacious & easy-to-use'],
+    rows:[['5 kg Front Loader','$6'],['7 kg Front Loader','$7'],['16 kg Front Loader','$14 / Super wash $16'],['24 kg Front Loader','$16'],['28 kg Front Loader','$20'],['After-hours keypad','223182#']] },
 
-  { id:'wash-dry-fold', name:'Wash, Dry & Fold', icon:'drum', img:'images/img-wash-dry-fold.jpg', from:'by weight',
-    blurb:'Sorted, washed, dried and folded by our staff. Pickup & delivery available.',
-    desc:'Drop your load in — or send it with our driver — and collect it clean, fresh, and neatly folded. We sort by colour and fabric, wash with biodegradable detergent, tumble dry and fold it crisp.',
-    extra:'Same-day available if in by 9am (+$6). Standard turnaround 24 hours. Hypoallergenic and fragrance-free detergent on request at no extra cost.',
-    chips:['Sorted by colour & fabric','Biodegradable detergent','Folded & bagged','Fragrance-free option','Same-day available','Free pickup over $60'],
-    rows:[['Wash, dry & fold','by weight'],['Minimum order','4 kg'],['Same-day (in by 9am)','+$6'],['Standard turnaround','24 hours'],['Pickup & delivery','free over $60']] },
+  { id:'wash-dry-fold', name:'Wash, Dry & Fold', icon:'drum', img:'images/img-wash-dry-fold.jpg', from:'from $38',
+    blurb:'Let us handle your everyday laundry — washed, dried and neatly folded, ready to go straight into your wardrobe.',
+    desc:'Let us handle your everyday laundry. We wash, dry, and neatly fold your clothes — ready to go straight into your wardrobe. Clothes washed and dried with plain/colour separation.',
+    extra:'Pick-up and delivery available. Ideal for families, busy professionals, and Airbnb hosts. Quality detergents that are kind to fabrics and colours. Free pick-up and drop off with every laundry order over $60.',
+    chips:['Plain/colour separation','Neatly folded & ready to put away','Pick-up and delivery available','Ideal for families, busy professionals & Airbnb hosts','Quality detergents','Free pickup over $60'],
+    rows:[['Wash, dry & fold','from $38'],['Doona cleaning (1)','$40'],['Doona cleaning (2)','$75'],['Doona cleaning (3)','$105'],['Free pickup & drop off','orders over $60']] },
 
   { id:'dry-cleaning', name:'Dry Cleaning', icon:'hanger', img:'images/img-dry-cleaning.jpg', from:'from $6.50',
-    blurb:'Suits, delicates & formalwear. Same-day if dropped before 9am.',
-    desc:'Professional solvent cleaning for the pieces that can\'t go in the machine. Every garment is inspected, spot-treated, cleaned and hand-finished on the press, then returned on hangers under a breathable cover.',
-    extra:'Wedding dresses, suede, and leather handled by specialist partners. Ask for a quote on anything unusual. Same-day available if in before 9am.',
-    chips:['Inspected & spot-treated','Hand-finished press','Returned on hangers','Delicate-safe solvents','Same-day available','Wedding dress specialist'],
-    rows:[['Shirt','$6.50'],['Trousers / skirt','$9.90'],['Two-piece suit','$19.90'],['Dress','from $16'],['Jacket / blazer','from $14'],['Same-day (in by 9am)','available']] },
+    blurb:'Expert care for delicate fabrics, business wear, and special garments — cleaned with attention to detail.',
+    desc:'Dry cleaning at Blessington Street Laundrette is a cost-effective and highly recommended service for garments that require specialized care. Our expert dry cleaners treat each garment as if it were their own, ensuring that your clothing receives the best possible care. Same-day service available when dropped off by 9am.',
+    extra:'Whether you choose to drop off your items in person or take advantage of our convenient pick-up service, we ensure a seamless experience from start to finish. We use the most sophisticated cleaning machinery and environmentally friendly solvents.',
+    chips:['Business Attire — suits, shirts, blouses','Evening Wear — gowns, dresses, tuxedos','Outerwear — coats, jackets, wool blends','Delicate Fabrics — silk, cashmere & more','Specialty Items — leather, suede & more','Same-day available — drop off by 9am'],
+    rows:[['Shirt','$6.50'],['Trousers / skirt','$9.90'],['Two-piece suit','$19.90'],['Dress','from $16'],['Same-day (drop off by 9am)','available'],['Pick-up & delivery','available']] },
 
-  { id:'rug-cleaning', name:'Rug Cleaning', icon:'rug', img:'images/img-rug.jpg', from:'from $60',
-    blurb:'Wool, synthetic & area rugs of all sizes — deep cleaned and returned in 7 days.',
-    desc:'Rugs accumulate dirt, dust, and allergens that regular vacuuming can\'t remove. We use professional equipment to deep-clean fibres, restore colour, and eliminate odours — leaving your rug fresh and revitalised.',
-    extra:'Standard 7-day turnaround. Express service available on request — ask when booking. Prices vary by fibre type and condition; quoted on inspection.',
-    chips:['Wool & natural fibre','Synthetic & polypropylene','Area rugs & runners','Persian & decorative rugs','Pickup & delivery','7-day turnaround'],
-    rows:[['Small rug (up to 1.5m²)','from $60'],['Medium rug (1.5–3m²)','from $90'],['Large rug (3m²+)','from $130'],['Pickup & delivery','free over $60'],['Turnaround','7 days'],['Express service','on request']] },
+  { id:'rug-cleaning', name:'Rug Cleaning', icon:'rug', img:'images/img-rug.jpg', from:'by size',
+    blurb:'Professional cleaning for wool, synthetic, and area rugs. Average 7-day turnaround.',
+    desc:'Professional cleaning for wool, synthetic, and area rugs. From everyday rugs to treasured pieces, we give them the care they deserve. Clear pricing by size or square metre.',
+    extra:'Pick-up and delivery for convenience. Average turnaround: 7 days. Free pick-up and drop off with every laundry order over $60.',
+    chips:['Wool, synthetic & area rugs','Clear pricing by size or sq metre','Pick-up and delivery','Average 7-day turnaround','Free pickup over $60'],
+    rows:[['Small rug (up to 1.5m²)','from $60'],['Medium rug (1.5–3m²)','from $90'],['Large rug (3m²+)','from $130'],['Pickup & delivery','free over $60'],['Average turnaround','7 days']] },
 
-  { id:'business-shirts', name:'Business Shirts', icon:'hanger', img:'images/img-business-shirts.jpg', from:'from $6',
-    blurb:'Washed, starched & pressed. Same-day before noon. Weekly accounts available.',
-    desc:'Washed at the right temperature, starched to your preference, and pressed to a crisp, even finish — collar, cuffs, placket and body. Returned hung, collared, and ready to wear directly from the hanger.',
-    extra:'Same-day available if in before noon. Weekly accounts available for regular clients. Starch preference: light, medium or heavy — just tell us at drop-off.',
-    chips:['Washed & starched','Hand-pressed','Returned on hangers','Same-day before noon','Weekly accounts','Blouses welcome'],
-    rows:[['Single shirt / blouse','$6'],['5 shirts (bundle)','$25'],['Same-day (in before noon)','available'],['Starch level','light / med / heavy']] },
+  { id:'business-shirts', name:'Business Shirts', icon:'hanger', img:'images/img-business-shirts.jpg', from:'$6 each / $25 for 5',
+    blurb:'Sharp, Crisp & Always Fresh. 5 shirts professionally ironed for just $25.',
+    desc:'Look Your Best with Blessington Street Laundrette. Sharp, Crisp & Always Fresh. Our skilled team uses professional equipment and proven techniques to give shirts, blouses, trousers, and more a flawless finish every time. Need fresh, sharp shirts each week? Leave it to us — we\'ll have them looking crisp and ready to go.',
+    extra:'Not Just Shirts — from curtains to bedding to those tricky fabrics that never sit flat — we handle it all. Our heavy-duty steam table makes light work of large or bulky items. Curtains & Upholstery: prices vary by size and fabric — just give us a call for a quote.',
+    chips:['5 shirts for $25 ($5 each)','Shirts, blouses & trousers','Professional equipment & techniques','Crisp flawless finish','Curtains & bedding','Heavy-duty steam table'],
+    rows:[['5 shirts wash & iron','$25 ($5.00 each)'],['Single shirt','$6'],['Got Something Special Coming Up?','Wedding, party or event — ask us']] },
 
-  { id:'ironing', name:'Ironing & Pressing', icon:'iron', img:'images/img-ironing.jpg', from:'from $3.50',
-    blurb:'Crisp, crease-free shirts and linens. Add to any wash order.',
-    desc:'Hand-pressed shirts, trousers and household linen finished to a professional standard. Have it as a standalone service or add pressing to any wash & fold order. Returned hung or folded — your choice.',
-    extra:'Popular for busy weeks: drop a basket on Monday, collect a week of fresh shirts by Tuesday. Great for bed linen and tablecloths too.',
-    chips:['Hand-pressed','Hung or folded','Add to any wash','Shirts & linen','Steam finish','Next-day turnaround'],
-    rows:[['Shirt / blouse','$3.50'],['5 shirts (bundle)','$25'],['Trousers','$4.50'],['Bed linen (set)','$12'],['Per 30-min basket','$18']] },
+  { id:'ironing', name:'Ironing & Pressing', icon:'iron', img:'images/img-ironing.jpg', from:'from $5',
+    blurb:'Crisp, professional finish every time. Gentle care for delicate fabrics.',
+    desc:'Need your clothes looking sharp? We\'ll press your shirts, uniforms, or formal wear to perfection. Crisp, professional finish every time. Gentle care for delicate fabrics. Perfect for busy workers, parents, and special occasions.',
+    extra:'From curtains to bedding to those tricky fabrics that never sit flat — we handle it all. Our heavy-duty steam table makes light work of large or bulky items. Prices vary by size and fabric — just give us a call for a quote.',
+    chips:['Crisp, professional finish every time','Gentle care for delicate fabrics','Perfect for busy workers, parents & special occasions','Curtains & bedding','Heavy-duty steam table'],
+    rows:[['5 shirts wash & iron','$25 ($5.00 each)'],['Single shirt','$6'],['Curtains & upholstery','call for a quote']] },
 
   { id:'stain-removal', name:'Stain Removal', icon:'drop', img:'images/img-stain.jpg', from:'from $12',
-    blurb:'Wine, coffee, ink, grease & makeup treated by hand. No fix, no fee.',
-    desc:'We assess every stain individually and choose the right treatment for the fabric. Best results when it\'s fresh — bring it in soon after the incident.',
-    extra:'Honest about outcomes: if we don\'t think we can shift it, we\'ll tell you before you\'re charged. No fix, no fee on spot treatments.',
-    chips:['Hand-treated','Fabric-safe method','Free assessment','No fix, no fee','Add to any wash','Fresh stains preferred'],
-    rows:[['Assessment','Free'],['Spot treatment','$6 / item'],['Heavy staining','from $12'],['No fix, no fee','on spot treatments'],['Add to wash order','yes']] },
+    blurb:'Say Goodbye to Stubborn Marks. We\'ve seen it all, and we know just what to do.',
+    desc:'Spilled wine on your favourite dress? Ink on your work shirt? Oil on your best jacket? Don\'t panic — we\'ve seen it all, and we know just what to do. At Blessington Street Laundrette, we understand that no two stains are alike. From coffee and curry to lipstick, paint, or grease, each mark needs its own special approach.',
+    extra:'We\'ll always do our best to give your clothes the greatest chance of a full recovery — and we\'ll be honest about what\'s possible before we begin.',
+    chips:['Tailored Treatments — every stain & fabric gets the right method','Professional Care — proven techniques & quality cleaning solutions','Gentle on Fabrics — tough on stains, kind to your clothes','Save Your Favourites — don\'t write off that much-loved garment'],
+    rows:[['Stain removal','from $12'],['Assessment','honest upfront'],['Add to wash order','yes']] },
 
-  { id:'repairs-alterations', name:'Repairs & Alterations', icon:'needle', img:'images/img-alterations.jpg', from:'from $8',
-    blurb:'Zip repairs, hemming, resizing, buttons & rip fixes. Quoted in store.',
-    desc:'Bring in the garment and we\'ll assess it in front of you, give you a quote, and let you decide. No obligation. Simple repairs are often done same-day or next-day.',
-    extra:'We do: zip repair and replacement, hemming, button work, rip and tear repair, waistband adjustments, sleeve shortening.',
-    chips:['Zip repair & replacement','Hemming','Button work','Rip & tear repair','Waistband adjustments','Quoted in store'],
-    rows:[['Basic repairs (buttons, hems)','from $8'],['Zip repair','from $15'],['Zip replacement','from $22'],['Waistband adjustment','from $18'],['Complex alterations','quoted in store']] },
+  { id:'repairs-alterations', name:'Repairs & Alterations', icon:'needle', img:'images/img-alterations.jpg', from:'quoted in store',
+    blurb:'Love Your Clothes for Longer. From simple hems to complete re-sizing.',
+    desc:'Why say goodbye to your favourite clothes or shoes when they can be brought back to life? At Blessington Street Laundrette, we believe in making the most of what you already love — saving you money and reducing waste while keeping you looking your best. From simple hems to complete re-sizing, our skilled alteration service can adjust your garments so they fit and feel just right.',
+    extra:'Whether it\'s a formal dress, a business suit, or everyday wear, we\'ll make sure it flatters you perfectly. Whether it\'s fixing a tear, shortening sleeves, or giving your favourite garment a refresh, we treat every item with care and precision.',
+    chips:['Save Money — restoring costs far less than buying new','Better for the Planet — reduce waste & keep quality materials in use','Keep the Comfort — already broken-in items are often more comfortable','Hold on to Memories — some items are simply irreplaceable'],
+    rows:[['Clothing alterations','quoted in store'],['Simple hems to complete re-sizing','available'],['Repairs & alterations','quoted on inspection']] },
 
   { id:'doona-cleaning', name:'Doona Cleaning', icon:'bed', img:'images/img-doona.jpg', from:'from $40',
-    blurb:'Doonas, quilts & pillows refreshed in large-capacity drums — fully dried.',
-    desc:'Bulky bedding that won\'t fit in a home machine, cleaned in our large-capacity drums. Doonas, quilts, pillows and mattress toppers come back fresh, fully dried and full of loft — no damp cores.',
-    extra:'Seasonal tip: refresh winter doonas before storage. Anti-allergen wash available on request. Vacuum storage bags available to buy in store.',
-    chips:['Large-capacity drums','Fully dried','Down & synthetic','Anti-allergen wash','Pillows & toppers','Seasonal refresh'],
-    rows:[['Doona cleaning (1)','$40'],['Doona cleaning (2)','$75'],['Doona cleaning (3)','$105'],['Pickup & delivery','free over $60']] },
+    blurb:'Doonas, quilts & blankets. 30 high-capacity machines for everything from everyday loads to doonas.',
+    desc:'30 high-capacity Dexter washing machines for everything from everyday loads to doonas and blankets. Bulky items that won\'t fit in a home machine cleaned properly and returned fresh.',
+    extra:'Free pick-up and drop off with every laundry order over $60. Biodegradable detergent is available.',
+    chips:['Single doona $40','Two doonas $75','Three doonas $105','Free pickup over $60','Biodegradable detergent available'],
+    rows:[['1 Doona','$40'],['2 Doonas','$75'],['3 Doonas','$105'],['Pickup & delivery','free over $60']] },
 
-  { id:'commercial-laundry', name:'Commercial & Bulk', icon:'stack', img:'images/img-machines.jpg', from:'POA',
-    blurb:'Reliable linen for cafés, gyms, salons & short-stay. Scheduled pickups, account billing.',
-    desc:'Dependable laundry for local business. Scheduled pickups, contract rates and consistent turnaround for cafés, gyms, salons, clinics and short-stay hosts. Tell us your weekly volume and we\'ll build a plan.',
-    extra:'Account billing, fixed weekly windows and priority turnaround all available. Trusted by venues across St Kilda and Balaclava.',
-    chips:['Scheduled pickups','Contract rates','Account billing','Next-day turnaround','Priority service','Cafés · Gyms · Salons · Stays'],
-    rows:[['Towels / linen','from $3.50 / kg'],['Weekly contract','tailored rate'],['Account billing','available'],['Turnaround','next-day'],['Priority service','on request']] },
+  { id:'commercial-laundry', name:'Commercial & Bulk', icon:'stack', img:'images/img-machines.jpg', from:'contact us',
+    blurb:'Reliable, professional laundry solutions for restaurants, cafés, salons, gyms, Airbnbs, and more.',
+    desc:'Our Commercial Laundry service, conveniently located at Blessington Street, is perfectly situated to cater to restaurants, hotels, and businesses throughout St Kilda and the surrounding areas. We understand that businesses need reliable, fast, and quality laundry services to keep operations running smoothly. We offer flexible delivery and collection times tailored to your needs.',
+    extra:'We accept Mastercard and Visa. Account facility is available upon request for commercial (pick-up & delivery) service.',
+    chips:['Time and Cost Efficiency','Consistency and Quality','Increased Productivity','Flexibility and Convenience','Eco-Friendly Practices','No Job Too Big or Small'],
+    rows:[['Towels / linen','from $3.50 / kg'],['Account billing','available on request'],['Mastercard & Visa','accepted'],['Delivery & collection','flexible, tailored to your needs']] },
 
-  { id:'pickup-delivery', name:'Pickup & Delivery', icon:'truck', img:'images/img-truck.jpg', from:'free over $60',
-    blurb:'We collect & return, right to your door. Free on orders over $60.',
-    desc:'Never carry a laundry bag again. Call us to arrange a collection. Our driver picks up from your door, we clean everything at Blessington Street, and return it fresh on your chosen day.',
-    extra:'Covering St Kilda, Balaclava and Elwood. Contactless drop-off available. Phone booking: 0417 579 143.',
-    chips:['St Kilda · Balaclava · Elwood','Same-day available','Contactless option','All services covered','Free over $60','Phone booking'],
-    rows:[['Orders over $60','Free both ways'],['Within service area (under $60)','$8 each way'],['Same-day collection','where available'],['Booking','phone 0417 579 143']] },
+  { id:'pickup-delivery', name:'Pickup & Delivery', icon:'truck', img:'images/img-truck.jpg', from:'from $60',
+    blurb:'Too busy to come in? We\'ll collect your laundry, clean it, and deliver it back fresh and ready to use.',
+    desc:'Too busy to come in? We\'ll collect your laundry, clean it, and deliver it back fresh and ready to use. Services starting from $60. Free pick-up and drop off with every laundry order over $60.',
+    extra:'Blessington Street Laundrette proudly serves customers across Melbourne, including St Kilda, Middle Park, Albert Park, Port Melbourne, Southbank, Elwood, South Yarra, Richmond, Fitzroy, Collingwood, Abbotsford, Brighton, Caulfield and Melbourne CBD.',
+    chips:['Free pickup & drop off over $60','St Kilda · Middle Park · Albert Park','Port Melbourne · Southbank · Elwood','South Yarra · Richmond · Fitzroy','Brighton · Caulfield · Melbourne CBD','Services starting from $60'],
+    rows:[['Free pickup & drop off','orders over $60'],['Services starting from','$60'],['Mastercard & Visa','accepted'],['Account facility','available on request']] },
 ];
 const svcById = (id) => SERVICES.find(s => s.id === id) || SERVICES[0];
 
-/* ---------------- shared business info ---------------- */
+/* ---------------- shared business info — from blessingtonstreetlaunderette.com.au ---------------- */
 const BIZ = {
   phone:'0417 579 143',
   phoneHref:'tel:+61417579143',
-  email:'hello@blessingtonstreetlaunderette.com.au',
-  addr:'22 Blessington Street, St Kilda VIC 3182',
+  phone2:'(03) 9534 2976',
+  phone2Href:'tel:0395342976',
+  addr:'22 Blessington Street, St Kilda',
   keypad:'223182#',
+  payment:'We accept Mastercard and Visa. Account facility is available upon request for commercial (pick-up & delivery) service.',
 };
 
 const HOURS = [
-  ['Monday','7:30am – 7pm'],['Tuesday','7:30am – 7pm'],['Wednesday','7:30am – 7pm'],
-  ['Thursday','7:30am – 7pm'],['Friday','7:30am – 7pm'],['Saturday','7:30am – 7pm'],['Sunday','7:30am – 7pm'],
+  ['Monday','7:30am – 7:00pm'],['Tuesday','7:30am – 7:00pm'],['Wednesday','7:30am – 7:00pm'],
+  ['Thursday','7:30am – 7:00pm'],['Friday','7:30am – 7:00pm'],['Saturday','7:30am – 7:00pm'],['Sunday','7:30am – 7:00pm'],
 ];
 
 /* ---------------- tweak state ---------------- */
@@ -171,34 +173,34 @@ function heroStandard(T) {
   return `
   <div class="hero">
     <div>
-      <span class="eyebrow">Your local laundry · St Kilda</span>
+      <span class="eyebrow">22 Blessington Street, St Kilda</span>
       <h1>${T.headline}</h1>
-      <p class="lede">Drop in on Blessington Street or let us collect from your door — washed, dried, folded and pressed by a team that actually cares.</p>
+      <p class="lede">Open 24/7 for Your Convenience. Our Service Hours: 7:30am – 7:00pm, 7 days a week.</p>
       <div class="cta-row">
-        <a class="btn btn--primary" href="tel:+61417579143">${ic('phone')} 0417 579 143</a>
+        <a class="btn btn--primary" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
         <a class="btn btn--ghost" data-go="pricing">See pricing</a>
       </div>
-      <div class="trust"><span class="stars">★★★★★</span> Melbourne's biggest coinless launderette · Open 24/7</div>
+      <div class="trust"><span class="stars">★★★★★</span> Melbourne's Biggest Self-Service Laundrette</div>
     </div>
-    ${photo('images/img-home.jpg', 'Blessington Street Launderette', 'hero__photo')}
+    ${photo('images/img-home.jpg', 'Blessington Street Laundrette', 'hero__photo')}
   </div>`;
 }
 function heroCompact(T) {
   return `
   <div class="hero hero--compact">
-    <span class="eyebrow">Your local laundry · St Kilda</span>
+    <span class="eyebrow">22 Blessington Street, St Kilda</span>
     <h1>${T.headline}</h1>
-    <p class="hero-tagline">Save time &amp; money with Melbourne's biggest self-service coinless laundry</p>
-    <p class="lede">30 machines · 28 dryers · open 24/7 · drop in or let us collect.</p>
+    <p class="hero-tagline">Save time &amp; money with Melbourne's biggest self service coinless laundry</p>
+    <p class="lede">Open 24/7 for Your Convenience &nbsp;·&nbsp; Service Hours: 7:30am – 7:00pm, 7 days a week</p>
   </div>`;
 }
 function bannerBlock() {
   return `
   <div class="banner">
     <div>
-      <span class="pill" style="background:rgba(255,255,255,.16); color:#fff; border-color:rgba(255,255,255,.3);">${ic('truck')} Collection &amp; delivery</span>
-      <h3 style="margin-top:12px;">We'll come to you — free over $60.</h3>
-      <p>Call <a href="tel:+61417579143" style="color:#fff; font-weight:700;">0417 579 143</a> to book. We cover St Kilda, Balaclava &amp; Elwood and return your fresh laundry right to your door.</p>
+      <span class="pill" style="background:rgba(255,255,255,.16); color:#fff; border-color:rgba(255,255,255,.3);">${ic('truck')} Pickup &amp; Delivery</span>
+      <h3 style="margin-top:12px;">Free pick-up and drop off with every laundry order over $60.</h3>
+      <p>Too busy to come in? We'll collect your laundry, clean it, and deliver it back fresh and ready to use. Services starting from $60.</p>
     </div>
     <a class="btn btn--ghost" data-link="pickup-delivery">Book a pickup ${ic('arrow')}</a>
   </div>`;
@@ -283,123 +285,62 @@ function renderService(id) {
 
 /* ---------------- COMMERCIAL ---------------- */
 function renderCommercial() {
-  const industries = [
-    { icon:'spark', name:'Medical & Allied Health', desc:'Clinics, physio, rehab, dental, aged care — scrubs, gowns, towels and treatment linen cleaned to strict hygiene standards.' },
-    { icon:'star', name:'Gyms & Fitness Studios', desc:'Towels and uniforms with fast turnaround so you never run short between classes.' },
-    { icon:'stack', name:'Restaurants & Cafés', desc:'Tablecloths, napkins, aprons and chef jackets laundered to a high standard, ready for service.' },
-    { icon:'drop', name:'Hair & Beauty Salons', desc:'Salon towels, gowns and capes professionally laundered and pressed.' },
-    { icon:'bed', name:'Hotels & Short-Stay', desc:'High-volume sheets, pillowcases, towels and staff uniforms on a reliable schedule.' },
-    { icon:'spark', name:'Massage & Day Spas', desc:'Towels, robes, sheets and pillow covers cleaned to premium standards.' },
-    { icon:'stack', name:'Childcare & Schools', desc:'Bedding, uniforms and activity mats sanitised for child safety.' },
-    { icon:'truck', name:'Events & Functions', desc:'Tablecloths, chair covers and event linens cleaned and returned ready for your next booking.' },
-  ];
-
-  const steps = [
-    ['Schedule a pickup', 'Organise regular collection times that fit your business. Same-day or scheduled — we work around your operation, not the other way around.'],
-    ['Professional cleaning & sanitisation', 'Expertly washed, sanitised, dried and folded using commercial-grade systems and premium detergents.'],
-    ['Next-day delivery', 'Clean, fresh linen returned promptly. Never run out of clean linen again.'],
-  ];
-
-  const reasons = [
-    { icon:'clock', head:'Save staff time', body:'Your team should focus on patients and clients — not managing laundry between appointments.' },
-    { icon:'check', head:'Professional hygiene', body:'Commercial-grade systems designed for deep cleaning and proper sanitisation of medical and hospitality linen.' },
-    { icon:'arrow', head:'Fast next-day turnaround', body:'Consistent processing means clean linen is always ready when you need it.' },
-    { icon:'truck', head:'Reliable pickup & delivery', body:'Collection and return on a schedule that fits your business — inner bayside Melbourne.' },
-    { icon:'tag', head:'More cost-effective', body:'Outsourcing laundry is often financially smarter than managing machines, staff time and detergent onsite.' },
-    { icon:'spark', head:'Eco-friendly options', body:'Biodegradable detergent available on request. Sustainable practices across all commercial accounts.' },
-  ];
-
-  const testimonials = [
-    { name:'Kerry Mccormack', role:'Regular customer', quote:'Rita, Milad and the girls are always pleasant… end result always immaculately cleaned.' },
-    { name:'Will Cochrane', role:'Regular customer, 10+ years', quote:'I have been using the Blessington Street Laundry for over 10 years… always assured the job will be done properly.' },
-    { name:'The Hon Neil Brown QC', role:'Regular customer', quote:'I have used it for several years… very happy with the quality of work.' },
+  const benefits = [
+    { icon:'clock', head:'Time and Cost Efficiency', body:'Save valuable time by leaving the laundry to us, allowing your team to focus on core business operations. Avoid the overhead of in-house laundry facilities and their associated costs — like equipment maintenance, utilities, and labour.' },
+    { icon:'check', head:'Consistency and Quality', body:'Our professional services ensure your linens, uniforms, and other laundry items are cleaned and pressed to the highest standards, every time. We handle high-volume laundry with attention to detail.' },
+    { icon:'arrow', head:'Increased Productivity', body:'With laundry tasks outsourced, your staff can focus on customer service and daily operations, improving overall efficiency.' },
+    { icon:'truck', head:'Flexibility and Convenience', body:'We offer customized delivery and pick-up schedules to suit your business, whether you need daily, weekly, or urgent services.' },
+    { icon:'spark', head:'Sustainability and Eco-Friendly Practices', body:'We use eco-friendly detergents and cleaning methods, ensuring that your business stays environmentally conscious while keeping your linens fresh and clean.' },
+    { icon:'stack', head:'No Job Too Big or Small', body:'Whether it\'s chef uniforms, towels, table linens, or medical attire, we have the capacity and expertise to handle all your laundry needs.' },
   ];
 
   return `
   <div class="head-block">
-    <span class="eyebrow">${ic('stack')} Commercial laundry</span>
-    <h1>Professional laundry<br>for Melbourne businesses</h1>
-    <p class="lede">Complimentary pickup and delivery across Melbourne's inner bayside — St Kilda, Albert Park, Middle Park and surrounding suburbs. Trusted by medical clinics, gyms, salons, hospitality venues and more.</p>
+    <span class="eyebrow">${ic('stack')} Commercial Laundry</span>
+    <h1>Commercial Laundry Services</h1>
+    <p class="lede">Our Commercial Laundry service, conveniently located at Blessington Street, is perfectly situated to cater to restaurants, hotels, and businesses throughout St Kilda and the surrounding areas. We offer flexible delivery and collection times tailored to your needs.</p>
     <div class="cta-row" style="margin-top:22px; display:flex; gap:12px;">
       <a class="btn btn--primary" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
-      <a class="btn btn--ghost" data-go="contact">Send a message</a>
+      <a class="btn btn--ghost" href="${BIZ.phone2Href}">${ic('phone')} ${BIZ.phone2}</a>
     </div>
   </div>
 
-  <div class="steps">
-    ${steps.map((st, i) => `<div class="step"><div class="num">${i + 1}</div><h3>${st[0]}</h3><p>${st[1]}</p></div>`).join('')}
-  </div>
-
-  <div class="sec-head" style="margin-top:50px;">
-    <div><span class="eyebrow">Why businesses choose us</span><h2 style="margin-top:10px;">Six reasons to outsource your laundry</h2></div>
+  <div class="sec-head">
+    <div><span class="eyebrow">Benefits of outsourcing your laundry to us</span><h2 style="margin-top:10px;">Why Choose Us</h2></div>
   </div>
   <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:50px;">
-    ${reasons.map(r => `
+    ${benefits.map(b => `
     <div class="card" style="padding:22px;">
-      <div style="width:36px;height:36px;border-radius:10px;background:var(--accent-tint);color:var(--accent-press);display:grid;place-items:center;margin-bottom:14px;">${ic(r.icon)}</div>
-      <h3 style="font-size:16px; margin-bottom:8px;">${r.head}</h3>
-      <p style="font-size:14px; color:var(--ink-soft); line-height:1.55;">${r.body}</p>
-    </div>`).join('')}
-  </div>
-
-  <div class="sec-head">
-    <div><span class="eyebrow">Industries we serve</span><h2 style="margin-top:10px;">Who we work with</h2></div>
-  </div>
-  <div style="display:grid; grid-template-columns:repeat(var(--cols,3),1fr); gap:14px; margin-bottom:50px;">
-    ${industries.map(ind => `
-    <div class="more-card" style="cursor:default;">
-      <div class="mi">${ic(ind.icon)}</div>
-      <div><b>${ind.name}</b><span style="display:block;font-size:12.5px;color:var(--muted);line-height:1.4;margin-top:3px;">${ind.desc}</span></div>
+      <div style="width:36px;height:36px;border-radius:10px;background:var(--accent-tint);color:var(--accent-press);display:grid;place-items:center;margin-bottom:14px;">${ic(b.icon)}</div>
+      <h3 style="font-size:15px; margin-bottom:8px;">${b.head}</h3>
+      <p style="font-size:13.5px; color:var(--ink-soft); line-height:1.55;">${b.body}</p>
     </div>`).join('')}
   </div>
 
   <div class="split2" style="margin-bottom:50px; align-items:start;">
-    <div>
-      <div class="sec-head" style="margin-top:0;"><div><span class="eyebrow">What we clean</span><h2 style="margin-top:10px; font-size:clamp(20px,2vw,26px);">Every item, done properly</h2></div></div>
-      <div class="card" style="padding:22px;">
-        ${['Towels and gym linen','Medical and patient gowns','Bed sheets and pillowcases','Staff uniforms and scrubs','Treatment room linen','Massage and therapy towels','Cleaning cloths and rags','Robes and spa linen','Tablecloths and napkins','Aprons and chef jackets'].map(item =>
-          `<div class="chips" style="margin:0 0 8px; flex-wrap:nowrap;"><span class="chip">${item}</span></div>`
-        ).join('')}
-      </div>
+    <div class="info-card">
+      <h3>Specials</h3>
+      <div class="prow"><span>1 Doona</span><b>$40</b></div>
+      <div class="prow"><span>2 Doonas</span><b>$75</b></div>
+      <div class="prow"><span>3 Doonas</span><b>$105</b></div>
+      <div class="prow"><span>5 shirts wash &amp; iron</span><b>$25.00 ($5.00 each)</b></div>
+      <div class="prow"><span>Free pickup &amp; drop off</span><b>orders over $60</b></div>
+      <div class="note" style="margin-top:14px;">${ic('check')} Biodegradable detergent is available. We accept Mastercard and Visa. Account facility available on request.</div>
     </div>
-    <div>
-      <div class="sec-head" style="margin-top:0;"><div><span class="eyebrow">Pricing</span><h2 style="margin-top:10px; font-size:clamp(20px,2vw,26px);">What it costs</h2></div></div>
-      <div class="pricebox" style="position:static;">
-        <h4>Commercial rates</h4>
-        <div class="from">tailored to your volume</div>
-        <div class="prow"><span>Towels / linen</span><b>from $3.50 / kg</b></div>
-        <div class="prow"><span>Weekly contract</span><b>tailored rate</b></div>
-        <div class="prow"><span>Account billing</span><b>available</b></div>
-        <div class="prow"><span>Turnaround</span><b>next-day</b></div>
-        <div class="prow"><span>Pickup &amp; delivery</span><b>free over $60</b></div>
-        <div class="prow"><span>Doona (1)</span><b>$40</b></div>
-        <div class="prow"><span>Doonas (2)</span><b>$75</b></div>
-        <div class="prow"><span>Doonas (3)</span><b>$105</b></div>
-        <div class="prow"><span>5 shirts wash &amp; iron</span><b>$25</b></div>
-        <a class="btn btn--primary btn--block" style="margin-top:16px;" href="${BIZ.phoneHref}">${ic('phone')} Call to discuss rates</a>
-        <a class="btn btn--ghost btn--block" style="margin-top:9px;" data-go="contact">Send an enquiry</a>
-        <div class="note">${ic('check')} Biodegradable detergent available on all commercial accounts.</div>
-      </div>
+    <div class="info-card">
+      <h3>Our Flexible Service</h3>
+      <div class="info-row"><div class="ii">${ic('check')}</div><div><b>We offer flexible, personalized service</b><span>To service your every need, we have washers of different sizes.</span></div></div>
+      <div class="info-row"><div class="ii">${ic('drop')}</div><div><b>Expertly removing different types of stains</b><span>You can feel confident when you are choosing our laundry services.</span></div></div>
+      <div class="info-row"><div class="ii">${ic('truck')}</div><div><b>Reliable, fast, and quality laundry services</b><span>To keep your operations running smoothly.</span></div></div>
+      <a class="btn btn--primary btn--block" style="margin-top:16px;" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
+      <a class="btn btn--ghost btn--block" style="margin-top:9px;" data-go="contact">Send an enquiry</a>
     </div>
-  </div>
-
-  <div class="sec-head">
-    <div><span class="eyebrow">What our customers say</span><h2 style="margin-top:10px;">Trusted for years</h2></div>
-  </div>
-  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:50px;">
-    ${testimonials.map(t => `
-    <div class="card" style="padding:22px;">
-      <div class="trust" style="margin-bottom:12px;"><span class="stars">★★★★★</span></div>
-      <p style="font-size:14.5px; color:var(--ink-soft); line-height:1.6; font-style:italic; margin-bottom:16px;">"${t.quote}"</p>
-      <div style="font-size:13px; font-weight:700; color:var(--ink);">${t.name}</div>
-      <div style="font-size:12px; color:var(--muted);">${t.role}</div>
-    </div>`).join('')}
   </div>
 
   <div class="banner">
     <div>
-      <h3>Book a commercial laundry pickup today</h3>
-      <p>Take the pressure off your team and ensure clean, professional-quality linen ready to use. Contact us to set up a regular service.</p>
+      <h3>Commercial Laundry Services Serving Melbourne</h3>
+      <p>Albert Park, Middle Park, St Kilda &amp; Surrounding Suburbs. By outsourcing your laundry needs to Blessington Street Laundrette, you're investing in the reliability, quality, and efficiency that your business deserves.</p>
     </div>
     <a class="btn btn--ghost" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
   </div>
@@ -430,32 +371,31 @@ function renderPricing() {
 
 /* ---------------- COLLECTION & DELIVERY ---------------- */
 function renderDelivery() {
-  const steps = [
-    ['Book a collection','Call us on ' + BIZ.phone + '. Same-day where available, or schedule ahead. We\'ll confirm your window.'],
-    ['We clean it','Our driver collects from your door. Everything\'s washed, dried, folded or pressed at Blessington Street by our staff.'],
-    ['Back to your door','We return it fresh on your chosen day. Contactless drop-off available — just leave a note when you book.'],
-  ];
+  const areas = ['St Kilda','Middle Park','Albert Park','Port Melbourne','Southbank','Kew & Kew East','Abbotsford','Collingwood','Fitzroy','Richmond','Brighton','Caulfield & Caulfield South/East','South Yarra','Elwood','East Melbourne','Melbourne CBD (3004)'];
   return `
-  <div class="head-block"><span class="eyebrow">${ic('truck')} Collection &amp; delivery</span>
-    <h1>We'll come to you</h1>
-    <p class="lede">Skip the trip. Covering St Kilda, Balaclava and Elwood — free both ways on orders over $60.</p>
+  <div class="head-block"><span class="eyebrow">${ic('truck')} Pickup &amp; Delivery</span>
+    <h1>Pickup &amp; Delivery Laundry Service</h1>
+    <p class="lede">Too busy to come in? We'll collect your laundry, clean it, and deliver it back fresh and ready to use. Services starting from $60. Free pick-up and drop off with every laundry order over $60.</p>
     <div class="cta-row" style="margin-top:22px; display:flex; gap:12px;">
       <a class="btn btn--primary" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
-      <a class="btn btn--ghost" data-go="contact">Send a message</a>
+      <a class="btn btn--ghost" href="${BIZ.phone2Href}">${ic('phone')} ${BIZ.phone2}</a>
     </div>
-  </div>
-  <div class="steps">
-    ${steps.map((st, i) => `<div class="step"><div class="num">${i + 1}</div><h3>${st[0]}</h3><p>${st[1]}</p></div>`).join('')}
   </div>
   <div class="split2">
     <div class="info-card">
-      <h3>What it costs</h3>
-      <div class="info-row"><div class="ii">${ic('truck')}</div><div><b>Orders over $60</b><span>Free collection &amp; delivery, both ways.</span></div></div>
-      <div class="info-row"><div class="ii">${ic('pin')}</div><div><b>Within service area</b><span>$8 each way for smaller orders.</span></div></div>
-      <div class="info-row"><div class="ii">${ic('clock')}</div><div><b>Same-day</b><span>Available on selected routes — confirm at booking.</span></div></div>
-      <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Book by phone</b><span><a href="${BIZ.phoneHref}" style="color:var(--accent);">${BIZ.phone}</a></span></div></div>
+      <h3>Pricing</h3>
+      <div class="info-row"><div class="ii">${ic('check')}</div><div><b>Free pick-up and drop off</b><span>With every laundry order over $60.</span></div></div>
+      <div class="info-row"><div class="ii">${ic('truck')}</div><div><b>Services starting from</b><span>$60</span></div></div>
+      <div class="info-row"><div class="ii">${ic('tag')}</div><div><b>Payment</b><span>We accept Mastercard and Visa. Account facility available on request for commercial service.</span></div></div>
+      <a class="btn btn--primary btn--block" style="margin-top:16px;" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
     </div>
-    ${photo('images/img-truck.jpg', 'Collection & delivery service', 'map-ph')}
+    <div class="info-card">
+      <h3>Service Areas</h3>
+      <p style="font-size:13px; color:var(--muted); margin-bottom:14px;">Blessington Street Laundrette proudly serves customers across Melbourne, including:</p>
+      <div class="chips" style="flex-wrap:wrap;">
+        ${areas.map(a => `<span class="chip">${a}</span>`).join('')}
+      </div>
+    </div>
   </div>
   ${footer()}`;
 }
@@ -466,28 +406,26 @@ function renderHours() {
   const order = [1,2,3,4,5,6,0];
   return `
   <div class="head-block"><span class="eyebrow">${ic('clock')} Opening hours</span>
-    <h1>When we're open</h1>
-    <p class="lede"><span class="open-dot"></span>Self-service machines open 24/7. Staff on-site 7:30am – 7pm, 7 days a week.</p>
+    <h1>Opening Hours</h1>
+    <p class="lede">Self-service hours: 24 hours, 7 days a week with the entry code 223182#. Service hours pickup/drop off: 7:30am – 7:00pm, 7 days a week.</p>
   </div>
   <div class="split2">
     <div class="info-card hours-table">
       <div class="hours-row" style="font-weight:700; color:var(--accent-press); border-bottom:1px solid var(--line-soft); margin-bottom:4px; padding-bottom:10px;">
-        <span>Self-service machines</span><span style="font-family:var(--font-head);">Open 24/7</span>
+        <span>Self-service</span><span style="font-family:var(--font-head);">24 hours, 7 days — keypad ${BIZ.keypad}</span>
       </div>
       ${order.map(d => {
         const h = HOURS[d === 0 ? 6 : d - 1];
         return `<div class="hours-row ${d === today ? 'today' : ''}"><span class="day">${h[0]}</span><span class="time">${h[1]}</span></div>`;
       }).join('')}
-      <div class="hours-row" style="color:var(--muted); font-size:13px; border-top:1px solid var(--line-soft); margin-top:4px; padding-top:10px;">
-        <span>After-hours keypad</span><span style="font-family:var(--font-head);">${BIZ.keypad}</span>
-      </div>
     </div>
     <div class="info-card">
-      <h3>Good to know</h3>
-      <div class="info-row"><div class="ii">${ic('coin')}</div><div><b>Coinless payments</b><span>Card, tap, Apple Pay, Google Pay and cash. No coins needed.</span></div></div>
-      <div class="info-row"><div class="ii">${ic('spark')}</div><div><b>Public holidays</b><span>Staff hours may vary — call ahead on ${BIZ.phone}.</span></div></div>
-      <div class="info-row"><div class="ii">${ic('truck')}</div><div><b>Collection windows</b><span>Pickups run 7:30am – 6pm, seven days.</span></div></div>
+      <h3>Contact &amp; Payment</h3>
+      <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Phone</b><span><a href="${BIZ.phoneHref}" style="color:var(--accent);">${BIZ.phone}</a></span></div></div>
+      <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Phone</b><span><a href="${BIZ.phone2Href}" style="color:var(--accent);">${BIZ.phone2}</a></span></div></div>
       <div class="info-row"><div class="ii">${ic('pin')}</div><div><b>Address</b><span>${BIZ.addr}</span></div></div>
+      <div class="info-row"><div class="ii">${ic('tag')}</div><div><b>Payment</b><span>Credit card, Apple Pay, Google Pay, cash. Mastercard &amp; Visa accepted.</span></div></div>
+      <div class="info-row"><div class="ii">${ic('check')}</div><div><b>Biodegradable detergent</b><span>Available on request.</span></div></div>
       <a class="btn btn--primary btn--block" style="margin-top:16px;" href="https://www.google.com/maps/place/Blessington+Street+Laundrette/@-37.870384,144.9776551,17z" target="_blank" rel="noopener">${ic('pin')} Get directions</a>
     </div>
   </div>
@@ -531,9 +469,9 @@ function renderFind() {
 /* ---------------- CONTACT ---------------- */
 function renderContact() {
   return `
-  <div class="head-block"><span class="eyebrow">${ic('mail')} Contact</span>
-    <h1>Get in touch</h1>
-    <p class="lede">Questions, quotes or a collection booking — call us direct on <a href="${BIZ.phoneHref}" style="color:var(--accent);">${BIZ.phone}</a> or send a message below.</p>
+  <div class="head-block"><span class="eyebrow">${ic('mail')} Contact Us</span>
+    <h1>Get In Touch</h1>
+    <p class="lede">Blessington Street Laundrette proudly serves customers across Melbourne. Fill in the form below and we will be in touch soon.</p>
   </div>
   <div class="split2">
     <form class="form" id="contactForm" onsubmit="return false;">
@@ -551,16 +489,18 @@ function renderContact() {
       </div>
       <div class="field"><label>Message</label><textarea placeholder="Tell us a bit more…"></textarea></div>
       <button class="btn btn--primary" id="sendBtn" type="submit">Send message ${ic('arrow')}</button>
-      <div class="form-ok" id="formOk">${ic('check')} Thanks — we'll be in touch shortly.</div>
+      <div class="form-ok" id="formOk">${ic('check')} Thanks — we'll be in touch soon.</div>
     </form>
     <div>
       <div class="info-card">
-        <h3>Reach us directly</h3>
-        <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Phone</b><span><a href="${BIZ.phoneHref}" style="color:var(--accent);">${BIZ.phone}</a></span></div></div>
-        <div class="info-row"><div class="ii">${ic('mail')}</div><div><b>Email</b><span>${BIZ.email}</span></div></div>
-        <div class="info-row"><div class="ii">${ic('pin')}</div><div><b>Visit</b><span>${BIZ.addr}</span></div></div>
-        <div class="info-row"><div class="ii">${ic('clock')}</div><div><b>Self-service</b><span>Open 24/7 · keypad ${BIZ.keypad}</span></div></div>
-        <div class="info-row"><div class="ii">${ic('clock')}</div><div><b>Staff hours</b><span>7:30am – 7pm, 7 days</span></div></div>
+        <h3>GET IN TOUCH!</h3>
+        <div class="info-row"><div class="ii">${ic('pin')}</div><div><b>Address</b><span>${BIZ.addr}</span></div></div>
+        <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Telephone</b><span><a href="${BIZ.phoneHref}" style="color:var(--accent);">${BIZ.phone}</a></span></div></div>
+        <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Telephone</b><span><a href="${BIZ.phone2Href}" style="color:var(--accent);">${BIZ.phone2}</a></span></div></div>
+        <div class="info-row"><div class="ii">${ic('clock')}</div><div><b>Service Hours (Pickup/Drop Off)</b><span>7:30am – 7:00pm, 7 days a week</span></div></div>
+        <div class="info-row"><div class="ii">${ic('coin')}</div><div><b>Self-Service Hours</b><span>24 hours, 7 days a week · entry code ${BIZ.keypad}</span></div></div>
+        <div class="info-row"><div class="ii">${ic('tag')}</div><div><b>Payment</b><span>${BIZ.payment}</span></div></div>
+        <div class="info-row"><div class="ii">${ic('check')}</div><div><b>Biodegradable detergent</b><span>Available</span></div></div>
       </div>
     </div>
   </div>
