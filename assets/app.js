@@ -324,9 +324,9 @@ function renderCommercial() {
     <span class="eyebrow">${ic('stack')} Commercial Laundry</span>
     <h1>Commercial Laundry Services Serving Melbourne, Albert Park, Middle Park, St Kilda &amp; Surrounding Suburbs</h1>
     <p class="lede">At Blessington Street Laundrette, we provide professional commercial laundry services with complimentary pick-up and delivery across Melbourne's inner bayside.</p>
-    <div class="cta-row" style="margin-top:22px; display:flex; gap:12px;">
-      <a class="btn btn--primary" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
-      <a class="btn btn--ghost" href="${BIZ.phone2Href}">${ic('phone')} ${BIZ.phone2}</a>
+    <div style="margin-top:18px; display:flex; gap:24px; flex-wrap:wrap;">
+      <a href="${BIZ.phoneHref}" style="color:var(--accent); font-weight:700; font-size:16px;">${ic('phone')} ${BIZ.phone}</a>
+      <a href="${BIZ.phone2Href}" style="color:var(--accent); font-weight:700; font-size:16px;">${ic('phone')} ${BIZ.phone2}</a>
     </div>
   </div>
 
@@ -336,12 +336,16 @@ function renderCommercial() {
   </div>
 
   <div class="sec-head"><div><h2>Who We Service</h2></div></div>
-  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:40px;">
-    ${whoAndIndustries.map(ind => `<div class="card" style="padding:18px;">
-      <h3 style="font-size:14px; margin-bottom:6px;">${ind.name}</h3>
-      <p style="font-size:13px; color:var(--ink-soft); line-height:1.5;">${ind.desc}</p>
-    </div>`).join('')}
-  </div>
+  ${(() => {
+    const cols = 3;
+    const rem = whoAndIndustries.length % cols;
+    const main = rem ? whoAndIndustries.slice(0, -rem) : whoAndIndustries;
+    const last = rem ? whoAndIndustries.slice(-rem) : [];
+    const cardHtml = ind => `<div class="card" style="padding:18px;"><h3 style="font-size:14px; margin-bottom:6px;">${ind.name}</h3><p style="font-size:13px; color:var(--ink-soft); line-height:1.5;">${ind.desc}</p></div>`;
+    const itemW = `calc((100% - ${cols - 1} * 14px) / ${cols})`;
+    const lastRow = last.length ? `<div style="display:flex; justify-content:center; gap:14px; grid-column:1/-1;">${last.map(ind => `<div style="flex:0 0 ${itemW}; min-width:0;">${cardHtml(ind)}</div>`).join('')}</div>` : '';
+    return `<div style="display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:40px;">${main.map(cardHtml).join('')}${lastRow}</div>`;
+  })()}
 
   <div class="info-card" style="margin-bottom:40px;">
     <h3>What We Clean</h3>
