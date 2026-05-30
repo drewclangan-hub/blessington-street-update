@@ -331,8 +331,7 @@ function renderCommercial() {
 
   return `
   <div class="head-block">
-    <span class="eyebrow">${ic('stack')} Commercial Laundry</span>
-    <h1>Commercial Laundry Services Serving Melbourne</h1>
+    <h1>Commercial Laundry</h1>
   </div>
 
   <div class="sec-head"><div><h2>How It Works</h2></div></div>
@@ -340,17 +339,22 @@ function renderCommercial() {
     ${steps.map((st, i) => `<div class="step"><div class="num">${i + 1}</div><h3>${st[0]}</h3><p>${st[1]}</p></div>`).join('')}
   </div>
 
-  <div class="sec-head"><div><h2>Who We Service</h2></div></div>
-  <div class="chips" style="margin-bottom:32px;">
-    ${whoAndIndustries.map(ind => `<span class="chip">${ind.name}</span>`).join('')}
+  <div class="commercial-split">
+    <div class="info-card">
+      <h3 style="margin-bottom:14px;">Who We Service</h3>
+      <div class="commercial-list">
+        ${whoAndIndustries.map(ind => `<div class="commercial-item">${ic('check')}<span>${ind.name}</span></div>`).join('')}
+      </div>
+    </div>
+    <div class="info-card">
+      <h3 style="margin-bottom:14px;">What We Clean</h3>
+      <div class="commercial-list">
+        ${whatWeClean.map(s => `<div class="commercial-item">${ic('check')}<span>${s}</span></div>`).join('')}
+      </div>
+    </div>
   </div>
 
-  <div class="sec-head"><div><h2>What We Clean</h2></div></div>
-  <div class="chips" style="margin-bottom:32px;">
-    ${whatWeClean.map(s => `<span class="chip">${ic('check')} ${s}</span>`).join('')}
-  </div>
-
-  <div class="banner">
+  <div class="banner" style="margin-top:28px;">
     <div>
       <h3>Book a Pickup Today</h3>
       <p>Professional laundry for businesses across Melbourne. Free pick-up and delivery available.</p>
