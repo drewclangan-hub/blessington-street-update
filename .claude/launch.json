@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "blessington-launderette",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-p", "3000", "C:/Users/drewl/claudeworking/blessington-launderette"],
+      "port": 3000
+    }
+  ]
+}

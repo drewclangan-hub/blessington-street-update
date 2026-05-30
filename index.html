@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blessington Street Launderette — St Kilda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Quicksand:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&family=Newsreader:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="theme-crisp">
+
+  <div class="app">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand__mark" id="brandMark"></span>
+        <span class="brand__name">Blessington<br>Launderette<span>St Kilda</span></span>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu"></button>
+      </div>
+
+      <nav class="nav">
+        <div class="nav__label">Browse</div>
+        <a data-go="home" data-nav="home"><span class="ni" data-ni="grid"></span> All services</a>
+        <a data-go="pricing" data-nav="pricing"><span class="ni" data-ni="tag"></span> Pricing</a>
+        <a data-go="delivery" data-nav="delivery"><span class="ni" data-ni="truck"></span> Collection &amp; delivery</a>
+        <div class="nav__label">Visit</div>
+        <a data-go="hours" data-nav="hours"><span class="ni" data-ni="clock"></span> Opening hours</a>
+        <a data-go="find" data-nav="find"><span class="ni" data-ni="pin"></span> Find us</a>
+        <a data-go="contact" data-nav="contact"><span class="ni" data-ni="mail"></span> Contact</a>
+
+        <div class="side-cta">
+          <p><strong>Laundry day, sorted.</strong> Book a free pickup and we'll bring it back fresh.</p>
+          <a class="btn btn--primary btn--block" href="tel:+61417579143">📞 0417 579 143</a>
+        </div>
+
+        <div class="side-foot">
+          <div><span class="open-dot"></span><strong>Open now</strong> · Self-service 24/7</div>
+          <div class="row"><span data-ni="clock"></span> Staff: 7:30am – 7pm, 7 days</div>
+          <div class="row"><span data-ni="pin"></span> 22 Blessington St, St Kilda</div>
+          <div class="row"><span data-ni="phone"></span> 0417 579 143</div>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- ============ MAIN ============ -->
+    <main class="main">
+      <div class="page" id="view"></div>
+    </main>
+
+  </div>
+
+  <script src="assets/app.js"></script>
+  <script>
+    /* coathanger brand mark — inline SVG matching the previous site's logo */
+    document.getElementById('brandMark').innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+      <path d="M12 5a1.6 1.6 0 0 1 1.6 1.6v1.3"/>
+      <path d="M13.6 7.9C16 9.5 20 12.5 20 15.5A1.5 1.5 0 0 1 18.5 17H5.5A1.5 1.5 0 0 1 4 15.5C4 12.5 8 9.5 10.4 7.9"/>
+      <path d="M10.4 7.9A1.6 1.6 0 0 1 12 6.9A1.6 1.6 0 0 1 13.6 7.9"/>
+    </svg>`;
+    document.getElementById('menuBtn').innerHTML = ic('menu');
+    document.querySelectorAll('[data-ni]').forEach(el => { el.innerHTML = ic(el.dataset.ni); });
+    document.querySelectorAll('.nav a').forEach(a => {
+      const span = a.querySelector('.ni');
+      if (span) span.style.cssText = 'display:inline-flex;width:18px;height:18px;';
+    });
+  </script>
+
+  <!-- ============ TWEAKS PANEL ============ -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+  <script type="text/babel" src="assets/tweaks-panel.jsx"></script>
+  <script type="text/babel">
+    const TWEAK_DEFAULTS = {
+      headline: "Blessington Street Launderette",
+      hero: "Compact",
+      columns: "3",
+      cards: "Photo",
+      showPrices: true,
+      showBanner: true,
+      look: "Crisp",
+    };
+    function TweakApp() {
+      const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+      React.useEffect(() => { if (window.applyTweaks) window.applyTweaks(t); }, [t]);
+      return (
+        <TweaksPanel title="Tweaks">
+          <TweakSection label="Hero" />
+          <TweakText  label="Headline"  value={t.headline} onChange={(v) => setTweak('headline', v)} />
+          <TweakRadio label="Hero size" value={t.hero} options={['Compact', 'Standard', 'Hidden']} onChange={(v) => setTweak('hero', v)} />
+          <TweakSection label="Service grid" />
+          <TweakRadio label="Columns"    value={t.columns} options={['2', '3', '4']} onChange={(v) => setTweak('columns', v)} />
+          <TweakRadio label="Card style" value={t.cards} options={['Photo', 'Minimal']} onChange={(v) => setTweak('cards', v)} />
+          <TweakToggle label="Show prices" value={t.showPrices} onChange={(v) => setTweak('showPrices', v)} />
+          <TweakToggle label="Collection banner" value={t.showBanner} onChange={(v) => setTweak('showBanner', v)} />
+          <TweakSection label="Look &amp; feel" />
+          <TweakRadio label="Type &amp; colour" value={t.look} options={['Crisp', 'Friendly', 'Editorial']} onChange={(v) => setTweak('look', v)} />
+        </TweaksPanel>
+      );
+    }
+    const tdiv = document.createElement('div');
+    document.body.appendChild(tdiv);
+    ReactDOM.createRoot(tdiv).render(<TweakApp />);
+  </script>
+
+</body>
+</html>
