@@ -556,7 +556,6 @@ function renderContact() {
         <div class="info-row"><div class="ii">${ic('clock')}</div><div><b>Service Hours (Pickup/Drop Off)</b><span>7:30am – 7:00pm, 7 days a week</span></div></div>
         <div class="info-row"><div class="ii">${ic('coin')}</div><div><b>Self-Service Hours</b><span>24 hours, 7 days a week · entry code ${BIZ.keypad}</span></div></div>
         <div class="info-row"><div class="ii">${ic('tag')}</div><div><b>Payment</b><span>${BIZ.payment}</span></div></div>
-        <div class="info-row"><div class="ii">${ic('check')}</div><div><b>Biodegradable detergent</b><span>Available</span></div></div>
       </div>
     </div>
   </div>
