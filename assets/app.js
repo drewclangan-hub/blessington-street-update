@@ -281,6 +281,132 @@ function renderService(id) {
   ${footer()}`;
 }
 
+/* ---------------- COMMERCIAL ---------------- */
+function renderCommercial() {
+  const industries = [
+    { icon:'spark', name:'Medical & Allied Health', desc:'Clinics, physio, rehab, dental, aged care — scrubs, gowns, towels and treatment linen cleaned to strict hygiene standards.' },
+    { icon:'star', name:'Gyms & Fitness Studios', desc:'Towels and uniforms with fast turnaround so you never run short between classes.' },
+    { icon:'stack', name:'Restaurants & Cafés', desc:'Tablecloths, napkins, aprons and chef jackets laundered to a high standard, ready for service.' },
+    { icon:'drop', name:'Hair & Beauty Salons', desc:'Salon towels, gowns and capes professionally laundered and pressed.' },
+    { icon:'bed', name:'Hotels & Short-Stay', desc:'High-volume sheets, pillowcases, towels and staff uniforms on a reliable schedule.' },
+    { icon:'spark', name:'Massage & Day Spas', desc:'Towels, robes, sheets and pillow covers cleaned to premium standards.' },
+    { icon:'stack', name:'Childcare & Schools', desc:'Bedding, uniforms and activity mats sanitised for child safety.' },
+    { icon:'truck', name:'Events & Functions', desc:'Tablecloths, chair covers and event linens cleaned and returned ready for your next booking.' },
+  ];
+
+  const steps = [
+    ['Schedule a pickup', 'Organise regular collection times that fit your business. Same-day or scheduled — we work around your operation, not the other way around.'],
+    ['Professional cleaning & sanitisation', 'Expertly washed, sanitised, dried and folded using commercial-grade systems and premium detergents.'],
+    ['Next-day delivery', 'Clean, fresh linen returned promptly. Never run out of clean linen again.'],
+  ];
+
+  const reasons = [
+    { icon:'clock', head:'Save staff time', body:'Your team should focus on patients and clients — not managing laundry between appointments.' },
+    { icon:'check', head:'Professional hygiene', body:'Commercial-grade systems designed for deep cleaning and proper sanitisation of medical and hospitality linen.' },
+    { icon:'arrow', head:'Fast next-day turnaround', body:'Consistent processing means clean linen is always ready when you need it.' },
+    { icon:'truck', head:'Reliable pickup & delivery', body:'Collection and return on a schedule that fits your business — inner bayside Melbourne.' },
+    { icon:'tag', head:'More cost-effective', body:'Outsourcing laundry is often financially smarter than managing machines, staff time and detergent onsite.' },
+    { icon:'spark', head:'Eco-friendly options', body:'Biodegradable detergent available on request. Sustainable practices across all commercial accounts.' },
+  ];
+
+  const testimonials = [
+    { name:'Kerry Mccormack', role:'Regular customer', quote:'Rita, Milad and the girls are always pleasant… end result always immaculately cleaned.' },
+    { name:'Will Cochrane', role:'Regular customer, 10+ years', quote:'I have been using the Blessington Street Laundry for over 10 years… always assured the job will be done properly.' },
+    { name:'The Hon Neil Brown QC', role:'Regular customer', quote:'I have used it for several years… very happy with the quality of work.' },
+  ];
+
+  return `
+  <div class="head-block">
+    <span class="eyebrow">${ic('stack')} Commercial laundry</span>
+    <h1>Professional laundry<br>for Melbourne businesses</h1>
+    <p class="lede">Complimentary pickup and delivery across Melbourne's inner bayside — St Kilda, Albert Park, Middle Park and surrounding suburbs. Trusted by medical clinics, gyms, salons, hospitality venues and more.</p>
+    <div class="cta-row" style="margin-top:22px; display:flex; gap:12px;">
+      <a class="btn btn--primary" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
+      <a class="btn btn--ghost" data-go="contact">Send a message</a>
+    </div>
+  </div>
+
+  <div class="steps">
+    ${steps.map((st, i) => `<div class="step"><div class="num">${i + 1}</div><h3>${st[0]}</h3><p>${st[1]}</p></div>`).join('')}
+  </div>
+
+  <div class="sec-head" style="margin-top:50px;">
+    <div><span class="eyebrow">Why businesses choose us</span><h2 style="margin-top:10px;">Six reasons to outsource your laundry</h2></div>
+  </div>
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:50px;">
+    ${reasons.map(r => `
+    <div class="card" style="padding:22px;">
+      <div style="width:36px;height:36px;border-radius:10px;background:var(--accent-tint);color:var(--accent-press);display:grid;place-items:center;margin-bottom:14px;">${ic(r.icon)}</div>
+      <h3 style="font-size:16px; margin-bottom:8px;">${r.head}</h3>
+      <p style="font-size:14px; color:var(--ink-soft); line-height:1.55;">${r.body}</p>
+    </div>`).join('')}
+  </div>
+
+  <div class="sec-head">
+    <div><span class="eyebrow">Industries we serve</span><h2 style="margin-top:10px;">Who we work with</h2></div>
+  </div>
+  <div style="display:grid; grid-template-columns:repeat(var(--cols,3),1fr); gap:14px; margin-bottom:50px;">
+    ${industries.map(ind => `
+    <div class="more-card" style="cursor:default;">
+      <div class="mi">${ic(ind.icon)}</div>
+      <div><b>${ind.name}</b><span style="display:block;font-size:12.5px;color:var(--muted);line-height:1.4;margin-top:3px;">${ind.desc}</span></div>
+    </div>`).join('')}
+  </div>
+
+  <div class="split2" style="margin-bottom:50px; align-items:start;">
+    <div>
+      <div class="sec-head" style="margin-top:0;"><div><span class="eyebrow">What we clean</span><h2 style="margin-top:10px; font-size:clamp(20px,2vw,26px);">Every item, done properly</h2></div></div>
+      <div class="card" style="padding:22px;">
+        ${['Towels and gym linen','Medical and patient gowns','Bed sheets and pillowcases','Staff uniforms and scrubs','Treatment room linen','Massage and therapy towels','Cleaning cloths and rags','Robes and spa linen','Tablecloths and napkins','Aprons and chef jackets'].map(item =>
+          `<div class="chips" style="margin:0 0 8px; flex-wrap:nowrap;"><span class="chip">${item}</span></div>`
+        ).join('')}
+      </div>
+    </div>
+    <div>
+      <div class="sec-head" style="margin-top:0;"><div><span class="eyebrow">Pricing</span><h2 style="margin-top:10px; font-size:clamp(20px,2vw,26px);">What it costs</h2></div></div>
+      <div class="pricebox" style="position:static;">
+        <h4>Commercial rates</h4>
+        <div class="from">tailored to your volume</div>
+        <div class="prow"><span>Towels / linen</span><b>from $3.50 / kg</b></div>
+        <div class="prow"><span>Weekly contract</span><b>tailored rate</b></div>
+        <div class="prow"><span>Account billing</span><b>available</b></div>
+        <div class="prow"><span>Turnaround</span><b>next-day</b></div>
+        <div class="prow"><span>Pickup &amp; delivery</span><b>free over $60</b></div>
+        <div class="prow"><span>Doona (1)</span><b>$40</b></div>
+        <div class="prow"><span>Doonas (2)</span><b>$75</b></div>
+        <div class="prow"><span>Doonas (3)</span><b>$105</b></div>
+        <div class="prow"><span>5 shirts wash &amp; iron</span><b>$25</b></div>
+        <a class="btn btn--primary btn--block" style="margin-top:16px;" href="${BIZ.phoneHref}">${ic('phone')} Call to discuss rates</a>
+        <a class="btn btn--ghost btn--block" style="margin-top:9px;" data-go="contact">Send an enquiry</a>
+        <div class="note">${ic('check')} Biodegradable detergent available on all commercial accounts.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-head">
+    <div><span class="eyebrow">What our customers say</span><h2 style="margin-top:10px;">Trusted for years</h2></div>
+  </div>
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:50px;">
+    ${testimonials.map(t => `
+    <div class="card" style="padding:22px;">
+      <div class="trust" style="margin-bottom:12px;"><span class="stars">★★★★★</span></div>
+      <p style="font-size:14.5px; color:var(--ink-soft); line-height:1.6; font-style:italic; margin-bottom:16px;">"${t.quote}"</p>
+      <div style="font-size:13px; font-weight:700; color:var(--ink);">${t.name}</div>
+      <div style="font-size:12px; color:var(--muted);">${t.role}</div>
+    </div>`).join('')}
+  </div>
+
+  <div class="banner">
+    <div>
+      <h3>Book a commercial laundry pickup today</h3>
+      <p>Take the pressure off your team and ensure clean, professional-quality linen ready to use. Contact us to set up a regular service.</p>
+    </div>
+    <a class="btn btn--ghost" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
+  </div>
+
+  ${footer()}`;
+}
+
 /* ---------------- PRICING ---------------- */
 function renderPricing() {
   return `
@@ -457,7 +583,7 @@ function footer() {
 /* ---------------- ROUTER ---------------- */
 const ROUTES = {
   home: renderHome, pricing: renderPricing, delivery: renderDelivery,
-  hours: renderHours, find: renderFind, contact: renderContact,
+  commercial: renderCommercial, hours: renderHours, find: renderFind, contact: renderContact,
 };
 
 function route() {
