@@ -499,6 +499,13 @@ function renderDelivery() {
       </div>
     </div>
   </div>
+  <div class="banner" style="margin-top:28px;">
+    <div>
+      <h3>Book a Pickup Today</h3>
+      <p>Too busy to come in? We'll collect your laundry, clean it, and deliver it back fresh.</p>
+    </div>
+    <a class="btn btn--ghost" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
+  </div>
   ${footer()}`;
 }
 
