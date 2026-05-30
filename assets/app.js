@@ -428,7 +428,6 @@ function renderContact() {
         <div class="info-row"><div class="ii">${ic('clock')}</div><div><b>Self-service</b><span>Open 24/7 · keypad ${BIZ.keypad}</span></div></div>
         <div class="info-row"><div class="ii">${ic('clock')}</div><div><b>Staff hours</b><span>7:30am – 7pm, 7 days</span></div></div>
       </div>
-      ${photo('images/img-wash-dry-fold.jpg', 'Our team at Blessington Street', 'map-ph')}
     </div>
   </div>
   ${footer()}`;
