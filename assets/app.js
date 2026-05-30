@@ -508,17 +508,6 @@ function renderFind() {
       title="Blessington Street Laundrette on Google Maps">
     </iframe>
   </div>
-  <div style="margin-top:24px; max-width:520px; margin-left:auto; margin-right:auto;">
-    <div class="info-card">
-      <h3>GET IN TOUCH!</h3>
-      <div class="info-row"><div class="ii">${ic('pin')}</div><div><b>Address</b><span>${BIZ.addr}</span></div></div>
-      <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Telephone</b><span><a href="${BIZ.phoneHref}" style="color:var(--accent);">${BIZ.phone}</a></span></div></div>
-      <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Telephone</b><span><a href="${BIZ.phone2Href}" style="color:var(--accent);">${BIZ.phone2}</a></span></div></div>
-      <div class="info-row"><div class="ii">${ic('clock')}</div><div><b>Self-Service Hours</b><span>24 hours, 7 days a week · entry code ${BIZ.keypad}</span></div></div>
-      <div class="info-row"><div class="ii">${ic('clock')}</div><div><b>Service Hours (Pickup/Drop Off)</b><span>7:30am – 7:00pm, 7 days a week</span></div></div>
-      <a class="btn btn--primary btn--block" style="margin-top:16px;" href="https://www.google.com/maps/place/Blessington+Street+Laundrette/@-37.870384,144.9776551,17z" target="_blank" rel="noopener">${ic('pin')} Get directions</a>
-    </div>
-  </div>
   ${footer()}`;
 }
 
