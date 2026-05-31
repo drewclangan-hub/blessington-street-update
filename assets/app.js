@@ -60,7 +60,7 @@ const SERVICES = [
     blurb:'Let us handle your everyday laundry — washed, dried and neatly folded, ready to go straight into your wardrobe.',
     desc:'', extra:'',
     chips:['Plain/colour separation','Neatly folded & ready to put away','Pick-up and delivery available','Ideal for families, busy professionals & Airbnb hosts','Quality detergents','Free pickup over $60'],
-    rows:[['Wash, Dry & Fold','from $38'],['Doona Cleaning (1)','$40'],['Doona Cleaning (2)','$75'],['Doona Cleaning (3)','$105'],['Free Pickup & Drop Off','orders over $60']] },
+    rows:[['Wash, Dry & Fold','from $38'],['Doona Cleaning (1)','$40'],['Doona Cleaning (2)','$75'],['Doona Cleaning (3)','$105'],['Free Pickup & Drop Off','Orders Over $60']] },
 
   { id:'dry-cleaning', name:'Dry Cleaning', icon:'hanger', img:'images/img-dry-cleaning.jpg', from:'from $6.50',
     blurb:'Expert care for delicate fabrics, business wear, and special garments — cleaned with attention to detail.',
@@ -73,7 +73,7 @@ const SERVICES = [
     blurb:'Professional cleaning for wool, synthetic, and area rugs. Average 7-day turnaround.',
     desc:'', extra:'',
     chips:['Wool, synthetic & area rugs','Clear pricing by size or sq metre','Pick-up and delivery','Average 7-day turnaround','Free pickup over $60'],
-    rows:[['Small Rug (up to 1.5m²)','from $60'],['Medium Rug (1.5–3m²)','from $90'],['Large Rug (3m²+)','from $130'],['Pickup & Delivery','free over $60'],['Average Turnaround','7 days']] },
+    rows:[['Small Rug (up to 1.5m²)','from $60'],['Medium Rug (1.5–3m²)','from $90'],['Large Rug (3m²+)','from $130'],['Pickup & Delivery','Free Over $60'],['Average Turnaround','7 days']] },
 
   { id:'business-shirts', name:'Business Shirts', icon:'hanger', img:'images/img-business-shirts.jpg', from:'$6 each / $25 for 5',
     blurb:'Sharp, Crisp & Always Fresh. 5 shirts professionally ironed for just $25.',
@@ -86,7 +86,7 @@ const SERVICES = [
     blurb:'Crisp, professional finish every time. Gentle care for delicate fabrics.',
     desc:'', extra:'',
     chips:['Crisp, professional finish every time','Gentle care for delicate fabrics','Perfect for busy workers, parents & special occasions','Curtains & bedding','Heavy-duty steam table'],
-    rows:[['5 Shirts Wash & Iron','$25 ($5.00 each)'],['Single Shirt','$6'],['Curtains & Upholstery','call for a quote']] },
+    rows:[['5 Shirts Wash & Iron','$25 ($5.00 each)'],['Single Shirt','$6'],['Curtains & Upholstery','Call for a Quote']] },
 
   { id:'stain-removal', name:'Stain Removal', icon:'drop', img:'images/img-stain.jpg', from:'from $12',
     blurb:'Say Goodbye to Stubborn Marks. We\'ve seen it all, and we know just what to do.',
@@ -98,7 +98,7 @@ const SERVICES = [
     blurb:'Love Your Clothes for Longer. From simple hems to complete re-sizing.',
     desc:'', extra:'',
     chips:['Save Money — restoring costs far less than buying new','Better for the Planet — reduce waste & keep quality materials in use','Keep the Comfort — already broken-in items are often more comfortable','Hold on to Memories — some items are simply irreplaceable'],
-    rows:[['Clothing Alterations','Quoted In Store'],['Simple Hems to Complete Re-Sizing','Available'],['Repairs & Alterations','Quoted on Inspection']] },
+    rows:[['Clothing Alterations','Quoted In Store'],['Simple Hems to Complete Re-Sizing','Available'],['Repairs & Alterations','Quoted On Inspection']] },
 
   { id:'doona-cleaning', name:'Doona Cleaning', icon:'bed', img:'images/img-doona.jpg', from:'from $40',
     blurb:'Doonas, quilts & blankets. 30 high-capacity machines for everything from everyday loads to doonas.',
@@ -110,13 +110,13 @@ const SERVICES = [
     blurb:'Reliable, professional laundry solutions for restaurants, cafés, salons, gyms, Airbnbs, and more.',
     desc:'', extra:'',
     chips:['Time and Cost Efficiency','Consistency and Quality','Increased Productivity','Flexibility and Convenience','Eco-Friendly Practices','No Job Too Big or Small'],
-    rows:[['Towels / Linen','from $3.50 / kg'],['Account Billing','Available on Request'],['Delivery & Collection','Flexible, tailored to your needs']] },
+    rows:[['Towels / Linen','from $3.50 / kg'],['Account Billing','Available On Request'],['Delivery & Collection','Flexible, Tailored to Your Needs']] },
 
   { id:'pickup-delivery', name:'Pickup & Delivery', icon:'truck', img:'images/img-truck.jpg', from:'from $60',
     blurb:'Too busy to come in? We\'ll collect your laundry, clean it, and deliver it back fresh and ready to use.',
     desc:'', extra:'',
     chips:['Free pickup & drop off over $60','St Kilda · Middle Park · Albert Park','Port Melbourne · Southbank · Elwood','South Yarra · Richmond · Fitzroy','Brighton · Caulfield · Melbourne CBD','Services starting from $60'],
-    rows:[['Services Starting From','$60'],['Mastercard & Visa','Accepted'],['Account Facility','Available on Request']] },
+    rows:[['Services Starting From','$60'],['Mastercard & Visa','Accepted'],['Account Facility','Available On Request']] },
 ];
 const svcById = (id) => SERVICES.find(s => s.id === id) || SERVICES[0];
 
@@ -526,7 +526,7 @@ function renderContactInfo() {
   <div class="head-block">
     <h1>Contact Us</h1>
   </div>
-  <div class="info-card" style="max-width:480px;">
+  <div class="info-card" style="max-width:480px; margin:0 auto;">
     <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Phone</b><span><a href="${BIZ.phoneHref}" style="color:var(--accent);">${BIZ.phone}</a></span></div></div>
     <div class="info-row"><div class="ii">${ic('phone')}</div><div><b>Phone</b><span><a href="${BIZ.phone2Href}" style="color:var(--accent);">${BIZ.phone2}</a></span></div></div>
     <div class="info-row"><div class="ii">${ic('pin')}</div><div><b>Address</b><span>${BIZ.addrFull}</span></div></div>
