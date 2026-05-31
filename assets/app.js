@@ -122,10 +122,10 @@ const svcById = (id) => SERVICES.find(s => s.id === id) || SERVICES[0];
 
 /* ---------------- shared business info — from blessingtonstreetlaunderette.com.au ---------------- */
 const BIZ = {
-  phone:'0417 579 143',
-  phoneHref:'tel:+61417579143',
-  phone2:'(03) 9534 2976',
-  phone2Href:'tel:0395342976',
+  phone:'(03) 9534 2976',
+  phoneHref:'tel:0395342976',
+  phone2:'0417 579 143',
+  phone2Href:'tel:+61417579143',
   addr:'22 Blessington Street, St Kilda',
   addrFull:'22 Blessington Street, St Kilda, VIC 3182, Melbourne, Australia',
   keypad:'223182#',

@@ -202,10 +202,11 @@ body.nav-open .sidebar{z-index:75;}
   align-items:center; gap:8px;
   margin-left:auto; flex:none;
   height:48px; padding:0 18px 0 14px; min-width:100px;
-  border-radius:999px; border:1.5px solid var(--accent);
-  background:var(--accent-tint); color:var(--accent-press);
+  border-radius:999px; border:1.5px solid var(--line);
+  background:var(--surface-2); color:var(--ink);
   cursor:pointer; font-size:13px; font-weight:700;
   font-family:var(--font-body);
+  transition:border-color .15s, background .15s;
 }
 .menu-btn svg{width:18px; height:18px; flex:none;}
 .menu-btn__label{font-size:13px; font-weight:700; letter-spacing:.01em;}
