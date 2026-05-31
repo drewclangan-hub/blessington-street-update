@@ -7,62 +7,134 @@ backend:
 
 site_url: https://blessington-launderette.vercel.app
 media_folder: images
+public_folder: /images
 
 collections:
+
+  # ─── BUSINESS DETAILS ─────────────────────────────────────────────
+  # Changes here update: Contact Us page, sidebar footer, banners, footers
   - name: settings
-    label: Business Settings
+    label: "📋 Business Details"
     files:
       - name: settings
-        label: Business Info
+        label: "Business Details (phone, address, payment)"
         file: _content/settings.json
         fields:
-          - { label: Business Name, name: businessName, widget: string }
-          - { label: Phone, name: phone, widget: string }
-          - { label: Phone Href, name: phoneHref, widget: string }
-          - { label: Phone 2, name: phone2, widget: string }
-          - { label: Phone 2 Href, name: phone2Href, widget: string }
-          - { label: Address (short), name: address, widget: string }
-          - { label: Address (full), name: addressFull, widget: string }
-          - { label: Keypad Code, name: keypad, widget: string }
-          - { label: Payment Info, name: payment, widget: text }
+          - label: "Business Name"
+            name: businessName
+            widget: string
+            hint: "Appears in the browser tab title"
+          - label: "Main Phone Number (displayed)"
+            name: phone
+            widget: string
+            hint: "e.g. (03) 9534 2976 — shown in buttons and Contact Us page"
+          - label: "Main Phone Number (link)"
+            name: phoneHref
+            widget: string
+            hint: "e.g. tel:0395342976 — no spaces, used for tap-to-call on mobile"
+          - label: "Secondary Phone Number (displayed)"
+            name: phone2
+            widget: string
+            hint: "e.g. 0417 579 143"
+          - label: "Secondary Phone Number (link)"
+            name: phone2Href
+            widget: string
+            hint: "e.g. tel:+61417579143"
+          - label: "Address (short — for sidebar and footer)"
+            name: address
+            widget: string
+            hint: "e.g. 22 Blessington Street, St Kilda"
+          - label: "Address (full — for Contact Us page)"
+            name: addressFull
+            widget: string
+            hint: "e.g. 22 Blessington Street, St Kilda, VIC 3182, Melbourne, Australia"
+          - label: "Door Keypad Code"
+            name: keypad
+            widget: string
+            hint: "Shown on the Self-Service and Opening Hours pages"
+          - label: "Payment Info"
+            name: payment
+            widget: text
+            hint: "Shown in the footer and pricing sections"
 
+  # ─── OPENING HOURS ────────────────────────────────────────────────
+  # Changes here update: the Opening Hours page
+  - name: hours
+    label: "🕐 Opening Hours"
+    files:
+      - name: hours
+        label: "Weekly Opening Hours"
+        file: _content/hours.json
+        fields:
+          - label: Days
+            name: root
+            widget: list
+            summary: "{{fields.day}}: {{fields.hours}}"
+            fields:
+              - label: "Day"
+                name: day
+                widget: string
+                hint: "e.g. Monday"
+              - label: "Hours"
+                name: hours
+                widget: string
+                hint: "e.g. 7:30am – 7:00pm"
+
+  # ─── SERVICES ─────────────────────────────────────────────────────
+  # Changes here update: the All Services grid, each service detail page, and Pricing page
   - name: services
-    label: Services
+    label: "🧺 Services"
     files:
       - name: services
-        label: All Services
+        label: "All Services (cards, details, pricing)"
         file: _content/services.json
         fields:
           - label: Services
             name: root
             widget: list
+            summary: "{{fields.name}} — from {{fields.from}}"
             fields:
-              - { label: ID, name: id, widget: string }
-              - { label: Name, name: name, widget: string }
-              - { label: Blurb, name: blurb, widget: text }
-              - { label: Starting From, name: from, widget: string }
-              - { label: Image Position (optional), name: imgPos, widget: string, required: false }
-              - label: Chips
+              - label: "Service ID"
+                name: id
+                widget: string
+                hint: "Do NOT change — used internally (e.g. self-service, dry-cleaning)"
+              - label: "Service Name"
+                name: name
+                widget: string
+                hint: "Shown on the service card and detail page heading (e.g. Dry Cleaning)"
+              - label: "Short Description"
+                name: blurb
+                widget: text
+                hint: "One sentence shown on the service card in the grid"
+              - label: "Starting Price"
+                name: from
+                widget: string
+                hint: "Shown on the card and pricing page (e.g. from $6.50, contact us)"
+              - label: "Bullet Points (tick pills)"
                 name: chips
                 widget: list
-                field: { label: Chip, name: chip, widget: string }
-              - label: Price Rows
+                field:
+                  label: "Bullet point"
+                  name: chip
+                  widget: string
+                hint: "Each item appears as a ticked pill on the service detail page"
+              - label: "Pricing Table Rows"
                 name: rows
                 widget: list
+                summary: "{{fields.label}}: {{fields.value}}"
                 fields:
-                  - { label: Label, name: label, widget: string }
-                  - { label: Value, name: value, widget: string }
-
-  - name: hours
-    label: Opening Hours
-    files:
-      - name: hours
-        label: Hours
-        file: _content/hours.json
-        fields:
-          - label: Hours
-            name: root
-            widget: list
-            fields:
-              - { label: Day, name: day, widget: string }
-              - { label: Hours, name: hours, widget: string }
+                  - label: "Row Label"
+                    name: label
+                    widget: string
+                    hint: "e.g. Single Shirt, Medium Rug (1.5–3m²)"
+                  - label: "Row Value"
+                    name: value
+                    widget: string
+                    hint: "e.g. $6, from $90, Call For A Quote"
+              - label: "Image Position (advanced)"
+                name: imgPos
+                widget: select
+                options: ["center", "top", "bottom", "left", "right"]
+                default: "center"
+                required: false
+                hint: "Controls which part of the photo is visible in the card thumbnail"
