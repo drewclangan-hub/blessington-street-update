@@ -1,0 +1,68 @@
+backend:
+  name: github
+  repo: drewclangan-hub/blessington-street-update
+  branch: master
+  base_url: https://blessington-launderette.vercel.app
+  auth_endpoint: api/auth
+
+site_url: https://blessington-launderette.vercel.app
+media_folder: images
+
+collections:
+  - name: settings
+    label: Business Settings
+    files:
+      - name: settings
+        label: Business Info
+        file: _content/settings.json
+        fields:
+          - { label: Business Name, name: businessName, widget: string }
+          - { label: Phone, name: phone, widget: string }
+          - { label: Phone Href, name: phoneHref, widget: string }
+          - { label: Phone 2, name: phone2, widget: string }
+          - { label: Phone 2 Href, name: phone2Href, widget: string }
+          - { label: Address (short), name: address, widget: string }
+          - { label: Address (full), name: addressFull, widget: string }
+          - { label: Keypad Code, name: keypad, widget: string }
+          - { label: Payment Info, name: payment, widget: text }
+
+  - name: services
+    label: Services
+    files:
+      - name: services
+        label: All Services
+        file: _content/services.json
+        fields:
+          - label: Services
+            name: root
+            widget: list
+            fields:
+              - { label: ID, name: id, widget: string }
+              - { label: Name, name: name, widget: string }
+              - { label: Blurb, name: blurb, widget: text }
+              - { label: Starting From, name: from, widget: string }
+              - { label: Image Position (optional), name: imgPos, widget: string, required: false }
+              - label: Chips
+                name: chips
+                widget: list
+                field: { label: Chip, name: chip, widget: string }
+              - label: Price Rows
+                name: rows
+                widget: list
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Value, name: value, widget: string }
+
+  - name: hours
+    label: Opening Hours
+    files:
+      - name: hours
+        label: Hours
+        file: _content/hours.json
+        fields:
+          - label: Hours
+            name: root
+            widget: list
+            fields:
+              - { label: Day, name: day, widget: string }
+              - { label: Hours, name: hours, widget: string }
