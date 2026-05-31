@@ -93,7 +93,7 @@ img{max-width:100%; display:block;}
 /* ---- SIDEBAR ---- */
 /* Mobile: sticky top bar */
 .sidebar{
-  position:sticky; top:0; z-index:60;
+  position:sticky; top:0; z-index:100;
   background:var(--surface); border-bottom:1px solid var(--line);
   display:flex; flex-direction:row; align-items:center;
   padding:10px 16px; gap:12px;
@@ -136,7 +136,7 @@ body.nav-open .nav{transform:translateX(0);}
 }
 body.nav-open .nav-overlay{display:block;}
 /* Raise sidebar stacking context above overlay so nav items are clickable */
-body.nav-open .sidebar{z-index:75;}
+body.nav-open .sidebar{z-index:110;}
 
 /* Desktop: static in sidebar */
 @media(min-width:860px){
