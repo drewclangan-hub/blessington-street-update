@@ -14,6 +14,8 @@ const SERVICES = [
   {
     "id": "self-service",
     "name": "Self-Service Laundry",
+    "icon": "drum",
+    "img": "images/img-machines.jpg",
     "blurb": "Melbourne's biggest self-service launderette. Open 24/7 for your convenience.",
     "from": "$6",
     "chips": [
@@ -50,9 +52,11 @@ const SERVICES = [
   {
     "id": "wash-dry-fold",
     "name": "Wash, Dry & Fold",
+    "icon": "drum",
+    "img": "images/img-wash-dry-fold.jpg",
+    "imgPos": "bottom",
     "blurb": "Let us handle your everyday laundry — washed, dried and neatly folded, ready to go straight into your wardrobe.",
     "from": "from $38",
-    "imgPos": "bottom",
     "chips": [
       "Plain/colour separation",
       "Neatly folded & ready to put away",
@@ -87,6 +91,9 @@ const SERVICES = [
   {
     "id": "dry-cleaning",
     "name": "Dry Cleaning",
+    "icon": "hanger",
+    "img": "images/img-dry-cleaning.jpg",
+    "chipsGrid": true,
     "blurb": "Expert care for delicate fabrics, business wear, and special garments — cleaned with attention to detail.",
     "from": "from $6.50",
     "chips": [
@@ -127,6 +134,8 @@ const SERVICES = [
   {
     "id": "rug-cleaning",
     "name": "Rug Cleaning",
+    "icon": "rug",
+    "img": "images/img-rug.jpg",
     "blurb": "Professional cleaning for wool, synthetic, and area rugs. Average 7-day turnaround.",
     "from": "by size",
     "chips": [
@@ -162,6 +171,8 @@ const SERVICES = [
   {
     "id": "business-shirts",
     "name": "Business Shirts",
+    "icon": "hanger",
+    "img": "images/img-business-shirts.jpg",
     "blurb": "Sharp, Crisp & Always Fresh. 5 shirts professionally ironed for just $25.",
     "from": "$6 each / $25 for 5",
     "chips": [
@@ -190,6 +201,8 @@ const SERVICES = [
   {
     "id": "ironing",
     "name": "Ironing & Pressing",
+    "icon": "iron",
+    "img": "images/img-ironing.jpg",
     "blurb": "Crisp, professional finish every time. Gentle care for delicate fabrics.",
     "from": "from $5",
     "chips": [
@@ -217,6 +230,8 @@ const SERVICES = [
   {
     "id": "stain-removal",
     "name": "Stain Removal",
+    "icon": "drop",
+    "img": "images/img-stain.jpg",
     "blurb": "Say Goodbye to Stubborn Marks. We've seen it all, and we know just what to do.",
     "from": "from $12",
     "chips": [
@@ -243,6 +258,8 @@ const SERVICES = [
   {
     "id": "repairs-alterations",
     "name": "Repairs & Alterations",
+    "icon": "needle",
+    "img": "images/img-alterations.jpg",
     "blurb": "Love Your Clothes for Longer. From simple hems to complete re-sizing.",
     "from": "quoted in store",
     "chips": [
@@ -269,6 +286,8 @@ const SERVICES = [
   {
     "id": "doona-cleaning",
     "name": "Doona Cleaning",
+    "icon": "bed",
+    "img": "images/img-doona.jpg",
     "blurb": "Doonas, quilts & blankets. 30 high-capacity machines for everything from everyday loads to doonas.",
     "from": "from $40",
     "chips": [
@@ -300,6 +319,8 @@ const SERVICES = [
   {
     "id": "commercial-laundry",
     "name": "Commercial & Bulk",
+    "icon": "stack",
+    "img": "images/img-machines.jpg",
     "blurb": "Reliable, professional laundry solutions for restaurants, cafés, salons, gyms, Airbnbs, and more.",
     "from": "contact us",
     "chips": [
@@ -328,6 +349,8 @@ const SERVICES = [
   {
     "id": "pickup-delivery",
     "name": "Pickup & Delivery",
+    "icon": "truck",
+    "img": "images/img-truck.jpg",
     "blurb": "Too busy to come in? We'll collect your laundry, clean it, and deliver it back fresh and ready to use.",
     "from": "from $60",
     "chips": [
