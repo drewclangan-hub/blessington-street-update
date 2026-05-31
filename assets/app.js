@@ -67,7 +67,7 @@ const SERVICES = [
     desc:'', extra:'',
     chipsGrid:true,
     chips:['<b>Business Attire</b><br><span style="font-size:11.5px;opacity:.7;font-weight:400;">suits, shirts, blouses</span>','<b>Evening Wear</b><br><span style="font-size:11.5px;opacity:.7;font-weight:400;">gowns, dresses, tuxedos</span>','<b>Outerwear</b><br><span style="font-size:11.5px;opacity:.7;font-weight:400;">coats, jackets, wool blends</span>','<b>Delicate Fabrics</b><br><span style="font-size:11.5px;opacity:.7;font-weight:400;">silk, cashmere & more</span>','<b>Specialty Items</b><br><span style="font-size:11.5px;opacity:.7;font-weight:400;">leather, suede & more</span>','<b>Same-day available</b><br><span style="font-size:11.5px;opacity:.7;font-weight:400;">drop off by 9am</span>'],
-    rows:[['Shirt','$6.50'],['Trousers / Skirt','$9.90'],['Two-Piece Suit','$19.90'],['Dress','from $16'],['Same-Day (drop off by 9am)','Available'],['Pick-Up & Delivery','Available']] },
+    rows:[['Shirt','$6.50'],['Trousers / Skirt','$9.90'],['Two-Piece Suit','$19.90'],['Dress','from $16'],['Same-Day (Drop Off By 9am)','Available'],['Pick-Up & Delivery','Available']] },
 
   { id:'rug-cleaning', name:'Rug Cleaning', icon:'rug', img:'images/img-rug.jpg', from:'by size',
     blurb:'Professional cleaning for wool, synthetic, and area rugs. Average 7-day turnaround.',
@@ -86,19 +86,19 @@ const SERVICES = [
     blurb:'Crisp, professional finish every time. Gentle care for delicate fabrics.',
     desc:'', extra:'',
     chips:['Crisp, professional finish every time','Gentle care for delicate fabrics','Perfect for busy workers, parents & special occasions','Curtains & bedding','Heavy-duty steam table'],
-    rows:[['5 Shirts Wash & Iron','$25 ($5.00 each)'],['Single Shirt','$6'],['Curtains & Upholstery','Call for a Quote']] },
+    rows:[['5 Shirts Wash & Iron','$25 ($5.00 each)'],['Single Shirt','$6'],['Curtains & Upholstery','Call For A Quote']] },
 
   { id:'stain-removal', name:'Stain Removal', icon:'drop', img:'images/img-stain.jpg', from:'from $12',
     blurb:'Say Goodbye to Stubborn Marks. We\'ve seen it all, and we know just what to do.',
     desc:'', extra:'',
     chips:['Tailored Treatments — every stain & fabric gets the right method','Professional Care — proven techniques & quality cleaning solutions','Gentle on Fabrics — tough on stains, kind to your clothes','Save Your Favourites — don\'t write off that much-loved garment'],
-    rows:[['Stain Removal','from $12'],['Assessment','Honest Upfront'],['Add to Wash Order','Yes']] },
+    rows:[['Stain Removal','from $12'],['Assessment','Honest Upfront'],['Add To Wash Order','Yes']] },
 
   { id:'repairs-alterations', name:'Repairs & Alterations', icon:'needle', img:'images/img-alterations.jpg', from:'quoted in store',
     blurb:'Love Your Clothes for Longer. From simple hems to complete re-sizing.',
     desc:'', extra:'',
     chips:['Save Money — restoring costs far less than buying new','Better for the Planet — reduce waste & keep quality materials in use','Keep the Comfort — already broken-in items are often more comfortable','Hold on to Memories — some items are simply irreplaceable'],
-    rows:[['Clothing Alterations','Quoted In Store'],['Simple Hems to Complete Re-Sizing','Available'],['Repairs & Alterations','Quoted On Inspection']] },
+    rows:[['Clothing Alterations','Quoted In Store'],['Simple Hems To Complete Re-Sizing','Available'],['Repairs & Alterations','Quoted On Inspection']] },
 
   { id:'doona-cleaning', name:'Doona Cleaning', icon:'bed', img:'images/img-doona.jpg', from:'from $40',
     blurb:'Doonas, quilts & blankets. 30 high-capacity machines for everything from everyday loads to doonas.',
@@ -110,7 +110,7 @@ const SERVICES = [
     blurb:'Reliable, professional laundry solutions for restaurants, cafés, salons, gyms, Airbnbs, and more.',
     desc:'', extra:'',
     chips:['Time and Cost Efficiency','Consistency and Quality','Increased Productivity','Flexibility and Convenience','Eco-Friendly Practices','No Job Too Big or Small'],
-    rows:[['Towels / Linen','from $3.50 / kg'],['Account Billing','Available On Request'],['Delivery & Collection','Flexible, Tailored to Your Needs']] },
+    rows:[['Towels / Linen','from $3.50 / kg'],['Account Billing','Available On Request'],['Delivery & Collection','Flexible, Tailored To Your Needs']] },
 
   { id:'pickup-delivery', name:'Pickup & Delivery', icon:'truck', img:'images/img-truck.jpg', from:'from $60',
     blurb:'Too busy to come in? We\'ll collect your laundry, clean it, and deliver it back fresh and ready to use.',
@@ -202,7 +202,7 @@ function bannerBlock() {
       <h3 style="margin-top:12px;">Free pick-up and drop off with every laundry order over $60.</h3>
       <p>Too busy to come in? We'll collect your laundry, clean it, and deliver it back fresh and ready to use. Services starting from $60.</p>
     </div>
-    <a class="btn btn--ghost" data-link="pickup-delivery">Book a Pickup ${ic('arrow')}</a>
+    <a class="btn btn--ghost" data-link="pickup-delivery">Book A Pickup ${ic('arrow')}</a>
   </div>`;
 }
 function svcCard(s) {
@@ -375,7 +375,7 @@ function renderCommercial() {
 
   <div class="banner" style="margin-top:28px;">
     <div>
-      <h3>Book a Pickup Today</h3>
+      <h3>Book A Pickup Today</h3>
       <p>Professional laundry for businesses across Melbourne. Free pick-up and delivery available.</p>
     </div>
     <a class="btn btn--ghost" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
@@ -492,7 +492,7 @@ function renderDelivery() {
   </div>
   <div class="banner" style="margin-top:28px;">
     <div>
-      <h3>Book a Pickup Today</h3>
+      <h3>Book A Pickup Today</h3>
       <p>Too busy to come in? We'll collect your laundry, clean it, and deliver it back fresh.</p>
     </div>
     <a class="btn btn--ghost" href="${BIZ.phoneHref}">${ic('phone')} ${BIZ.phone}</a>
