@@ -56,7 +56,7 @@ const SERVICES = [
     chips:['Open 24/7','30 high-capacity Dexter washers','28 double-stack EXPRESS dryers','Credit card · Apple Pay · Google Pay · cash','Secure keypad entry 223182#','Clean, spacious & easy-to-use'],
     rows:[['5 kg Front Loader','$6'],['7 kg Front Loader','$7'],['16 kg Front Loader','$14 / Super wash $16'],['24 kg Front Loader','$16'],['28 kg Front Loader','$20']] },
 
-  { id:'wash-dry-fold', name:'Wash, Dry & Fold', icon:'drum', img:'images/img-wash-dry-fold.jpg', from:'from $38',
+  { id:'wash-dry-fold', name:'Wash, Dry & Fold', icon:'drum', img:'images/img-wash-dry-fold.jpg', imgPos:'bottom', from:'from $38',
     blurb:'Let us handle your everyday laundry — washed, dried and neatly folded, ready to go straight into your wardrobe.',
     desc:'', extra:'',
     chips:['Plain/colour separation','Neatly folded & ready to put away','Pick-up and delivery available','Ideal for families, busy professionals & Airbnb hosts','Quality detergents','Free pickup over $60'],
@@ -161,9 +161,9 @@ window.applyTweaks = function (t) {
 };
 
 /* ---------------- photo helper — real images ---------------- */
-function photo(src, alt, cls='') {
+function photo(src, alt, cls='', pos='center') {
   return `<div class="photo ${cls}" style="position:relative; overflow:hidden;">
-    <img src="${src}" alt="${alt}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">
+    <img src="${src}" alt="${alt}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:${pos};z-index:0;">
     <span class="photo__tag" style="position:relative;z-index:2;">${ic('camera')} ${alt}</span>
   </div>`;
 }
@@ -219,7 +219,7 @@ function svcCard(s) {
   }
   return `<article class="svc" data-link="${s.id}">
     <div style="position:relative; height:118px; overflow:hidden;">
-      <img src="${s.img}" alt="${s.name}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      <img src="${s.img}" alt="${s.name}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:${s.imgPos||'center'}">
       <span class="svc__ico" style="position:absolute; top:10px; left:10px; z-index:1;">${ic(s.icon)}</span>
     </div>
     <div class="svc__body">
@@ -269,7 +269,7 @@ function renderService(id) {
   </div>
   <div class="detail-grid">
     <div class="detail-desc">
-      ${photo(s.img, s.name, 'detail-hero')}
+      ${photo(s.img, s.name, 'detail-hero', s.imgPos||'center')}
       ${s.desc ? `<p>${s.desc}</p>` : ''}
       <div class="${s.chipsGrid ? 'chips chips--grid' : 'chips'}">${s.chips.map(c => `<span class="chip${s.chipsGrid ? ' chip--grid' : ''}">${ic('check')} ${c}</span>`).join('')}</div>
       ${s.extra ? `<p style="margin-top:22px; font-size:15px; color:var(--muted); line-height:1.55;">${s.extra}</p>` : ''}
