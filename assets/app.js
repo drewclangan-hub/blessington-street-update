@@ -474,7 +474,7 @@ function renderContact() {
     <h1>Get In Touch</h1>
   </div>
   <div style="max-width:560px; margin:0 auto;">
-    <form class="form" id="contactForm" onsubmit="return false;">
+    <form class="form" id="contactForm" action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST">
       <div class="field--row">
         <div class="field"><label>Name</label><input type="text" placeholder="Your name" required></div>
         <div class="field"><label>Phone</label><input type="tel" placeholder="Optional"></div>
@@ -550,8 +550,15 @@ document.addEventListener('click', (e) => {
   const whyCard = e.target.closest('.why-card');
   if (whyCard && window.innerWidth < 860) { whyCard.classList.toggle('why-card--open'); return; }
   if (e.target.closest('#sendBtn')) {
-    const ok = document.getElementById('formOk');
-    if (ok) { ok.classList.add('show'); document.getElementById('sendBtn').style.display = 'none'; }
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+    if (form.action.includes('REPLACE_WITH_YOUR_FORM_ID')) {
+      // Formspree not yet configured — show demo success
+      const ok = document.getElementById('formOk');
+      if (ok) { ok.classList.add('show'); document.getElementById('sendBtn').style.display = 'none'; }
+      return;
+    }
+    // Let the form submit naturally to Formspree
   }
   if (e.target.closest('.menu-btn')) { document.body.classList.toggle('nav-open'); return; }
   if (e.target.closest('.nav__close')) { document.body.classList.remove('nav-open'); return; }
