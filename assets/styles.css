@@ -306,13 +306,13 @@ body.nav-open .sidebar{z-index:110;}
 .sec-head p{font-size:14.5px; color:var(--muted); margin-top:6px;}
 
 /* ---- SERVICE GRID ---- */
-.svc-grid{display:grid; grid-template-columns:1fr; gap:12px;}
-@media(min-width:480px){.svc-grid{grid-template-columns:repeat(2,1fr); gap:14px;}}
+.svc-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:10px;}
+@media(min-width:480px){.svc-grid{gap:14px;}}
 @media(min-width:860px){.svc-grid{grid-template-columns:repeat(var(--cols,3),1fr); gap:18px;}}
 
 /* last-row centering: mobile = full width, desktop = centred at column width */
-.svc-last-row{display:grid; grid-template-columns:1fr; gap:12px; grid-column:1/-1;}
-@media(min-width:480px){.svc-last-row{grid-template-columns:repeat(2,1fr); gap:14px;}}
+.svc-last-row{display:grid; grid-template-columns:repeat(2,1fr); gap:10px; grid-column:1/-1;}
+@media(min-width:480px){.svc-last-row{gap:14px;}}
 @media(min-width:860px){.svc-last-row{display:flex; justify-content:center; gap:18px;}}
 .svc-last-row > *{min-width:0;}
 @media(min-width:860px){.svc-last-row > *{flex:0 0 var(--item-w, 200px);}}
@@ -325,7 +325,8 @@ body.nav-open .sidebar{z-index:110;}
 .svc__minhead{display:flex; align-items:center; gap:11px; margin-bottom:2px;}
 .svc__ico--inline{position:static; width:34px; height:34px; flex:none; background:var(--accent-tint); box-shadow:none;}
 @media(min-width:640px){.svc__ico--inline{width:36px; height:36px;}}
-.svc__body{padding:14px 14px 15px; display:flex; flex-direction:column; gap:6px; flex:1;}
+.svc__body{padding:10px 10px 12px; display:flex; flex-direction:column; gap:5px; flex:1;}
+@media(min-width:480px){.svc__body{padding:14px 14px 15px; gap:6px;}}
 @media(min-width:640px){.svc__body{padding:15px 16px 16px; gap:7px;}}
 .svc__ico{position:absolute; top:10px; left:10px; width:32px; height:32px; border-radius:9px; display:grid; place-items:center; background:rgba(255,255,255,.9); color:var(--accent-press); box-shadow:var(--shadow-sm); z-index:1;}
 @media(min-width:640px){.svc__ico{width:34px; height:34px; border-radius:10px;}}
