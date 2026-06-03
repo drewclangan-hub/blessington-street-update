@@ -343,7 +343,7 @@ const SERVICES = [
     "id": "free-quote",
     "name": "Free Quote Today",
     "icon": "mail",
-    "img": "images/img-home.jpg",
+    "img": "images/img-quote.jpg",
     "imgPos": "center",
     "tint": "oklch(0.45 0.12 245)",
     "link": "contact",
