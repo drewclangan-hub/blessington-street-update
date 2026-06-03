@@ -119,8 +119,11 @@ function bannerBlock() {
   </div>`;
 }
 function svcCard(s) {
-  return `<article class="svc svc--tile" data-link="${s.id}">
+  const nav = s.link ? `data-go="${s.link}"` : `data-link="${s.id}"`;
+  const tint = s.tint ? `style="background:${s.tint}; mix-blend-mode:multiply;"` : '';
+  return `<article class="svc svc--tile${s.tint ? ' svc--tinted' : ''}" ${nav}>
     <img src="${s.img}" alt="${s.name}" class="svc__tile-img" style="object-position:${s.imgPos||'center'}">
+    ${s.tint ? `<div class="svc__tile-tint" ${tint}></div>` : ''}
     <div class="svc__tile-overlay">
       <h3 class="svc__tile-name">${s.name}</h3>
       <span class="svc__tile-cta">${ic('arrow')}</span>

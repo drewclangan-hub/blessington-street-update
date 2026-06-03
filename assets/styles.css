@@ -332,6 +332,7 @@ body.nav-open .sidebar{z-index:110;}
   transition:transform .4s ease;
 }
 .svc--tile:hover .svc__tile-img{transform:scale(1.06);}
+.svc__tile-tint{position:absolute; inset:0; opacity:.55;}
 
 .svc__tile-overlay{
   position:absolute; inset:0;
