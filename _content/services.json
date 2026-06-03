@@ -1,28 +1,5 @@
 [
   {
-    "id": "self-service",
-    "name": "Self-Service Laundry",
-    "icon": "drum",
-    "img": "images/img-machines.jpg",
-    "blurb": "Melbourne's biggest self-service launderette. Open 24/7 for your convenience.",
-    "from": "$6",
-    "chips": [
-      "Open 24/7",
-      "30 high-capacity Dexter washers",
-      "28 double-stack EXPRESS dryers",
-      "Credit card · Apple Pay · Google Pay · cash",
-      "Secure keypad entry 223182#",
-      "Clean, spacious & easy-to-use"
-    ],
-    "rows": [
-      { "label": "5 kg Front Loader", "value": "$6" },
-      { "label": "7 kg Front Loader", "value": "$7" },
-      { "label": "16 kg Front Loader", "value": "$14 / Super wash $16" },
-      { "label": "24 kg Front Loader", "value": "$16" },
-      { "label": "28 kg Front Loader", "value": "$20" }
-    ]
-  },
-  {
     "id": "wash-dry-fold",
     "name": "Wash, Dry & Fold",
     "icon": "drum",
@@ -39,11 +16,26 @@
       "Free pickup over $60"
     ],
     "rows": [
-      { "label": "Wash, Dry & Fold", "value": "from $38" },
-      { "label": "Doona Cleaning (1)", "value": "$40" },
-      { "label": "Doona Cleaning (2)", "value": "$75" },
-      { "label": "Doona Cleaning (3)", "value": "$105" },
-      { "label": "Free Pickup & Drop Off", "value": "Orders Over $60" }
+      {
+        "label": "Wash, Dry & Fold",
+        "value": "from $38"
+      },
+      {
+        "label": "Doona Cleaning (1)",
+        "value": "$40"
+      },
+      {
+        "label": "Doona Cleaning (2)",
+        "value": "$75"
+      },
+      {
+        "label": "Doona Cleaning (3)",
+        "value": "$105"
+      },
+      {
+        "label": "Free Pickup & Drop Off",
+        "value": "Orders Over $60"
+      }
     ]
   },
   {
@@ -63,34 +55,68 @@
       "<b>Same-day available</b><br><span style=\"font-size:11.5px;opacity:.7;font-weight:400;\">drop off by 9am</span>"
     ],
     "rows": [
-      { "label": "Shirt", "value": "$6.50" },
-      { "label": "Trousers / Skirt", "value": "$9.90" },
-      { "label": "Two-Piece Suit", "value": "$19.90" },
-      { "label": "Dress", "value": "from $16" },
-      { "label": "Same-Day (Drop Off By 9am)", "value": "Available" },
-      { "label": "Pick-Up & Delivery", "value": "Available" }
+      {
+        "label": "Shirt",
+        "value": "$6.50"
+      },
+      {
+        "label": "Trousers / Skirt",
+        "value": "$9.90"
+      },
+      {
+        "label": "Two-Piece Suit",
+        "value": "$19.90"
+      },
+      {
+        "label": "Dress",
+        "value": "from $16"
+      },
+      {
+        "label": "Same-Day (Drop Off By 9am)",
+        "value": "Available"
+      },
+      {
+        "label": "Pick-Up & Delivery",
+        "value": "Available"
+      }
     ]
   },
   {
-    "id": "rug-cleaning",
-    "name": "Rug Cleaning",
-    "icon": "rug",
-    "img": "images/img-rug.jpg",
-    "blurb": "Professional cleaning for wool, synthetic, and area rugs. Average 7-day turnaround.",
-    "from": "by size",
+    "id": "self-service",
+    "name": "Self-Service Laundry",
+    "icon": "drum",
+    "img": "images/img-machines.jpg",
+    "blurb": "Melbourne's biggest self-service launderette. Open 24/7 for your convenience.",
+    "from": "$6",
     "chips": [
-      "Wool, synthetic & area rugs",
-      "Clear pricing by size or sq metre",
-      "Pick-up and delivery",
-      "Average 7-day turnaround",
-      "Free pickup over $60"
+      "Open 24/7",
+      "30 high-capacity Dexter washers",
+      "28 double-stack EXPRESS dryers",
+      "Credit card · Apple Pay · Google Pay · cash",
+      "Secure keypad entry 223182#",
+      "Clean, spacious & easy-to-use"
     ],
     "rows": [
-      { "label": "Small Rug (up to 1.5m²)", "value": "from $60" },
-      { "label": "Medium Rug (1.5–3m²)", "value": "from $90" },
-      { "label": "Large Rug (3m²+)", "value": "from $130" },
-      { "label": "Pickup & Delivery", "value": "Free Over $60" },
-      { "label": "Average Turnaround", "value": "7 days" }
+      {
+        "label": "5 kg Front Loader",
+        "value": "$6"
+      },
+      {
+        "label": "7 kg Front Loader",
+        "value": "$7"
+      },
+      {
+        "label": "16 kg Front Loader",
+        "value": "$14 / Super wash $16"
+      },
+      {
+        "label": "24 kg Front Loader",
+        "value": "$16"
+      },
+      {
+        "label": "28 kg Front Loader",
+        "value": "$20"
+      }
     ]
   },
   {
@@ -109,88 +135,18 @@
       "Heavy-duty steam table"
     ],
     "rows": [
-      { "label": "5 Shirts Wash & Iron", "value": "$25 ($5.00 each)" },
-      { "label": "Single Shirt", "value": "$6" },
-      { "label": "Got Something Special Coming Up?", "value": "Wedding, party or event — ask us" }
-    ]
-  },
-  {
-    "id": "ironing",
-    "name": "Ironing & Pressing",
-    "icon": "iron",
-    "img": "images/img-ironing.jpg",
-    "blurb": "Crisp, professional finish every time. Gentle care for delicate fabrics.",
-    "from": "from $5",
-    "chips": [
-      "Crisp, professional finish every time",
-      "Gentle care for delicate fabrics",
-      "Perfect for busy workers, parents & special occasions",
-      "Curtains & bedding",
-      "Heavy-duty steam table"
-    ],
-    "rows": [
-      { "label": "5 Shirts Wash & Iron", "value": "$25 ($5.00 each)" },
-      { "label": "Single Shirt", "value": "$6" },
-      { "label": "Curtains & Upholstery", "value": "Call For A Quote" }
-    ]
-  },
-  {
-    "id": "stain-removal",
-    "name": "Stain Removal",
-    "icon": "drop",
-    "img": "images/img-stain.jpg",
-    "blurb": "Say Goodbye to Stubborn Marks. We've seen it all, and we know just what to do.",
-    "from": "from $12",
-    "chips": [
-      "Tailored Treatments — every stain & fabric gets the right method",
-      "Professional Care — proven techniques & quality cleaning solutions",
-      "Gentle on Fabrics — tough on stains, kind to your clothes",
-      "Save Your Favourites — don't write off that much-loved garment"
-    ],
-    "rows": [
-      { "label": "Stain Removal", "value": "from $12" },
-      { "label": "Assessment", "value": "Honest Upfront" },
-      { "label": "Add To Wash Order", "value": "Yes" }
-    ]
-  },
-  {
-    "id": "repairs-alterations",
-    "name": "Repairs & Alterations",
-    "icon": "needle",
-    "img": "images/img-alterations.jpg",
-    "blurb": "Love Your Clothes for Longer. From simple hems to complete re-sizing.",
-    "from": "quoted in store",
-    "chips": [
-      "Save Money — restoring costs far less than buying new",
-      "Better for the Planet — reduce waste & keep quality materials in use",
-      "Keep the Comfort — already broken-in items are often more comfortable",
-      "Hold on to Memories — some items are simply irreplaceable"
-    ],
-    "rows": [
-      { "label": "Clothing Alterations", "value": "Quoted In Store" },
-      { "label": "Simple Hems To Complete Re-Sizing", "value": "Available" },
-      { "label": "Repairs & Alterations", "value": "Quoted On Inspection" }
-    ]
-  },
-  {
-    "id": "doona-cleaning",
-    "name": "Doona Cleaning",
-    "icon": "bed",
-    "img": "images/img-doona.jpg",
-    "blurb": "Doonas, quilts & blankets. 30 high-capacity machines for everything from everyday loads to doonas.",
-    "from": "from $40",
-    "chips": [
-      "Single doona $40",
-      "Two doonas $75",
-      "Three doonas $105",
-      "Free pickup over $60",
-      "Biodegradable detergent available"
-    ],
-    "rows": [
-      { "label": "1 Doona", "value": "$40" },
-      { "label": "2 Doonas", "value": "$75" },
-      { "label": "3 Doonas", "value": "$105" },
-      { "label": "Pickup & Delivery", "value": "Free over $60" }
+      {
+        "label": "5 Shirts Wash & Iron",
+        "value": "$25 ($5.00 each)"
+      },
+      {
+        "label": "Single Shirt",
+        "value": "$6"
+      },
+      {
+        "label": "Got Something Special Coming Up?",
+        "value": "Wedding, party or event — ask us"
+      }
     ]
   },
   {
@@ -209,9 +165,18 @@
       "No Job Too Big or Small"
     ],
     "rows": [
-      { "label": "Towels / Linen", "value": "from $3.50 / kg" },
-      { "label": "Account Billing", "value": "Available On Request" },
-      { "label": "Delivery & Collection", "value": "Flexible, Tailored To Your Needs" }
+      {
+        "label": "Towels / Linen",
+        "value": "from $3.50 / kg"
+      },
+      {
+        "label": "Account Billing",
+        "value": "Available On Request"
+      },
+      {
+        "label": "Delivery & Collection",
+        "value": "Flexible, Tailored To Your Needs"
+      }
     ]
   },
   {
@@ -230,9 +195,173 @@
       "Services starting from $60"
     ],
     "rows": [
-      { "label": "Services Starting From", "value": "$60" },
-      { "label": "Mastercard & Visa", "value": "Accepted" },
-      { "label": "Account Facility", "value": "Available On Request" }
+      {
+        "label": "Services Starting From",
+        "value": "$60"
+      },
+      {
+        "label": "Mastercard & Visa",
+        "value": "Accepted"
+      },
+      {
+        "label": "Account Facility",
+        "value": "Available On Request"
+      }
+    ]
+  },
+  {
+    "id": "repairs-alterations",
+    "name": "Repairs & Alterations",
+    "icon": "needle",
+    "img": "images/img-alterations.jpg",
+    "blurb": "Love Your Clothes for Longer. From simple hems to complete re-sizing.",
+    "from": "quoted in store",
+    "chips": [
+      "Save Money — restoring costs far less than buying new",
+      "Better for the Planet — reduce waste & keep quality materials in use",
+      "Keep the Comfort — already broken-in items are often more comfortable",
+      "Hold on to Memories — some items are simply irreplaceable"
+    ],
+    "rows": [
+      {
+        "label": "Clothing Alterations",
+        "value": "Quoted In Store"
+      },
+      {
+        "label": "Simple Hems To Complete Re-Sizing",
+        "value": "Available"
+      },
+      {
+        "label": "Repairs & Alterations",
+        "value": "Quoted On Inspection"
+      }
+    ]
+  },
+  {
+    "id": "stain-removal",
+    "name": "Stain Removal",
+    "icon": "drop",
+    "img": "images/img-stain.jpg",
+    "blurb": "Say Goodbye to Stubborn Marks. We've seen it all, and we know just what to do.",
+    "from": "from $12",
+    "chips": [
+      "Tailored Treatments — every stain & fabric gets the right method",
+      "Professional Care — proven techniques & quality cleaning solutions",
+      "Gentle on Fabrics — tough on stains, kind to your clothes",
+      "Save Your Favourites — don't write off that much-loved garment"
+    ],
+    "rows": [
+      {
+        "label": "Stain Removal",
+        "value": "from $12"
+      },
+      {
+        "label": "Assessment",
+        "value": "Honest Upfront"
+      },
+      {
+        "label": "Add To Wash Order",
+        "value": "Yes"
+      }
+    ]
+  },
+  {
+    "id": "ironing",
+    "name": "Ironing & Pressing",
+    "icon": "iron",
+    "img": "images/img-ironing.jpg",
+    "blurb": "Crisp, professional finish every time. Gentle care for delicate fabrics.",
+    "from": "from $5",
+    "chips": [
+      "Crisp, professional finish every time",
+      "Gentle care for delicate fabrics",
+      "Perfect for busy workers, parents & special occasions",
+      "Curtains & bedding",
+      "Heavy-duty steam table"
+    ],
+    "rows": [
+      {
+        "label": "5 Shirts Wash & Iron",
+        "value": "$25 ($5.00 each)"
+      },
+      {
+        "label": "Single Shirt",
+        "value": "$6"
+      },
+      {
+        "label": "Curtains & Upholstery",
+        "value": "Call For A Quote"
+      }
+    ]
+  },
+  {
+    "id": "doona-cleaning",
+    "name": "Doona Cleaning",
+    "icon": "bed",
+    "img": "images/img-doona.jpg",
+    "blurb": "Doonas, quilts & blankets. 30 high-capacity machines for everything from everyday loads to doonas.",
+    "from": "from $40",
+    "chips": [
+      "Single doona $40",
+      "Two doonas $75",
+      "Three doonas $105",
+      "Free pickup over $60",
+      "Biodegradable detergent available"
+    ],
+    "rows": [
+      {
+        "label": "1 Doona",
+        "value": "$40"
+      },
+      {
+        "label": "2 Doonas",
+        "value": "$75"
+      },
+      {
+        "label": "3 Doonas",
+        "value": "$105"
+      },
+      {
+        "label": "Pickup & Delivery",
+        "value": "Free over $60"
+      }
+    ]
+  },
+  {
+    "id": "rug-cleaning",
+    "name": "Rug Cleaning",
+    "icon": "rug",
+    "img": "images/img-rug.jpg",
+    "blurb": "Professional cleaning for wool, synthetic, and area rugs. Average 7-day turnaround.",
+    "from": "by size",
+    "chips": [
+      "Wool, synthetic & area rugs",
+      "Clear pricing by size or sq metre",
+      "Pick-up and delivery",
+      "Average 7-day turnaround",
+      "Free pickup over $60"
+    ],
+    "rows": [
+      {
+        "label": "Small Rug (up to 1.5m²)",
+        "value": "from $60"
+      },
+      {
+        "label": "Medium Rug (1.5–3m²)",
+        "value": "from $90"
+      },
+      {
+        "label": "Large Rug (3m²+)",
+        "value": "from $130"
+      },
+      {
+        "label": "Pickup & Delivery",
+        "value": "Free Over $60"
+      },
+      {
+        "label": "Average Turnaround",
+        "value": "7 days"
+      }
     ]
   }
 ]
