@@ -123,7 +123,7 @@ function svcCard(s) {
     <img src="${s.img}" alt="${s.name}" class="svc__tile-img" style="object-position:${s.imgPos||'center'}">
     <div class="svc__tile-overlay">
       <h3 class="svc__tile-name">${s.name}</h3>
-      <span class="svc__tile-cta">${ic('arrow')} More Information</span>
+      <span class="svc__tile-cta">${ic('arrow')}</span>
     </div>
   </article>`;
 }
