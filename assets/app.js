@@ -119,26 +119,11 @@ function bannerBlock() {
   </div>`;
 }
 function svcCard(s) {
-  const T = TWEAKS;
-  const price = T.showPrices ? `<span class="svc__price">from <b>${s.from}</b></span>` : `<span></span>`;
-  if (T.cards === 'minimal') {
-    return `<article class="svc svc--min" data-link="${s.id}">
-      <div class="svc__body">
-        <div class="svc__minhead"><span class="svc__ico svc__ico--inline">${ic(s.icon)}</span><h3>${s.name}</h3></div>
-        <p class="svc__blurb">${s.blurb}</p>
-        <div class="svc__foot">${price}<span class="svc__arrow">${ic('arrow')}</span></div>
-      </div>
-    </article>`;
-  }
-  return `<article class="svc" data-link="${s.id}">
-    <div style="position:relative; height:118px; overflow:hidden;">
-      <img src="${s.img}" alt="${s.name}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:${s.imgPos||'center'}">
-      <span class="svc__ico" style="position:absolute; top:10px; left:10px; z-index:1;">${ic(s.icon)}</span>
-    </div>
-    <div class="svc__body">
-      <h3>${s.name}</h3>
-      <p class="svc__blurb">${s.blurb}</p>
-      <div class="svc__foot">${price}<span class="svc__arrow">${ic('arrow')}</span></div>
+  return `<article class="svc svc--tile" data-link="${s.id}">
+    <img src="${s.img}" alt="${s.name}" class="svc__tile-img" style="object-position:${s.imgPos||'center'}">
+    <div class="svc__tile-overlay">
+      <h3 class="svc__tile-name">${s.name}</h3>
+      <span class="svc__tile-cta">${ic('arrow')} More Information</span>
     </div>
   </article>`;
 }

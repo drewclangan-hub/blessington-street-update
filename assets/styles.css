@@ -317,31 +317,54 @@ body.nav-open .sidebar{z-index:110;}
 .svc-last-row > *{min-width:0;}
 @media(min-width:860px){.svc-last-row > *{flex:0 0 var(--item-w, 200px);}}
 
-.svc{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); overflow:hidden; cursor:pointer; display:flex; flex-direction:column; transition:.16s; box-shadow:var(--shadow-sm);}
-.svc:hover{transform:translateY(-3px); box-shadow:var(--shadow); border-color:var(--accent-tint-2);}
-.svc--min{min-height:0;}
-.svc--min .svc__body{padding:14px 16px;}
-@media(min-width:640px){.svc--min .svc__body{padding:16px 18px;}}
-.svc__minhead{display:flex; align-items:center; gap:11px; margin-bottom:2px;}
-.svc__ico--inline{position:static; width:34px; height:34px; flex:none; background:var(--accent-tint); box-shadow:none;}
-@media(min-width:640px){.svc__ico--inline{width:36px; height:36px;}}
-.svc__body{padding:10px 10px 12px; display:flex; flex-direction:column; gap:5px; flex:1;}
-@media(min-width:480px){.svc__body{padding:14px 14px 15px; gap:6px;}}
-@media(min-width:640px){.svc__body{padding:15px 16px 16px; gap:7px;}}
-.svc__ico{position:absolute; top:10px; left:10px; width:32px; height:32px; border-radius:9px; display:grid; place-items:center; background:rgba(255,255,255,.9); color:var(--accent-press); box-shadow:var(--shadow-sm); z-index:1;}
-@media(min-width:640px){.svc__ico{width:34px; height:34px; border-radius:10px;}}
-.svc__ico svg{width:17px; height:17px;}
-@media(min-width:640px){.svc__ico svg{width:19px; height:19px;}}
-.svc h3{font-size:16px;}
-@media(min-width:640px){.svc h3{font-size:18px;}}
-.svc__blurb{font-size:13px; color:var(--ink-soft); flex:1; line-height:1.4;}
-.svc__foot{display:flex; align-items:center; justify-content:space-between; margin-top:4px;}
-.svc__price{font-size:13px; color:var(--ink-soft);}
-.svc__price b{font-family:var(--font-head); font-weight:var(--head-weight); font-size:15px; color:var(--ink);}
-@media(min-width:640px){.svc__price b{font-size:16px;}}
-.svc__arrow{width:30px; height:30px; border-radius:50%; display:grid; place-items:center; background:var(--accent-tint); color:var(--accent-press); transition:.16s;}
-.svc:hover .svc__arrow{background:var(--accent); color:var(--on-accent);}
-.svc__arrow svg{width:15px; height:15px;}
+/* ---- Service tile card ---- */
+.svc--tile{
+  position:relative; overflow:hidden; cursor:pointer;
+  border-radius:var(--r); aspect-ratio:4/3;
+  box-shadow:var(--shadow-sm);
+  transition:transform .2s, box-shadow .2s;
+}
+.svc--tile:hover{transform:translateY(-3px); box-shadow:var(--shadow);}
+
+.svc__tile-img{
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit:cover; display:block;
+  transition:transform .4s ease;
+}
+.svc--tile:hover .svc__tile-img{transform:scale(1.06);}
+
+.svc__tile-overlay{
+  position:absolute; inset:0;
+  background:linear-gradient(to top, rgba(0,0,0,.72) 0%, rgba(0,0,0,.12) 55%, transparent 100%);
+  display:flex; flex-direction:column; justify-content:flex-end;
+  padding:12px 12px 14px;
+  transition:background .25s;
+}
+.svc--tile:hover .svc__tile-overlay{
+  background:linear-gradient(to top, rgba(0,0,0,.82) 0%, rgba(0,0,0,.4) 60%, rgba(0,0,0,.05) 100%);
+}
+
+.svc__tile-name{
+  font-family:var(--font-head); font-weight:var(--head-weight);
+  font-size:13px; color:#fff; line-height:1.2; margin:0;
+  text-shadow:0 1px 3px rgba(0,0,0,.4);
+}
+@media(min-width:480px){.svc__tile-name{font-size:14px;}}
+@media(min-width:640px){.svc__tile-name{font-size:16px;}}
+
+/* "More Information" — desktop hover only */
+.svc__tile-cta{
+  display:none; align-items:center; gap:5px;
+  font-size:11.5px; font-weight:700; color:rgba(255,255,255,.92);
+  letter-spacing:.04em; margin-top:5px;
+  opacity:0; transform:translateY(5px);
+  transition:opacity .22s, transform .22s;
+}
+.svc__tile-cta svg{width:12px; height:12px;}
+@media(min-width:860px){
+  .svc__tile-cta{display:flex;}
+  .svc--tile:hover .svc__tile-cta{opacity:1; transform:translateY(0);}
+}
 
 /* ---- BANNER ---- */
 .banner{margin-top:24px; padding:20px; border-radius:var(--r-lg); position:relative; overflow:hidden;
