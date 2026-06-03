@@ -97,7 +97,7 @@ const SERVICES = [
     "id": "self-service",
     "name": "Self-Service Laundry",
     "icon": "drum",
-    "img": "images/img-machines.jpg",
+    "img": "images/img-home.jpg",
     "blurb": "Melbourne's biggest self-service launderette. Open 24/7 for your convenience.",
     "from": "$6",
     "chips": [
